@@ -1,0 +1,78 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import BussinessmanImage from "@/assets/images/bussinessman.png";
+
+export default function BusinessmanSection() {
+  const descriptionText = `S. Sajad Haider successfully transitioned from military service to business ventures, demonstrating the same strategic thinking and leadership in entrepreneurship that he showed in the Pakistan Air Force. His business acumen complemented his military career, creating a unique legacy in both fields.`;
+
+  return (
+    <div className="max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 items-center z-10">
+        {/* TEXT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, type: "spring" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="space-y-8"
+        >
+          <TextRevealCard
+            text="The Entrepreneur"
+            revealText="S. Sajad Haider"
+            className="p-0 border-none bg-transparent w-auto"
+              hoverClassName="bg-background"
+              revealTextClassName="text-dark dark:text-light"
+              textClassName="text-2xl"
+          />
+
+          <TextGenerateEffect 
+            words={descriptionText}
+            className="text-md font-normal"
+          />
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Button 
+              variant="outline" 
+              className="group text-sm px-6 py-3 rounded-full border-primary/30 hover:border-primary"
+            >
+              <span className="mr-2">Explore Business Ventures</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                &rarr;
+              </span>
+            </Button>
+          </motion.div>
+        </motion.div>
+
+        {/* IMAGE SECTION */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, type: "spring" }}
+          className="relative"
+        >
+          <div className="absolute -top-8 -left-8 w-5/6 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
+          
+          <BackgroundGradient className="rounded-2xl overflow-hidden p-1 bg-white dark:bg-zinc-900">
+            <motion.img
+              src={BussinessmanImage}
+              alt="Businessman"
+              className="relative z-10 rounded-xl w-full h-auto shadow-2xl"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            />
+          </BackgroundGradient>
+
+     
+        </motion.div>
+      </div>
+      </div>
+  );
+}
