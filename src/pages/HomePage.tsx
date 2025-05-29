@@ -15,7 +15,7 @@ export default function Home() {
             <TrueHeroSection />
         </section>
 
-        <section className="relative max-w-screen-xl ml-auto my-10 md:my-30 p-2">
+        <section id="awards" className="relative max-w-screen-xl ml-auto my-10 md:my-30 p-2">
             <AwardSection />
         </section>
 
@@ -31,7 +31,7 @@ export default function Home() {
             <RecordSection />
         </section>
 
-        <section className="relative my-10 md:my-30 p-2">
+        <section id="books" className="relative my-10 md:my-30 p-2" >
             <BookHighlightSection />
         </section>
 

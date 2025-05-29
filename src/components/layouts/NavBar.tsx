@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import SSHLogo from "@/assets/logo/ssh-logo.png";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -12,10 +13,10 @@ export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
 
     const navLinks = [
-        { label: "Books", href: "#books" },
-        { label: "Life History", href: "#life-history" },
-        { label: "Awards", href: "#awards" },
-        { label: "Interviews", href: "#interviews" },
+        { label: "Books", href: "/#books" },
+        { label: "Early Life", href: "/early-life" },
+        { label: "Life At Airforce", href: "/war-life" },
+        { label: "Awards", href: "/#awards" },
     ];
 
     useEffect(() => {
@@ -66,13 +67,15 @@ export default function Navbar() {
         >
             <div className="mx-auto flex justify-between items-center relative">
                 <motion.div whileHover={{ y: -3, transition: { type: "spring", stiffness: 400 } }}>
+                       <Link
+                        to="/">
                     <motion.img
                         src={SSHLogo}
                         alt="SSH Logo"
                         className="w-auto"
                         animate={{ height: scrolled ? 40 : 100 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                    />                </motion.div>
+                    />     </Link>           </motion.div>
 
                 <ul className="gap-4  hidden md:flex items-center">
                     <NavLinks />

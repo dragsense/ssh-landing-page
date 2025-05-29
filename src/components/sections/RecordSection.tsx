@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import placeHolderImage from '@/assets/images/placeholder.png';
+import { BackgroundLines } from "../ui/background-lines";
 
 export default function RecordSection() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+   
+        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Text Side */}
         <div>
@@ -47,6 +50,6 @@ export default function RecordSection() {
           </div>
         </div>
       )}
-    </>
+    </BackgroundLines>
   );
 }

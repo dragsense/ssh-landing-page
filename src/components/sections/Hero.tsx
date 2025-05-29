@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <div
-      className="h-screen max-w-screen-xl mx-auto flex flex-col items-center justify-center overflow-hidden p-2"
+      className="h-screen max-w-screen-xl mx-auto flex flex-col items-center justify-center overflow-hidden p-5"
     >
       {/* Layered Background Effects */}
       <div className="absolute  inset-0 z-0">
@@ -56,11 +56,12 @@ export default function Hero() {
         <div className=" text-center mb-6">
 
           <h1
-            className="text-[5rem] md:text-[10rem] text-transparent bg-clip-text
+            className="text-[4rem] md:text-[10rem] text-transparent bg-clip-text
                       bg-[linear-gradient(to_right,_#000,_transparent_50%,_#000)]
                       dark:bg-[linear-gradient(to_right,_#fff,_transparent_50%,_#fff)]"
           >
             S. Sajad Haider
+            
           </h1>
 
 

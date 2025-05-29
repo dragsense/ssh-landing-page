@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Spotlight } from "@/components/ui/spotlight";
+import { Spotlight } from "@/components/ui/spotlight-new";
 import News1 from "@/assets/archive/news-1.png";
 import News2 from "@/assets/archive/news-2.png";
 import News3 from "@/assets/archive/news-3.png";
@@ -97,11 +97,7 @@ export default function MediaArchiveSection() {
 
   return (
     <>
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="hsl(var(--primary))"
-      />
-      
+      <Spotlight />
       <div className="z-10">
         <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-transparent">
           MEDIA ARCHIVE
