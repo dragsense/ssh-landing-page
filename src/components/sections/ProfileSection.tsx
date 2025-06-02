@@ -27,7 +27,7 @@ export default function BusinessmanSection() {
             className="p-0 border-none bg-transparent w-auto"
               hoverClassName="dark:bg-black bg-accent"
               revealTextClassName="text-dark dark:text-light"
-              textClassName="text-4xl"
+              textClassName="text-foreground font-semibold text-4xl"
           />
 
           <TextGenerateEffect 

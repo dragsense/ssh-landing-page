@@ -34,7 +34,7 @@ export default function TrueHeroComponent() {
               className="p-0 border-none bg-transparent"
               hoverClassName="bg-background"
               revealTextClassName="text-dark dark:text-light"
-              textClassName="text-4xl"
+              textClassName="text-foreground font-semibold text-4xl"
 
             />
           </motion.div>
