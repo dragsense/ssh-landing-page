@@ -61,7 +61,7 @@ export default function Hero() {
                       dark:bg-[linear-gradient(to_right,_#fff,_transparent_50%,_#fff)]"
           >
             S. Sajad Haider
-            
+
           </h1>
 
 
@@ -82,7 +82,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ staggerChildren: 0.1 }}
       >
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-8">
           {[badge1].map((badge, index) => (
             <motion.div
               key={index}
@@ -101,8 +101,8 @@ export default function Hero() {
             </motion.div>
           ))}
 
-    
-          <div className="felx-1 flex items-center gap-4 mr-10">
+
+          <div className="felx-1 flex items-center gap-8">
             {[badge2, badge3].map((badge, index) => (
               <motion.div
                 key={index}
@@ -120,6 +120,12 @@ export default function Hero() {
                 />
               </motion.div>
             ))}
+            <Button
+              variant="ghost"
+              className="font-bold mb-20  -ml-20 tracking-wide rotate-[90deg]"
+            >
+              _______ view all awards
+            </Button>
           </div>
         </div>
       </motion.div>

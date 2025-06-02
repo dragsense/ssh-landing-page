@@ -16,11 +16,11 @@ const achievementsText = `Haider personally destroyed four Indian aircraft, 11 I
 export default function TrueHeroComponent() {
   return (
 
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-40 items-start z-10 ">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-30 items-start z-10 ">
       {/* Left Column */}
-      <div className="space-y-8">
+      <div className="flex flex-col gap-2 justify-between h-full">
 
-        <div className="space-y-2 ">
+        <div className="space-y-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function TrueHeroComponent() {
               className="p-0 border-none bg-transparent"
               hoverClassName="bg-background"
               revealTextClassName="text-dark dark:text-light"
-              textClassName="text-2xl"
+              textClassName="text-4xl"
 
             />
           </motion.div>
@@ -50,7 +50,7 @@ export default function TrueHeroComponent() {
           </motion.div>
         </div>
 
-        <div className="space-y-20">
+   <div className="space-y-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,13 +80,13 @@ export default function TrueHeroComponent() {
                 transition={{ type: "spring", stiffness: 300 }}
               />
           </motion.div>
-        </div>
+       </div>
       </div>
 
 
 
       {/* Right Column */}
-      <div className="space-y-8">
+      <div className="space-y-20">
         {/* Hero Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -111,7 +111,6 @@ export default function TrueHeroComponent() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="p-6"
         >
           <h3 className="text-lg font-semibold mb-4 text-primary">Combat Achievements</h3>
           <TextGenerateEffect

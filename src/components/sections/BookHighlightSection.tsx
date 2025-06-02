@@ -25,39 +25,20 @@ export default function BookHighlightSection() {
 
   return (
     <div className="max-w-screen-lg mx-auto pb-20">
-      {/* Animated background text */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        <motion.div
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="text-[3rem] font-bold opacity-5 dark:opacity-[0.03] whitespace-nowrap tracking-wider absolute top-1/2"
-        >
-          <span className="text-black dark:text-white">
-            BEST SELLING • HISTORICAL ACCOUNT • AIR COMBAT • BEST SELLING • HISTORICAL ACCOUNT • AIR COMBAT
-          </span>
-        </motion.div>
-      </div>
+    
+     
 
       <div className="grid md:grid-cols-3 gap-8 items-center z-10">
         {/* Left Column - Title */}
-        <div className="space-y-4">
-          <TypewriterEffectSmooth words={titleWords} textClassName="text-2xl xl:text-4xl" />
-           <h2 className="text-3xl font-serif font-bold mb-4">
-            of Indo-Pak Wars
+        <div className="space-y-4 flex flex-col justify-between h-full">
+          <h2 className="text-4xl font-serif font-bold mb-4">
+           Demolishing Myths of Indo Pak Wars 1965-1971
           </h2>
-          <TypewriterEffectSmooth
-            words={subtitleWords}
-            cursorClassName="h-6"
-            textClassName="text-sm"
-          />
           <p className="text-sm mt-4 text-muted-foreground">
-            Biography by <br /> 
+            Biography by <br />
             <span className="font-semibold text-foreground">S. Sajad Haider</span>
           </p>
+
         </div>
 
         {/* Center - Book Image with 3D effect */}
@@ -68,46 +49,57 @@ export default function BookHighlightSection() {
           whileHover={{ y: -10 }}
           className="flex flex-col justify-center"
         >
-            <img
-              src={DemoBook}
-              alt="Flight of the Falcon"
-              className="w-auto md:w-72 rounded-lg shadow-xl"
-            />
+          <img
+            src={DemoBook}
+            alt="Flight of the Falcon"
+            className="w-auto md:w-72 rounded-lg shadow-xl"
+          />
 
-            <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className=""
-      >
-        <div className="px-4 py-2 mt-8 bg-background text-foreground text-xs font-medium rounded-full shadow-sm border">
-          #1 Bestseller in Military History
-        </div>
-      </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className=""
+          >
+            <div className="px-4 py-2 mt-8 bg-background text-foreground text-xs font-medium rounded-full shadow-sm border">
+              #1 Bestseller in Military History
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Right Column - Description */}
-        <div className="flex flex-col items-start justify-center space-y-6">
-          <TextGenerateEffect 
+        <div className="flex flex-col items-end justify-between w-full h-full space-y-6">
+          <TextGenerateEffect
             words={descriptionText}
-            className="text-sm font-semibold"
-          />
+            className="text-sm font-semibold text-muted-background dark:text-muted-foreground"
           
+          />
+
           <div className="flex gap-3 flex-wrap">
             <Button variant="outline" className="rounded-full group">
               <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
               Download PDF
             </Button>
-            
-            <Button variant="ghost" className="rounded-full group">
-              Read Excerpt
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+
           </div>
         </div>
       </div>
 
-    
+  {/* Animated background text */}
+        <motion.div
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+className="absolute top-1/2 -translate-y-1/2 text-[3rem] font-bold opacity-5 dark:opacity-[0.1] whitespace-nowrap tracking-wider"
+        >
+          <span className="text-black dark:text-white">
+            BEST SELLING • HISTORICAL ACCOUNT • AIR COMBAT • BEST SELLING • HISTORICAL ACCOUNT • AIR COMBAT
+          </span>
+        </motion.div>
+
     </div>
   );
 }

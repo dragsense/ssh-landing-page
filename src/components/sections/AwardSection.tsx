@@ -44,7 +44,7 @@ export default function AwardSlider() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-semibold text-left mb-10 relative z-10"
+        className="text-4xl md:text-4xl font-bold text-left mb-10 relative z-10"
       >
         AWARDS
 
@@ -57,7 +57,7 @@ export default function AwardSlider() {
         transition={{ duration: 0.8 }}
         className="relative"
       >
-        <div className="flex items-center flex-col md:flex-row  gap-4 md:gap-8">
+        <div className="flex items-end flex-col md:flex-row  gap-4 md:gap-8">
           <div className="flex gap-5">
             <Button
               variant="ghost"
@@ -112,7 +112,7 @@ export default function AwardSlider() {
                   transition={{ duration: 0.5 }}
                   whileHover={{ scale: index >= currentIndex && index < currentIndex + itemsPerView ? 1.1 : 0.9 }}
                   className={cn(
-                    "flex flex-col items-center min-w-[calc(25%-1rem)] md:min-w-[calc(25%-2rem)] p-4 rounded-xl transition-all",
+                    "flex flex-col items-center min-w-[calc(25%-1rem)] md:min-w-[calc(20%-2rem)] p-4 rounded-xl transition-all",
                     index >= currentIndex && index < currentIndex + itemsPerView
                       ? "bg-background/80 shadow-lg border border-primary/10 dark:border-white/10"
                       : "bg-muted/50"
@@ -121,7 +121,7 @@ export default function AwardSlider() {
                   <motion.img
                     src={award.src}
                     alt={award.label}
-                    className="h-20 object-contain"
+                    className="h-40 object-contain"
                     whileHover={{ rotate: [0, -5, 5, 0] }}
                     transition={{ duration: 0.5 }}
                   />

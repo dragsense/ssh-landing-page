@@ -26,16 +26,16 @@ const educationText = [
 
 export default function EarlyLifeSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-8 md:gap-12 items-center z-10">
+    <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-20 md:gap-12 items-center z-10">
       {/* Left Column - Images & Text */}
-      <div className="space-y-8">
+      <div className="flex flex-col justify-between h-full gap-20">
         {/* First Paragraph with Image */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-end gap-6"
+          className="flex flex-col md:flex-row items-end gap-20"
         >
           <p className="flex-1">
             His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons.
@@ -55,17 +55,17 @@ export default function EarlyLifeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-end gap-6"
+          className="flex flex-col md:flex-row items-end gap-20"
         >
             <motion.img
               src={S5_Image}
               alt="Young Haider in uniform"
-              className="w-64 h-auto rounded-lg"
+              className="w-1/2 h-auto rounded-lg"
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             />
          
-          <p className="flex-1">
+          <p className="flex-1 text-right">
             As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan.
           </p>
         </motion.div>
@@ -77,9 +77,9 @@ export default function EarlyLifeSection() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         viewport={{ once: true }}
-        className="relative"
+        className="relative dark:bg-black bg-accent h-full"
       >
-          <div className="bg-background p-6 rounded-[10px] border-1 h-full flex flex-col items-center">
+          <div className=" p-6 rounded-[10px] border-1 h-full flex flex-col items-center">
             <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-primary transition-colors">
               Read More &gt;&gt;
             </p>
@@ -92,13 +92,14 @@ export default function EarlyLifeSection() {
               <img
                 src={S6_Image}
                 alt="Sajad Haider and son"
-                className="mx-auto w-48 h-auto rounded-lg shadow-lg"
+                className="mx-auto w-full h-auto rounded-lg shadow-lg"
               />
             </motion.div>
 
             <TypewriterEffectSmooth
               words={educationText}
               className="text-center mb-2"
+              textClassName="xl:text-3xl"
               cursorClassName="h-8"
             />
 

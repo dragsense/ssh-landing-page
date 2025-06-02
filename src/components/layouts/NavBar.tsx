@@ -26,7 +26,7 @@ export default function Navbar() {
     }, []);
 
      const linkClass =
-        "relative px-4 py-2 rounded-lg text-lg font-medium text-foreground/80 hover:text-white transition";
+        "relative px-4 py-2 rounded-lg text-[20px] font-bold text-foreground/80 hover:text-white transition";
 
 
     const NavLinks = () => (
@@ -50,20 +50,7 @@ export default function Navbar() {
                         </a>}
                 </motion.li>
             ))}
-            <li>
-                <Button
-                    variant="ghost"
-                    className="group border border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm"
-                >
-                    <span className="flex items-center">
-                        <span className="mr-2">Contact</span>
-                        <motion.span animate={{ x: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
-                            <ArrowRight className="h-4 w-4" />
-                        </motion.span>
-                    </span>
-                </Button>
-            </li>
-
+            
         </>
     );
 

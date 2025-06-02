@@ -82,7 +82,7 @@ export default function QuoteSlider() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute bottom-8 right-6 flex gap-3">
+        <div className="absolute bottom-0 right-6 flex gap-3">
 
 
         <Button

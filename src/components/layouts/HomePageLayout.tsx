@@ -9,7 +9,7 @@ export default function HomePageLayout({ children }: { children: React.ReactNode
         <Navbar />
         <Hero />
       </header>
-      <main className="px-4 overflow-hidden">
+      <main className="overflow-hidden">
         {children}
       </main>
     </>

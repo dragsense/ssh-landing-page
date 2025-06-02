@@ -11,7 +11,7 @@ export default function RecordSection() {
    
         <>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-20 items-center">
         {/* Text Side */}
         <div>
           <h2 className="text-4xl font-serif font-bold mb-4">
@@ -30,7 +30,7 @@ export default function RecordSection() {
             className="rounded-md object-cover w-full max-w-md"
             whileHover={{ scale: 1.02 }}
           />
-<div className="absolute top-3 right-3 flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity duration-300">            <Play className="w-4 h-4" />
+<div className="absolute top-5 -right-5 flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity duration-300">            <Play className="w-4 h-4" />
             <span>play video</span>
           </div>
         </div>

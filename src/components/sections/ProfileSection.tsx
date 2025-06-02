@@ -11,7 +11,7 @@ export default function BusinessmanSection() {
 
   return (
     <div className="max-w-screen-lg mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 items-center z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18  z-10">
         {/* TEXT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -21,12 +21,12 @@ export default function BusinessmanSection() {
           className="space-y-8"
         >
           <TextRevealCard
-            text="The Entrepreneur"
+            text="The Businessman"
             revealText="S. Sajad Haider"
             className="p-0 border-none bg-transparent w-auto"
-              hoverClassName="bg-background"
+              hoverClassName="dark:bg-black bg-accent"
               revealTextClassName="text-dark dark:text-light"
-              textClassName="text-2xl"
+              textClassName="text-4xl"
           />
 
           <TextGenerateEffect 
@@ -56,7 +56,7 @@ export default function BusinessmanSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, type: "spring" }}
-          className="relative"
+          className="relative -mb-10"
         >
           <div className="absolute -top-8 -left-8 w-5/6 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
           

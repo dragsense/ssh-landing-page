@@ -19,11 +19,11 @@ export default function Home() {
             <AwardSection />
         </section>
 
-        <section className="relative my-10 md:my-30 p-2">
+        <section className="relative my-10 md:my-30 -mb-30 pt-30 dark:bg-black bg-accent">
             <ProfileSection />
         </section>
 
-        <section className="relative my-10 md:my-30 p-2">
+        <section className="relative my-10 md:my-40 p-2">
             <QuoteSection />
         </section>
 
