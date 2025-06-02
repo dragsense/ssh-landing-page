@@ -16,18 +16,17 @@ const achievementsText = `Haider personally destroyed four Indian aircraft, 11 I
 export default function TrueHeroComponent() {
   return (
 
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 items-start z-10 ">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-40 items-start z-10 ">
       {/* Left Column */}
       <div className="space-y-8">
 
-        <div className="space-y-2">
+        <div className="space-y-2 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, type: "spring" }}
             viewport={{ once: true, margin: "-100px" }}
           >
-
             <TextRevealCard
               text="A True Hero"
               revealText="S. Sajad Haider"
@@ -51,14 +50,13 @@ export default function TrueHeroComponent() {
           </motion.div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <BackgroundGradient className="rounded-xl overflow-hidden p-1 bg-white dark:bg-zinc-900">
               <motion.img
                 src={S2_Image}
                 alt="Pilots briefing"
@@ -66,7 +64,6 @@ export default function TrueHeroComponent() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-            </BackgroundGradient>
           </motion.div>
 
           <motion.div
@@ -75,7 +72,6 @@ export default function TrueHeroComponent() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <BackgroundGradient className="rounded-xl overflow-hidden p-1 bg-white dark:bg-zinc-900">
               <motion.img
                 src={S3_Image}
                 alt="Aircraft and crew"
@@ -83,7 +79,6 @@ export default function TrueHeroComponent() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-            </BackgroundGradient>
           </motion.div>
         </div>
       </div>
@@ -101,7 +96,6 @@ export default function TrueHeroComponent() {
           className="relative"
         >
           <div className="absolute -inset-4 rounded-2xl bg-primary/10 -z-10 blur-md"></div>
-          <BackgroundGradient className="rounded-2xl overflow-hidden p-1 bg-white dark:bg-zinc-900">
             <motion.img
               src={S1_Image}
               alt="Hero Portrait"
@@ -109,7 +103,6 @@ export default function TrueHeroComponent() {
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
-          </BackgroundGradient>
         </motion.div>
 
         {/* Achievements */}

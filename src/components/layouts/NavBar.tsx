@@ -14,8 +14,8 @@ export default function Navbar() {
 
     const navLinks = [
         { label: "Books", href: "/#books" },
-        { label: "Early Life", href: "/early-life" },
-        { label: "Life At Airforce", href: "/war-life" },
+        { label: "Early Life", to: "/early-life" },
+        { label: "Life At Airforce", to: "/war-life" },
         { label: "Awards", href: "/#awards" },
     ];
 
@@ -25,17 +25,29 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+     const linkClass =
+        "relative px-4 py-2 rounded-lg text-lg font-medium text-foreground/80 hover:text-white transition";
+
+
     const NavLinks = () => (
         <>
             {navLinks.map((link, i) => (
                 <motion.li key={link.href} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }}>
-                    <a
-                        href={link.href}
-                        className="relative px-4 py-2 rounded-lg text-lg font-medium text-foreground/80 hover:text-white transition"
+                    {link.to ? <Link
+                        to={link.to}
+                        className={linkClass}
 
                     >
                         {link.label}
-                    </a>
+                    </Link> :
+                        <a
+                            href={link.href}
+                            className={linkClass}
+
+                        >
+                            {link.label}
+
+                        </a>}
                 </motion.li>
             ))}
             <li>
@@ -67,15 +79,15 @@ export default function Navbar() {
         >
             <div className="mx-auto flex justify-between items-center relative">
                 <motion.div whileHover={{ y: -3, transition: { type: "spring", stiffness: 400 } }}>
-                       <Link
+                    <Link
                         to="/">
-                    <motion.img
-                        src={SSHLogo}
-                        alt="SSH Logo"
-                        className="w-auto"
-                        animate={{ height: scrolled ? 40 : 100 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                    />     </Link>           </motion.div>
+                        <motion.img
+                            src={SSHLogo}
+                            alt="SSH Logo"
+                            className="w-auto"
+                            animate={{ height: scrolled ? 40 : 100 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                        />     </Link>           </motion.div>
 
                 <ul className="gap-4  hidden md:flex items-center">
                     <NavLinks />

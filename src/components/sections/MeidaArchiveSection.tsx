@@ -17,9 +17,9 @@ const mediaItems = [
     link: "#"
   },
   {
-    title: "Strike at Pathankot | War Diaries | Episode 6",
-    source: "/ TCM Originals",
-    image: News2,
+    title: "Pakistan Failed Indian Mission | 1965 War",
+    source: "/ BOL News",
+    image: News3,
     link: "#"
   },
   {
@@ -27,7 +27,49 @@ const mediaItems = [
     source: "/ BOL News",
     image: News3,
     link: "#"
-  }
+  },
+  {
+    title: "Pakistan Failed Indian Mission | 1965 War",
+    source: "/ BOL News",
+    image: News3,
+    link: "#"
+  },
+  {
+    title: "Strike at Pathankot | War Diaries | Episode 6",
+    source: "/ TCM Originals",
+    image: News2,
+    link: "#"
+  },
+    {
+    title: "Whispers of the Forgotten | Untold Stories of 1965 and 1971 Wars",
+    source: "/ RAVA Documentary Films",
+    image: News1,
+    link: "#"
+  },
+  {
+    title: "Pakistan Failed Indian Mission | 1965 War",
+    source: "/ BOL News",
+    image: News3,
+    link: "#"
+  },
+  {
+    title: "Pakistan Failed Indian Mission | 1965 War",
+    source: "/ BOL News",
+    image: News3,
+    link: "#"
+  },
+  {
+    title: "Whispers of the Forgotten | Untold Stories of 1965 and 1971 Wars",
+    source: "/ RAVA Documentary Films",
+    image: News1,
+    link: "#"
+  },
+  {
+    title: "Pakistan Failed Indian Mission | 1965 War",
+    source: "/ BOL News",
+    image: News3,
+    link: "#"
+  },
 ];
 
 export default function MediaArchiveSection() {
@@ -45,55 +87,89 @@ export default function MediaArchiveSection() {
   };
 
   const getCardStyle = (i: number) => {
-    const distance = (i - index + mediaItems.length) % mediaItems.length;
-    const absDistance = Math.min(distance, mediaItems.length - distance);
-    
-    if (absDistance === 0) {
-      return {
-        zIndex: 30,
-        x: 0,
-        scale: 1,
-        opacity: 1,
-        filter: "brightness(1)",
-        transition: { 
-          type: "spring", 
-          stiffness: 300, 
-          damping: 30,
-          delay: direction === 0 ? i * 0.1 : 0
-        }
-      };
-    } else if (absDistance === 1) {
-      const xPos = (distance === 1 ? 1 : -1) * 180;
-      return {
-        zIndex: 20,
-        x: xPos,
-        scale: 0.85,
-        opacity: 0.8,
-        filter: "brightness(0.7)",
-        transition: { 
-          type: "spring", 
-          stiffness: 300, 
-          damping: 30,
-          delay: direction === 0 ? i * 0.1 : 0.1
-        }
-      };
-    } else {
-      const xPos = (distance <= mediaItems.length/2 ? 1 : -1) * 280;
-      return {
-        zIndex: 10,
-        x: xPos,
-        scale: 0.7,
-        opacity: 0,
-        filter: "brightness(0.5)",
-        transition: { 
-          type: "spring", 
-          stiffness: 300, 
-          damping: 30,
-          delay: direction === 0 ? i * 0.1 : 0.2
-        }
-      };
-    }
+  const distance = (i - index + mediaItems.length) % mediaItems.length;
+  const absDistance = Math.min(distance, mediaItems.length - distance);
+
+  const getDirection = () => {
+    if (distance === absDistance) return 1;
+    if (mediaItems.length - distance === absDistance) return -1;
+    return distance <= mediaItems.length / 2 ? 1 : -1;
   };
+
+  const dir = getDirection();
+
+  if (absDistance === 0) {
+    return {
+      zIndex: 30,
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      filter: "brightness(1)",
+      transition: { 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 30,
+        delay: direction === 0 ? i * 0.1 : 0
+      }
+    };
+  } else if (absDistance === 1) {
+    return {
+      zIndex: 25,
+      x: dir * 180,
+      scale: 0.85,
+      opacity: 1,
+      filter: "brightness(0.75)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        delay: direction === 0 ? i * 0.1 : 0.1
+      }
+    };
+  } else if (absDistance === 2) {
+    return {
+      zIndex: 20,
+      x: dir * 280,
+      scale: 0.7,
+      opacity: 0.9,
+      filter: "brightness(0.6)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        delay: direction === 0 ? i * 0.1 : 0.2
+      }
+    };
+  } else if (absDistance === 3) {
+    return {
+      zIndex: 15,
+      x: dir * 360,
+      scale: 0.6,
+      opacity: 0.7,
+      filter: "brightness(0.4)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        delay: direction === 0 ? i * 0.1 : 0.3
+      }
+    };
+  } else {
+    return {
+      zIndex: 10,
+      x: dir * 440,
+      scale: 0.5,
+      opacity: 0.5,
+      filter: "brightness(0.3)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        delay: direction === 0 ? i * 0.1 : 0.4
+      }
+    };
+  }
+};
 
   return (
     <>

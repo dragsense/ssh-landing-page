@@ -40,7 +40,6 @@ export default function EarlyLifeSection() {
           <p className="flex-1">
             His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons.
           </p>
-          <BackgroundGradient className="rounded-lg overflow-hidden p-1 flex-1 bg-white dark:bg-zinc-900">
             <motion.img
               src={S4_Image}
               alt="S. Sajad Haider youth"
@@ -48,7 +47,6 @@ export default function EarlyLifeSection() {
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             />
-          </BackgroundGradient>
         </motion.div>
 
         {/* Second Paragraph with Image */}
@@ -59,7 +57,6 @@ export default function EarlyLifeSection() {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row items-end gap-6"
         >
-          <BackgroundGradient className="rounded-lg overflow-hidden p-1 flex-1 bg-white dark:bg-zinc-900 order-1 md:order-2">
             <motion.img
               src={S5_Image}
               alt="Young Haider in uniform"
@@ -67,7 +64,7 @@ export default function EarlyLifeSection() {
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             />
-          </BackgroundGradient>
+         
           <p className="flex-1">
             As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan.
           </p>
@@ -82,8 +79,7 @@ export default function EarlyLifeSection() {
         viewport={{ once: true }}
         className="relative"
       >
-        <BackgroundGradient className="rounded-[12px] p-1 bg-white dark:bg-zinc-900">
-          <div className="bg-background p-6 rounded-[10px] h-full flex flex-col items-center">
+          <div className="bg-background p-6 rounded-[10px] border-1 h-full flex flex-col items-center">
             <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-primary transition-colors">
               Read More &gt;&gt;
             </p>
@@ -117,7 +113,7 @@ export default function EarlyLifeSection() {
               </p>
             </motion.div>
           </div>
-        </BackgroundGradient>
+       
       </motion.div>
     </div>
   );

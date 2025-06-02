@@ -60,7 +60,6 @@ export default function BusinessmanSection() {
         >
           <div className="absolute -top-8 -left-8 w-5/6 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
           
-          <BackgroundGradient className="rounded-2xl overflow-hidden p-1 bg-white dark:bg-zinc-900">
             <motion.img
               src={BussinessmanImage}
               alt="Businessman"
@@ -68,7 +67,6 @@ export default function BusinessmanSection() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             />
-          </BackgroundGradient>
 
      
         </motion.div>

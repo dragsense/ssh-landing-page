@@ -68,13 +68,11 @@ export default function BookHighlightSection() {
           whileHover={{ y: -10 }}
           className="flex flex-col justify-center"
         >
-          <BackgroundGradient className="rounded-2xl flex-1 overflow-hidden p-1 bg-white dark:bg-zinc-900">
             <img
               src={DemoBook}
               alt="Flight of the Falcon"
               className="w-auto md:w-72 rounded-lg shadow-xl"
             />
-          </BackgroundGradient>
 
             <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -73,13 +73,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1d1c20] border border-white/[0.08] w-[40rem] rounded-lg p-8 relative overflow-hidden",
+        "bg-[#1d1c20] border border-white/[0.08]  rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-40  relative flex items-center overflow-hidden">
+      <div className="relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -118,7 +118,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className={cn("text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]", textClassName)}>
+          <p className={cn("text-base sm:text-[3rem] font-bold bg-clip-text text-transparent bg-[#323238]", textClassName)}>
             {text}
           </p>
           <MemoizedStars />

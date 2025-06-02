@@ -9,7 +9,7 @@ export default function RecordSection() {
 
   return (
    
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+        <>
 
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Text Side */}
@@ -50,6 +50,6 @@ export default function RecordSection() {
           </div>
         </div>
       )}
-    </BackgroundLines>
+    </>
   );
 }
