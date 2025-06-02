@@ -7,6 +7,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import S1_Image from "@/assets/images/s1.png";
 import S2_Image from "@/assets/images/s2.png";
 import S3_Image from "@/assets/images/s3.png";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 
 const heroDescription = `S. Sajad Haider, a legendary Pakistani fighter pilot and former one-star rank officer in the Pakistan Air Force (PAF). He led the devastating Blitzkrieg on Pathankot airbase during the 1965 Indo-Pakistani war, demonstrating exceptional courage and tactical brilliance.`;
@@ -126,15 +127,17 @@ export default function TrueHeroComponent() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Button
-            variant="outline"
-            className="group rounded-full border-primary/30 hover:border-primary px-6 py-3"
-          >
+           <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+      >
+         
             <span className="mr-2">Explore Full Story</span>
             <span className="group-hover:translate-x-1 transition-transform">
               &rarr;
             </span>
-          </Button>
+          </HoverBorderGradient>
         </motion.div>
       </div>
     </div>

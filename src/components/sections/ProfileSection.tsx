@@ -5,6 +5,7 @@ import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import BussinessmanImage from "@/assets/images/bussinessman.png";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function BusinessmanSection() {
   const descriptionText = `S. Sajad Haider successfully transitioned from military service to business ventures, demonstrating the same strategic thinking and leadership in entrepreneurship that he showed in the Pakistan Air Force. His business acumen complemented his military career, creating a unique legacy in both fields.`;
@@ -38,15 +39,16 @@ export default function BusinessmanSection() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Button 
-              variant="outline" 
-              className="group text-sm px-6 py-3 rounded-full border-primary/30 hover:border-primary"
-            >
+             <HoverBorderGradient
+                    containerClassName="rounded-full"
+                    as="button"
+                    className="dark:bg-black bg-accent text-black dark:text-white flex items-center space-x-2"
+                  >
               <span className="mr-2">Explore Business Ventures</span>
               <span className="group-hover:translate-x-1 transition-transform">
                 &rarr;
               </span>
-            </Button>
+            </HoverBorderGradient>
           </motion.div>
         </motion.div>
 
