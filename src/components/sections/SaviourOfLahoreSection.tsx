@@ -7,7 +7,7 @@ import Minar_E_Pakistan_Image from "@/assets/images/mira-pakistan.png";
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function SaviourOfLahoreSection() {
-    const descriptionText = `Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft. `;
+    const descriptionText = `Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.`;
     const descriptionText2 = `He was also an author, columnist, businessman, defence analyst, political commentator, and philanthropist.`;
 
     return (
@@ -53,7 +53,6 @@ export default function SaviourOfLahoreSection() {
                     transition={{ duration: 0.7, type: "spring" }}
                     className="relative"
                 >
-                    <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
 
                     <motion.img
                         src={Minar_E_Pakistan_Image}
@@ -63,7 +62,6 @@ export default function SaviourOfLahoreSection() {
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     />
 
- </BackgroundLines>
                 </motion.div>
         </div>
 

@@ -14,10 +14,10 @@ const awards = [
   { label: "Sitara-e-Jurrat", src: Award2 },
   { label: "Tamgha-e-Defence", src: Award3 },
   { label: "War Medal 1965", src: Award4 },
-  { label: "Gallantry Award", src: Award1 },
-  { label: "Service Medal", src: Award2 },
-  { label: "Honor Badge", src: Award3 },
-  { label: "Valor Star", src: Award4 },
+    { label: "Golden Eagle", src: Award1 },
+  { label: "Sitara-e-Jurrat", src: Award2 },
+  { label: "Tamgha-e-Defence", src: Award3 },
+  { label: "War Medal 1965", src: Award4 },
 ];
 
 export default function AwardSlider() {
@@ -62,7 +62,7 @@ export default function AwardSlider() {
             <Button
               variant="ghost"
               size="icon"
-              className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-primary/10"
+              className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
               onClick={prevSlide}
               disabled={currentIndex === 0}
             >
@@ -77,7 +77,7 @@ export default function AwardSlider() {
             <Button
               variant="ghost"
               size="icon"
-              className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-primary/10"
+              className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
               onClick={nextSlide}
               disabled={currentIndex >= awards.length - itemsPerView}
             >
@@ -94,7 +94,7 @@ export default function AwardSlider() {
             className="flex-1 overflow-hidden relative"
           >
             <motion.div
-              className="flex gap-4 md:gap-8 transition-transform duration-300"
+              className="flex gap-4 md:gap-2 transition-transform duration-300"
               style={{
                 transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
                 width: `${(awards.length / itemsPerView) * 100}%`
@@ -114,7 +114,7 @@ export default function AwardSlider() {
                   className={cn(
                     "flex flex-col items-center min-w-[calc(25%-1rem)] md:min-w-[calc(20%-2rem)] p-4 rounded-xl transition-all",
                     index >= currentIndex && index < currentIndex + itemsPerView
-                      ? "bg-background/80 shadow-lg border border-primary/10 dark:border-white/10"
+                      ? "bg-background/80"
                       : "bg-muted/50"
                   )}
                 >

@@ -1,48 +1,31 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { SparklesCore } from "@/components/ui/sparkles"
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import heroBg from '@/assets/hero/hero-bg.png';
-import heroImg from '@/assets/hero/hero-img.png';
-import badge1 from '@/assets/hero/badge-1.png';
-import badge2 from '@/assets/hero/badge-2.png';
-import badge3 from '@/assets/hero/badge-3.png';
+import { SparklesCore } from "@/components/ui/sparkles";
+import heroBg from "@/assets/hero/hero-bg.png";
+import heroImg from "@/assets/hero/hero-img.png";
+import badge1 from "@/assets/hero/badge-1.png";
+import badge2 from "@/assets/hero/badge-2.png";
+import badge3 from "@/assets/hero/badge-3.png";
 
 export default function Hero() {
-  const words = [
-    { text: "Celebrating" },
-    { text: "the" },
-    { text: "Legacy", className: "text-primary" },
-    { text: "of" },
-    { text: "S. Sajad Haider", className: "text-primary font-bold" },
-  ];
-
   return (
-    <div
-      className="h-screen max-w-screen-xl mx-auto flex flex-col items-center justify-center overflow-hidden p-5"
-    >
-      {/* Layered Background Effects */}
-      <div className="absolute  inset-0 z-0">
-        {/* Your background image with overlay */}
+    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center">
+      {/* Background + Sparkles */}
+      <div className="absolute inset-0 -z-10">
         <div
-          className="absolute inset-0 bg-cover bg-to-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-
-
         <SparklesCore
           id="hero-sparkles"
           background="transparent"
           minSize={0.4}
           maxSize={2.0}
           particleDensity={30}
-          className="w-full h-full opacity-70 z-10 relative"
+          className="w-full h-full opacity-70"
           particleColor="#e99020"
         />
-
-
       </div>
-
 
       {/* Hero Image */}
       <motion.div
@@ -67,71 +50,63 @@ export default function Hero() {
 
           <div className="mt-4 flex items-center justify-center text-base md:text-lg">
             <span className="dark:text-white text-black">1932</span>
-            <div className="flex-1 mx-4 h-px w-24 md:w-40 bg-gradient-to-r from-black/40 via-transparent to-black/40 dark:from-white/40 dark:via-transparent dark:to-white/40" />
-            <span className="dark:text-white text-black">1932</span>
+            <div className="flex-1 mx-4 h-0.5 w-24 md:w-40 bg-gradient-to-r from-black/40 via-transparent to-black/40 dark:from-white/40 dark:via-transparent dark:to-white/40" />
+            <span className="dark:text-white text-black">2025</span>
           </div>
         </div>
       </motion.div>
 
+      {/* Badges + View Button */}
+      <div className="absolute bottom-10 left-0 w-full">
+        <div className="flex items-end justify-between w-full">
+          {/* Left badge */}
+          <motion.img
+            src={badge1}
+            alt="Badge 1"
+            className="h-16 md:h-20 object-contain drop-shadow-xl"
+            initial={{ x: -60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ y: -5 }}
+          />
 
 
-      {/* Badges */}
-      <motion.div
-        className="absolute bottom-10 w-full"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ staggerChildren: 0.1 }}
-      >
-        <div className="flex items-center justify-between gap-8">
-          {[badge1].map((badge, index) => (
-            <motion.div
+        </div>
+      </div>
+
+      <div className="absolute bottom-10 right-0">
+
+        {/* Center badges */}
+        <div className="flex items-center gap-6">
+          {[badge2, badge3].map((badge, index) => (
+            <motion.img
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              src={badge}
+              alt={`Badge ${index + 2}`}
+              className="h-16 md:h-20 object-contain drop-shadow-xl"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 + index * 0.2, duration: 0.6 }}
               whileHover={{ y: -5 }}
-              className="relative group"
-            >
-              <div className="absolute -inset-2 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-70 transition-opacity" />
-              <img
-                src={badge}
-                alt={`Badge ${index + 1}`}
-                className="relative h-16 md:h-20 w-auto object-contain drop-shadow-lg"
-              />
-            </motion.div>
+            />
           ))}
 
-
-          <div className="felx-1 flex items-center gap-8">
-            {[badge2, badge3].map((badge, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{ y: -5 }}
-                className="relative group"
-              >
-                <div className="absolute -inset-2 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-70 transition-opacity" />
-                <img
-                  src={badge}
-                  alt={`Badge ${index + 1}`}
-                  className="relative h-16 md:h-20 w-auto object-contain drop-shadow-lg"
-                />
-              </motion.div>
-            ))}
+          {/* View all awards */}
+          <motion.div
+                 whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <Button
               variant="ghost"
-              className="font-bold mb-20  -ml-20 tracking-wide rotate-[90deg]"
+              className="rotate-90 tracking-wide font-medium hover:text-[#9b6dac] hover:bg-transparent  transition -ml-15 cursor-pointer"
             >
-              _______ view all awards
+              — view all awards —
             </Button>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
 
 
-
+      </div>
     </div>
   );
 }

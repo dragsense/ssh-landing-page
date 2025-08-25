@@ -6,9 +6,10 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import BussinessmanImage from "@/assets/images/bussinessman.png";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
 export default function BusinessmanSection() {
-  const descriptionText = `S. Sajad Haider successfully transitioned from military service to business ventures, demonstrating the same strategic thinking and leadership in entrepreneurship that he showed in the Pakistan Air Force. His business acumen complemented his military career, creating a unique legacy in both fields.`;
+  const descriptionText = `S. Sajad Haider successfully transitioned from military service to business ventures, demonstrating the same strategic thinking and leadership in entrepreneurship that he showed in the Pakistan Air Force, culminating in the defence, aviation and communication company called Cormorant.`;
 
   return (
     <div className="max-w-screen-lg mx-auto">
@@ -25,12 +26,12 @@ export default function BusinessmanSection() {
             text="The Businessman"
             revealText="S. Sajad Haider"
             className="p-0 border-none bg-transparent w-auto"
-              hoverClassName="dark:bg-black bg-accent"
-              revealTextClassName="text-dark dark:text-light"
-              textClassName="text-foreground font-semibold text-4xl"
+            hoverClassName="dark:bg-black bg-accent"
+            revealTextClassName="text-dark dark:text-light"
+            textClassName="text-foreground font-semibold text-4xl"
           />
 
-          <TextGenerateEffect 
+          <TextGenerateEffect
             words={descriptionText}
             className="text-md font-normal"
           />
@@ -39,16 +40,10 @@ export default function BusinessmanSection() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-             <HoverBorderGradient
-                    containerClassName="rounded-full"
-                    as="button"
-                    className="dark:bg-black bg-accent text-black dark:text-white flex items-center space-x-2"
-                  >
-              <span className="mr-2">Explore Business Ventures</span>
-              <span className="group-hover:translate-x-1 transition-transform">
-                &rarr;
-              </span>
-            </HoverBorderGradient>
+            <GradientFillButton className="font-semibold">
+              <span><a href="/business-man">Explore Business Ventures</a></span>
+              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+            </GradientFillButton>
           </motion.div>
         </motion.div>
 
@@ -60,19 +55,19 @@ export default function BusinessmanSection() {
           transition={{ duration: 0.7, type: "spring" }}
           className="relative -mb-10"
         >
-          <div className="absolute -top-8 -left-8 w-5/6 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
-          
-            <motion.img
-              src={BussinessmanImage}
-              alt="Businessman"
-              className="relative z-10 rounded-xl w-full h-auto shadow-2xl"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            />
+          <div className="absolute -top-6 -left-6 w-5/6 h-5/6 border-2 border-primary/20 dark:border-white/30 rounded-tl-md rounded-tr-md rounded-bl-md z-0 dark:border-primary/10"></div>
 
-     
+          <motion.img
+            src={BussinessmanImage}
+            alt="Businessman"
+            className="relative z-10 rounded-xl w-full h-auto shadow-2xl"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          />
+
+
         </motion.div>
       </div>
-      </div>
+    </div>
   );
 }

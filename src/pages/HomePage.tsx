@@ -23,14 +23,14 @@ export default function Home() {
             <ProfileSection />
         </section>
 
-        <section className="relative my-10 md:my-40 p-2">
+        <section className="relative my-10 md:my-40 p-2"    >
             <QuoteSection />
         </section>
 
-        <section className="relative max-w-screen-lg mx-auto my-10 md:my-30 p-2">
+        <section className="relative max-w-screen-lg my-70 mx-auto p-2 flex items-center">
             <RecordSection />
         </section>
-
+        <div id="publications"></div>
         <section id="books" className="relative my-10 md:my-30 p-2" >
             <BookHighlightSection />
         </section>
@@ -39,7 +39,7 @@ export default function Home() {
             <MediaArchiveSection />
         </section>
 
-        <section className="relative max-w-screen-xl ml-auto p-2">
+        <section className="relative max-w-screen-xl mx-auto p-2">
             <EarlyLifeSection />
         </section>
 

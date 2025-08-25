@@ -9,7 +9,7 @@ export default function WarFeatureSection() {
     return (
         <div className="min-h-screen">
 
-            <div className="overflow-hidden pointer-events-none select-none">
+            <div className="overflow-hidden pointer-events-none select-none mb-30">
                 <motion.div
                     animate={{ x: ["0%", "-100%"] }}
                     transition={{
@@ -33,14 +33,13 @@ export default function WarFeatureSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className=""
+                        className="flex justify-between flex-col"
                     >
                         <p className="font-normal mb-5">
-                            Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.
+Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.
                         </p>
                         <p className="font-normal mb-10">
-                            He was also an author, columnist, businessman, defence analyst, political commentator, and philanthropist.                    </p>
-                        <BackgroundGradient className="rounded-lg overflow-hidden p-1 bg-white dark:bg-zinc-900">
+He was also an author, columnist, businessman, defence analyst, political commentator, and philanthropist.</p>
                             <motion.img
                                 src={S17_Image}
                                 alt="S. Sajad Haider youth"
@@ -48,7 +47,6 @@ export default function WarFeatureSection() {
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             />
-                        </BackgroundGradient>
                     </motion.div>
 
                     <motion.div
@@ -58,7 +56,6 @@ export default function WarFeatureSection() {
                         viewport={{ once: true }}
                         className=""
                     >
-                        <BackgroundGradient className="rounded-lg overflow-hidden p-1 flex-1 bg-white dark:bg-zinc-900 order-1 md:order-2">
                             <motion.img
                                 src={S16_Image}
                                 alt="Young Haider in uniform"
@@ -66,7 +63,6 @@ export default function WarFeatureSection() {
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             />
-                        </BackgroundGradient>
 
                     </motion.div>
                 </div>

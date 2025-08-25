@@ -13,10 +13,11 @@ export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
 
     const navLinks = [
-        { label: "Books", href: "/#books" },
+        { label: "Publications", href: "/#publications" },
         { label: "Early Life", to: "/early-life" },
         { label: "Life At Airforce", to: "/war-life" },
-        { label: "Awards", href: "/#awards" },
+                { label: "Businessman", to: "/business-man" },
+
     ];
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export default function Navbar() {
     }, []);
 
      const linkClass =
-        "relative px-4 py-2 rounded-lg text-[20px] font-bold text-foreground/80 hover:text-white transition";
+        "relative px-4 py-2 rounded-lg text-[18px] font-semibold text-foreground/80 hover:text-primary transition";
 
 
     const NavLinks = () => (

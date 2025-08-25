@@ -2,37 +2,63 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import placeHolderImage from '@/assets/images/placeholder.png';
+import imageReocrd from '@/assets/images/record.png';
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function RecordSection() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-   
-        <>
+  return ( 
 
-      <div className="grid md:grid-cols-2 gap-20 items-center">
+    <>
+
+      <div className="grid md:grid-cols-2 gap-5 items-center h-3/4">
         {/* Text Side */}
-        <div>
-          <h2 className="text-4xl font-serif font-bold mb-4">
-            World record loop of 1958
+        <div className="space-y-4">
+          <h2 className="text-5xl font-bold text-muted-foreground mb-4">
+            WORLD RECORD LOOP OF 1958
           </h2>
           <p className="text-sm leading-relaxed max-w-md">
-            On 2 February 1958, flying in the No. 3 position, F/L Haider was part of the F-86 Sabre aerobatic team led by Wg. Cdr. Mitty Masud that set a world record performing a 16-aircraft diamond loop.
+           On 2 February 1958, flying in the No. 3 position, F/L Haider was part of the 16 F-86 Sabres aerobatic team led by Wg. Cdr. Mitty Masud that set a world record performing a 16-aircraft diamond loop.
           </p>
+
+          <motion.img
+            src={imageReocrd}
+            alt="Record"
+            className="rounded-md object-cover w-full h-full max-w-md"
+            whileHover={{ scale: 1.02 }}
+          />
         </div>
 
         {/* Video Side */}
-        <div className="relative group cursor-pointer" onClick={() => setIsOpen(true)}>
+        <div className="flex justify-center flex-col text-center group w-full cursor-pointer gap-4" onClick={() => setIsOpen(true)}>
           <motion.img
             src={placeHolderImage}
             alt="Loop Thumbnail"
-            className="rounded-md object-cover w-full max-w-md"
+            className="object-cover w-full h-full"
             whileHover={{ scale: 1.02 }}
           />
-<div className="absolute top-5 -right-5 flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity duration-300">            <Play className="w-4 h-4" />
-            <span>play video</span>
+
+          <div className="space-y-4">
+            <div className="flex items-center justify-between w-full">
+              <h3 className="text-md font-semibold">
+                DIAMOND LOOP
+              </h3>
+                 <h3 className="text-md font-semibold">
+                16 F-86 SABRE
+              </h3>
+                 <h3 className="text-md font-semibold">
+                FEBRUARY 2, 1958
+              </h3>
+            </div>
+          <div className="text-center text-muted text-6xl font-bold">
+            <span>
+              PAF - FALCONS
+            </span>
           </div>
+
+          </div>
+
         </div>
       </div>
 

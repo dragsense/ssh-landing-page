@@ -20,13 +20,13 @@ const earlyLifeText = [
 const educationText = [
   { text: "Early" },
   { text: "Life" },
-  { text: "&", className: "text-purple-500 dark:text-purple-300" },
-  { text: "Education", className: "text-primary dark:text-primary" },
+  { text: "&" },
+  { text: "Education" },
 ];
 
 export default function EarlyLifeSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-20 md:gap-12 items-center z-10">
+    <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-20 md:gap-12 items-center z-10">
       {/* Left Column - Images & Text */}
       <div className="flex flex-col justify-between h-full gap-20">
         {/* First Paragraph with Image */}
@@ -38,15 +38,16 @@ export default function EarlyLifeSection() {
           className="flex flex-col md:flex-row items-end gap-20"
         >
           <p className="flex-1">
-            His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons.
+            His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons. He grew up around people from various cultures and religions, and remembers life in that multicultural setting as “wonderful and uncomplicated”(As per flight of the Falcon)
+
           </p>
-            <motion.img
-              src={S4_Image}
-              alt="S. Sajad Haider youth"
-              className="w-64 h-auto rounded-lg"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            />
+          <motion.img
+            src={S4_Image}
+            alt="S. Sajad Haider youth"
+            className="w-64 h-auto rounded-lg"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          />
         </motion.div>
 
         {/* Second Paragraph with Image */}
@@ -57,16 +58,17 @@ export default function EarlyLifeSection() {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row items-end gap-20"
         >
-            <motion.img
-              src={S5_Image}
-              alt="Young Haider in uniform"
-              className="w-1/2 h-auto rounded-lg"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            />
-         
+          <motion.img
+            src={S5_Image}
+            alt="Young Haider in uniform"
+            className="w-1/2 h-auto rounded-lg"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          />
+
           <p className="flex-1 text-right">
-            As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan.
+            As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just ”An arm’s length away… I sat on the floor of the stage and gaped at the founder in sheer awe”, sparking the seed of his ambition to become a defender of Pakistan.
+
           </p>
         </motion.div>
       </div>
@@ -79,42 +81,44 @@ export default function EarlyLifeSection() {
         viewport={{ once: true }}
         className="relative dark:bg-black bg-accent h-full"
       >
-          <div className=" p-6 rounded-[10px] border-1 h-full flex flex-col items-center">
-            <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-primary transition-colors">
-              Read More &gt;&gt;
-            </p>
+        <div className=" p-6 rounded-[10px] border-1 h-full flex flex-col items-center">
+          <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-[#9b6dac] transition-colors">
+            Read More &gt;&gt;
+          </p>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-              className="mb-6"
-            >
-              <img
-                src={S6_Image}
-                alt="Sajad Haider and son"
-                className="mx-auto w-full h-auto rounded-lg shadow-lg"
-              />
-            </motion.div>
-
-            <TypewriterEffectSmooth
-              words={educationText}
-              className="text-center mb-2"
-              textClassName="xl:text-3xl"
-              cursorClassName="h-8"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            className="mb-6"
+          >
+            <img
+              src={S6_Image}
+              alt="Sajad Haider and son"
+              className="mx-auto w-full h-auto rounded-lg shadow-lg"
             />
+          </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="w-full mt-4"
-            >
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent my-4" />
-              <p className="text-sm text-muted-foreground">
-                "The foundation of greatness is laid in childhood"
-              </p>
-            </motion.div>
-          </div>
-       
+
+
+          <TypewriterEffectSmooth
+            words={educationText}
+            className="text-center mb-2 min-w-50"
+            textClassName="xl:text-3xl"
+            cursorClassName="h-8"
+          />
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="w-full mt-4"
+          >
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent my-4" />
+            <p className="text-sm text-muted-foreground">
+              "The foundation of greatness is laid in childhood"
+            </p>
+          </motion.div>
+        </div>
+
       </motion.div>
     </div>
   );

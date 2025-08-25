@@ -42,11 +42,12 @@ export default function Footer() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              AN ENDURING LEGACY
+              A LEGACY
             </motion.h2>
             
-            As a teenager, S. Sajad Haider aspired to follow in the footsteps of his heroes. Watching cadets at Quetta Academy from just six feet away, the seed of ambition was planted - to become a defender of Pakistan's skies and a symbol of national pride.
-          </motion.div>
+Sajad Haider fought for the truth. He has left a lasting legacy, one that emphasizes honor, integrity, and having the humility to learn and grow from one’s mistakes. But above all else, to have faith in Allah that He will help you in your time of need.
+Potential quote for this section, before or after:
+“Your integrity is your number one asset. That is the one thing that they cannot take from you. They can take everything away from you, but not that. Your knowledge is what you use to fight the nepotism and corruption          </motion.div>
 
           {/* Right - Jet Graphic */}
           <motion.div

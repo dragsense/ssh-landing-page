@@ -98,9 +98,7 @@ export const TextRevealCard = ({
           className={cn("absolute bg-[#1d1c20] z-20  will-change-transform", hoverClassName)}
         >
           <p
-            style={{
-              textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-            }}
+        
             className={cn("text-base sm:text-[3rem] py-10 font-bold text-white  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300", revealTextClassName)}
           
           >
@@ -117,7 +115,7 @@ export const TextRevealCard = ({
           className=" w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] ">
           <p className={cn("text-base sm:text-[3rem] font-bold bg-clip-text text-transparent bg-[#323238]", textClassName)}>
             {text}
           </p>

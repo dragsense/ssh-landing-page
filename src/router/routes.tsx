@@ -3,6 +3,7 @@ import RootLayout from "@/components/layouts/RootLayouts";
 import Home from "@/pages/HomePage";
 import EarlyLife from "@/pages/EarlyLifePage";
 import WarLife from "@/pages/WarLifePage";
+import BusinessMan from "@/pages/Businessman";
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/early-life", element: <EarlyLife /> },
-       { path: "/war-life", element: <WarLife /> }
+       { path: "/war-life", element: <WarLife /> },
+        { path: "/business-man", element: <BusinessMan /> }
     ]
   }
 ]);
