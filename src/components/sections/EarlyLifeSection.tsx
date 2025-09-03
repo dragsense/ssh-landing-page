@@ -38,7 +38,8 @@ export default function EarlyLifeSection() {
           className="flex flex-col md:flex-row items-end gap-20"
         >
           <p className="flex-1">
-            His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons. He grew up around people from various cultures and religions, and remembers life in that multicultural setting as “wonderful and uncomplicated”(As per flight of the Falcon)
+            Sajad Haider spent most of his early life within a tin-roofed home, two of which were gifted to his father by Nawab Mehran Khan Bugti in a complex of eight houses that he’d built. He grew up with Akbar Bugti and his siblings, and remembered Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. He lived around people from various cultures and religions, and recalled life in that multicultural setting as “wonderful and uncomplicated”
+
 
           </p>
           <motion.img
@@ -67,7 +68,8 @@ export default function EarlyLifeSection() {
           />
 
           <p className="flex-1 text-right">
-            As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just ”An arm’s length away… I sat on the floor of the stage and gaped at the founder in sheer awe”, sparking the seed of his ambition to become a defender of Pakistan.
+As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just ”An arm’s length away… (he) sat on the floor of the stage and gaped at the founder in sheer awe”, sparking the seed of his ambition to become a defender of Pakistan.
+
 
           </p>
         </motion.div>

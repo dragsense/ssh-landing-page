@@ -2,22 +2,31 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Award1 from '@/assets/images/award-1.png';
-import Award2 from '@/assets/images/award-2.png';
-import Award3 from '@/assets/images/award-3.png';
-import Award4 from '@/assets/images/award-4.png';
+import Award1 from '@/assets/images/220px-Sitara_-_i_-Jurat_.png';
+import Award3 from '@/assets/images/PAF_GoldenEagleAward.png';
+import Award4 from '@/assets/images/Tamgha-e-Diffa_Medal_Obverse.png';
+import Award5 from '@/assets/images/Sitara-e-Harb_1965_War_Ribbon.png';
+import Award6 from '@/assets/images/Sitara-e-Harb_1971_War.png';
+import Award7 from '@/assets/images/Tamgha-e-Jang 71.png';
+import Award8 from '@/assets/images/War_Medal_1965(Tamgha-e-Jang,_A.H.1385).png';
+
+
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 const awards = [
-  { label: "Golden Eagle", src: Award1 },
-  { label: "Sitara-e-Jurrat", src: Award2 },
-  { label: "Tamgha-e-Defence", src: Award3 },
-  { label: "War Medal 1965", src: Award4 },
-    { label: "Golden Eagle", src: Award1 },
-  { label: "Sitara-e-Jurrat", src: Award2 },
-  { label: "Tamgha-e-Defence", src: Award3 },
-  { label: "War Medal 1965", src: Award4 },
+    { label: "Golden Eagle", src: Award3 },
+  { label: "Sitara-e-Jurrat", src: Award1 },
+  { label: "Tamgha-e-Diffa", src: Award4 },
+     { label: "Sitara-e-Harb 65", src: Award5 },
+  { label: "Sitara-e-Harb 71", src: Award6 },
+  { label: "Tamgha-e-Jang 71", src: Award7 },
+ { label: "Tamgha-e-Jang 65", src: Award8 },
+
+   { label: "Golden Eagle", src: Award3 },
+  { label: "Sitara-e-Jurrat", src: Award1 },
+    { label: "Tamgha-e-Diffa", src: Award4 },
+    { label: "Sitara-e-Harb 65", src: Award5 },
 ];
 
 export default function AwardSlider() {

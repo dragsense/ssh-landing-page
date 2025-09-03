@@ -50,12 +50,12 @@ export default function InnerPageHero({ title, content, image }: { title: string
                     transition={{ duration: 0.7, type: "spring" }}
                     className="relative m-10 h-2/"
                 >
-                    <div className="absolute -top-8 -right-8 w-5/6 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
+                    <div className="absolute -top-8 -right-0 w-4/5 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
 
                         <motion.img
                             src={image}
                             alt="EarlyLife"
-                            className="relative z-10 rounded-xl w-full h-120 shadow-2xl object-cover object-top"
+                            className="relative z-10 rounded-xl w-auto h-120 shadow-2xl object-contain object-top"
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         />

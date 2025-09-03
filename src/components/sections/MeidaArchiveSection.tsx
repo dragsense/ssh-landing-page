@@ -11,66 +11,67 @@ import News3 from "@/assets/archive/news-3.png";
 
 const mediaItems = [
   {
+    title: "Pakistan Failed Indian Mission | Pak India 1965 War | Sayed Sajad Haider | Breaking News",
+    source: "BOL News Official",
+    image: "https://img.youtube.com/vi/sNCUcOE5IqI/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=sNCUcOE5IqI&t=11s",
+  },
+  {
+    title: "INTERVIEW WITH AIR COMMODORE SAJAD HAIDER (Ret’d Pakistan Air Force)",
+    source: "William Butt Interviews",
+    image: "https://img.youtube.com/vi/ojGlQFLIKjc/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=ojGlQFLIKjc",
+  },
+  {
     title: "Whispers of the Forgotten | Untold Stories of 1965 and 1971 Wars",
-    source: "/ RAVA Documentary Films",
-    image: News1,
-    link: "#"
-  },
-  {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
-  },
-  {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
-  },
-  {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
+    source: "Rava Documentary Films",
+    image: "https://img.youtube.com/vi/dWK4MPZVJ0c/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=dWK4MPZVJ0c&t=68s",
   },
   {
     title: "Strike at Pathankot | War Diaries | Episode 6",
-    source: "/ TCM Originals",
-    image: News2,
-    link: "#"
+    source: "TCM Originals",
+    image: "https://img.youtube.com/vi/JGxedPB3iJI/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=JGxedPB3iJI&t=13s",
   },
   {
-    title: "Whispers of the Forgotten | Untold Stories of 1965 and 1971 Wars",
-    source: "/ RAVA Documentary Films",
-    image: News1,
-    link: "#"
+    title: "EXCLUSIVE: Air Commodore Sajjad Haider's Emotional Plea",
+    source: "Siasat.pk",
+    image: "https://img.youtube.com/vi/rutrv7J4dQY/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=rutrv7J4dQY",
   },
   {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
+    title: "A Day with Fighter Pilot Air Cdre S. Sajjad Haider VLOG",
+    source: "Ayesh Medic",
+    image: "https://img.youtube.com/vi/BR3kxxikzgk/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=BR3kxxikzgk&t=134s",
   },
   {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
+    title: "PAF 1965 BBC Interview",
+    source: "Zohare Haider",
+    image: "https://img.youtube.com/vi/A2ueJJKJgqE/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=A2ueJJKJgqE",
   },
   {
-    title: "Whispers of the Forgotten | Untold Stories of 1965 and 1971 Wars",
-    source: "/ RAVA Documentary Films",
-    image: News1,
-    link: "#"
+    title: "Air Commodore (Retired) S. Sajjad Haider Funeral Prayers",
+    source: "BOL News",
+    image: "https://img.youtube.com/vi/BnzN9tDc4eg/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=BnzN9tDc4eg",
   },
   {
-    title: "Pakistan Failed Indian Mission | 1965 War",
-    source: "/ BOL News",
-    image: News3,
-    link: "#"
+    title: "A Glance at the Life of Syed Sajad Haider",
+    source: "Air Cdre Sajjad",
+    image: "https://img.youtube.com/vi/GEPLCkTjGY4/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=GEPLCkTjGY4&t=16s",
+  },
+  {
+    title: "Tribute To A.M. Asghar Khan | Speech by Air Commodore (R) Sayed Sajad Haider",
+    source: "Air Cdre Sajjad",
+    image: "https://img.youtube.com/vi/4d5c03JEoCg/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=4d5c03JEoCg",
   },
 ];
+
 
 export default function MediaArchiveSection() {
   const [index, setIndex] = useState(0);

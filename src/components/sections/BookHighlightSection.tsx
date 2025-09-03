@@ -1,13 +1,9 @@
 // components/BookHighlightSection.tsx
 import React from "react";
-import { Download, ArrowRight, ShoppingCart } from "lucide-react";
+import {  ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { WavyBackground } from "@/components/ui/wavy-background";
-import { Button } from "@/components/ui/button";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import DemoBook from "@/assets/images/demo-book.png";
+import DemoBook from "@/assets/images/bookcover.jpg";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
 export default function BookHighlightSection() {
@@ -22,7 +18,7 @@ export default function BookHighlightSection() {
     { text: "1971", className: "text-red-500 dark:text-red-300" },
   ];
 
-  const descriptionText = `Flight of the Falcon is about the spectacular episodes, trials and tribulations I had to face during my 28 years in the Pakistan Air Force.`;
+  const descriptionText = `"Flight of the Falcon is about the spectacular episodes, trials and tribulations I had to face during my 28 years in the Pakistan Air Force."`;
 
   return (
     <div className="max-w-screen-lg mx-auto pb-20" >

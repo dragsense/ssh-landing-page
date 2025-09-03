@@ -11,7 +11,7 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
 
-const heroDescription = `A Pakistani fighter pilot and former one-star rank officer in the Pakistan Air Force (PAF). He was best known for leading a devastating Blitzkrieg on the Pathankot airbase in India on 6 September during the Indo-Pakistani air war of 1965.`;
+const heroDescription = `A Pakistani fighter pilot and former one-star rank officer in the Pakistan Air Force (PAF). He was best known for leading a devastating Blitzkrieg on the Pathankot airbase in India on 6 September during the Indo-Pakistani air war of 1965. `;
 
 const achievementsText = `Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.`;
 

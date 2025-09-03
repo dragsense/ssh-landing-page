@@ -1,10 +1,24 @@
 
 import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
-import S4_Image from '@/assets/images/s4.png';
-import S5_Image from '@/assets/images/s5.png';
-import S6_Image from '@/assets/images/s6.png';
-import S7_Image from '@/assets/images/s7.png';
+import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
+import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
+import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
+import S7_Image from '@/assets/images/airforce/Sayed_Sajad_Haider_(Flight_Cadet,_Pakistan_Air_Force).jpg';
+import S8a_Image from '@/assets/images/airforce/WhatsApp Image 2025-01-14 at 17.28.47.jpeg';
+import S9a_Image from '@/assets/images/airforce/s1.jpg';
+import S10a_Image from '@/assets/images/airforce/s2.jpg';
+import S8_Image from '@/assets/images/airforce/s10.jpg';
+import S9_Image from '@/assets/images/airforce/s11.jpg';
+import S10_Image from '@/assets/images/airforce/s12.jpg';
+import S11_Image from '@/assets/images/airforce/s3.jpg';
+import S12_Image from '@/assets/images/airforce/s4.jpg';
+import S13_Image from '@/assets/images/airforce/s5.jpg';
+import S14_Image from '@/assets/images/airforce/s6.jpg';
+import S15_Image from '@/assets/images/airforce/s7.jpg';
+import S16_Image from '@/assets/images/airforce/s8.jpg';
+import S17_Image from '@/assets/images/airforce/s9.jpg';
+
 
 export function LifeAtTheAirforce() {
     return <HeroParallax products={products}>
@@ -59,83 +73,83 @@ export const products = [
         title: "",
         link: "",
         thumbnail:
-            S4_Image,
+            S8a_Image,
     },
     {
         title: "",
         link: "",
         thumbnail:
-            S5_Image,
+            S9a_Image,
     },
     {
         title: "",
         link: "",
         thumbnail:
-            S6_Image,
-    },
-
-    {
-        title: "",
-        link: "",
-        thumbnail:
-            S7_Image,
-    },
-    {
-        title: "",
-        link: "",
-        thumbnail:
-            S4_Image,
-    },
-    {
-        title: "",
-        link: "",
-        thumbnail:
-            S5_Image,
-    },
-    {
-        title: "",
-        link: "",
-        thumbnail:
-            S6_Image,
+            S10a_Image,
     },
 
     {
         title: "",
         link: "",
         thumbnail:
-            S7_Image,
+            S8_Image,
     },
     {
         title: "",
         link: "",
         thumbnail:
-            S6_Image,
-    },
-
-    {
-        title: "",
-        link: "",
-        thumbnail:
-            S7_Image,
+            S9_Image,
     },
     {
         title: "",
         link: "",
         thumbnail:
-            S4_Image,
+            S10_Image,
     },
     {
         title: "",
         link: "",
         thumbnail:
-            S6_Image,
+            S11_Image,
     },
 
     {
         title: "",
         link: "",
         thumbnail:
-            S7_Image,
+            S12_Image,
+    },
+    {
+        title: "",
+        link: "",
+        thumbnail:
+            S13_Image,
+    },
+
+    {
+        title: "",
+        link: "",
+        thumbnail:
+            S14_Image,
+    },
+    {
+        title: "",
+        link: "",
+        thumbnail:
+            S15_Image,
+    },
+    {
+        title: "",
+        link: "",
+        thumbnail:
+            S16_Image,
+    },
+
+    {
+        title: "",
+        link: "",
+        thumbnail:
+            S17_Image,
     },
     {
         title: "",
