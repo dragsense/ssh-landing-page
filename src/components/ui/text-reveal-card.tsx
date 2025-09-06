@@ -99,7 +99,7 @@ export const TextRevealCard = ({
         >
           <p
         
-            className={cn("text-base sm:text-[3rem] py-10 font-bold text-white  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300", revealTextClassName)}
+            className={cn("text-base text-[3rem] py-10 font-bold text-white  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300", revealTextClassName)}
           
           >
             {revealText}

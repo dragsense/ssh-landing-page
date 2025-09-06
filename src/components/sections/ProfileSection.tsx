@@ -13,7 +13,7 @@ export default function BusinessmanSection() {
 
   return (
     <div className="max-w-screen-lg mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18  z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 z-10">
         {/* TEXT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -22,6 +22,7 @@ export default function BusinessmanSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-8"
         >
+          
           <TextRevealCard
             text="The Businessman"
             revealText="S. Sajad Haider"

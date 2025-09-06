@@ -19,15 +19,15 @@ export default function Home() {
             <AwardSection />
         </section>
 
-        <section className="relative my-10 md:my-30 -mb-30 pt-30 dark:bg-black bg-accent">
+        <section className="relative my-10 md:my-30 pt-30 dark:bg-black bg-accent p-2">
             <ProfileSection />
         </section>
 
-        <section className="relative my-10 md:my-40 p-2"    >
+        <section className="relative mt-40 md:my-40 p-2"    >
             <QuoteSection />
         </section>
 
-        <section className="relative max-w-screen-lg my-70 mx-auto p-2 flex items-center">
+        <section className="relative max-w-screen-lg md:mb-70 mx-auto p-2 flex items-center">
             <RecordSection />
         </section>
         <div id="publications"></div>

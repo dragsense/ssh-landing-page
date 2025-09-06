@@ -88,7 +88,7 @@ export default function TrueHeroComponent() {
 
 
       {/* Right Column */}
-      <div className="space-y-5 flex flex-col h-100 justify-between">
+      <div className="space-y-5 flex flex-col justify-between">
         {/* Hero Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
