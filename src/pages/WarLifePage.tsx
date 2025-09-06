@@ -1,4 +1,4 @@
-import S7_Image from "@/assets/images/s7.png";
+import S7_Image from "@/assets/images/S7.png";
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import { LifeAtTheAirforce } from "@/components/sections/LifeAtTheAirforce";
 import SaviourOfLahoreSection from "@/components/sections/SaviourOfLahoreSection";
