@@ -4,7 +4,7 @@ module.exports = {
     {
       name: "ssh-app",
       script: "serve",
-      args: "-s dist -l 3000",
+      args: ["-s", "dist", "-l", "3000"],
       env: {
         NODE_ENV: "production",
       },
