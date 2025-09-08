@@ -3,8 +3,8 @@ module.exports = {
   apps: [
     {
       name: "ssh-app",
-      script: "serve",
-      args: ["-s", "dist", "-l", "3000"],
+      script: "npm",
+      args: "run serve",
       env: {
         NODE_ENV: "production",
       },
