@@ -6,8 +6,8 @@ module.exports = {
       args: "-s dist -l 3000",
       env: {
         NODE_ENV: "production",
-      },
-    },
+      }
+    }
   ],
 
   deploy: {
@@ -19,8 +19,6 @@ module.exports = {
       path: "/var/www/ssh_demo_web_usr/data/www/ssh-demo.websight.digital",
       key: "C:/Users/ranaa/.ssh/trainer-server",
       "post-deploy": "sh ./deploy.sh",
-    },
-
-   
-  },
+    }
+  }
 };
