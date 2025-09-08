@@ -12,4 +12,4 @@ pnpm install --frozen-lockfile
 npm run build
 
 # reload app
-pm2 reload ecosystem.config.js --only ssh-app
+pm2 reload ecosystem.config.cjs --only ssh-app
