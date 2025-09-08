@@ -4,7 +4,7 @@ module.exports = {
     {
       name: "ssh-app",
       script: "npm",
-      args: "run serve",
+      args: ["run", "serve"],
       env: {
         NODE_ENV: "production",
       },
