@@ -1,3 +1,4 @@
+// ecosystem.config.js
 module.exports = {
   apps: [
     {
@@ -6,8 +7,8 @@ module.exports = {
       args: "-s dist -l 3000",
       env: {
         NODE_ENV: "production",
-      }
-    }
+      },
+    },
   ],
 
   deploy: {
@@ -18,7 +19,8 @@ module.exports = {
       repo: "git@github.com:dragsense/ssh-landing-page.git",
       path: "/var/www/ssh_demo_web_usr/data/www/ssh-demo.websight.digital",
       key: "C:/Users/ranaa/.ssh/trainer-server",
+      "post-setup": "",
       "post-deploy": "sh ./deploy.sh",
-    }
-  }
+    },
+  },
 };
