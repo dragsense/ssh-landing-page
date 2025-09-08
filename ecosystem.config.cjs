@@ -3,8 +3,9 @@ module.exports = {
   apps: [
     {
       name: "ssh-app",
-      script: "npm",
-      args: ["run", "serve"],
+      script: "serve",
+      args: "-s dist -l 3000",
+      cwd: "/var/www/ssh_demo_web_usr/data/www/ssh-demo.websight.digital/current",
       env: {
         NODE_ENV: "production",
       },
