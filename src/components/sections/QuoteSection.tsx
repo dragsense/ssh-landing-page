@@ -22,7 +22,7 @@ const quotes = [
 export default function QuoteSlider() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [wrapperHeight, setWrapperHeight] = useState(300);
+  const [wrapperHeight, setWrapperHeight] = useState(400);
 
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -58,16 +58,16 @@ export default function QuoteSlider() {
   useEffect(() => {
     if (textRef.current) {
       const height = textRef.current.offsetHeight;
-      setWrapperHeight(height + 120); // +120px for arrows + plane
+      setWrapperHeight(Math.max(height + 150, 400)); // +150px for arrows + plane, minimum 400px
     }
   }, [index]);
 
   return (
-    <div className="max-w-screen-lg mx-auto relative">
+    <div className="max-w-screen-lg mx-auto relative py-8 md:py-12" >
 
       <Quote
-        className="absolute left-0  top-0 opacity-10"
-        size={100}
+        className="absolute left-0 top-0 opacity-10 z-0"
+        size={80}
         strokeWidth={1}
       />
 
@@ -88,40 +88,40 @@ export default function QuoteSlider() {
               duration: 0.5,
               ease: [0.65, 0, 0.35, 1],
             }}
-            className="px-4 absolute right-0"
+            className="px-4 absolute right-0 z-10"
             ref={textRef}
           >
-            <p className="text-2xl sm:text-3xl font-medium leading-relaxed font-satisfy italic">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed font-satisfy italic">
               “{quotes[index].text}”
             </p>
-            <div className="mt-4 flex items-center justify-left gap-4">
-              <span className="text-sm font-light">{quotes[index].author}</span>
-              <span className="w-24 h-px bg-white/30"></span>
+            <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-left gap-2 sm:gap-4">
+              <span className="text-xs sm:text-sm font-light">{quotes[index].author}</span>
+              <span className="w-16 sm:w-24 h-px bg-white/30"></span>
             </div>
           </motion.div>
         </AnimatePresence>
 
         {/* Arrows stay inside wrapper */}
-        <div className="absolute bottom-12 right-6 flex gap-3">
+        <div className="absolute bottom-8 md:bottom-12 right-4 md:right-6 flex gap-2 md:gap-3 z-20">
           <Button
             variant="ghost"
             size="icon"
-            className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
+            className="shrink-0 rounded-full h-10 w-10 md:h-12 md:w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
             onClick={handlePrev}
           >
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
             </motion.div>
           </Button>
 
           <Button
             variant="ghost"
             size="icon"
-            className="shrink-0 rounded-full h-12 w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
+            className="shrink-0 rounded-full h-10 w-10 md:h-12 md:w-12 bg-black/10 hover:bg-[#4e8f79]/50 cursor-pointer"
             onClick={handleNext}
           >
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
             </motion.div>
           </Button>
         </div>
@@ -131,7 +131,7 @@ export default function QuoteSlider() {
           key={index} // re-trigger animation on slide change
           src={JetImage}
           alt="Jet"
-          className="absolute -top-25 right-0 w-[200px] rotate-[2deg]"
+          className="absolute -top-16 md:-top-20 lg:-top-25 right-0 w-[120px] md:w-[160px] lg:w-[200px] rotate-[2deg] z-5"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}

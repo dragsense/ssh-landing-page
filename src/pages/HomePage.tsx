@@ -11,35 +11,37 @@ import TrueHeroSection from "@/components/sections/TrueHeroSection";
 export default function Home() {
     return (<HomePageLayout>
 
-        <section className="relative max-w-screen-lg mx-auto my-10 md:my-30 p-2">
+        <section className="relative max-w-screen-lg mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <TrueHeroSection />
         </section>
 
-        <section id="awards" className="relative max-w-screen-xl ml-auto my-10 md:my-30 p-2">
+        <section id="awards" className="relative max-w-screen-xl mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <AwardSection />
         </section>
 
-        <section className="relative my-10 md:my-30 pt-30 dark:bg-black bg-accent p-2">
+        <section className="relative my-8 md:my-16 lg:my-24 pt-8 md:pt-16 lg:pt-24 dark:bg-black bg-accent px-4 md:px-6">
             <ProfileSection />
         </section>
 
-        <section className="relative mt-40 md:my-40 p-2"    >
+        <section className="relative mt-28 mb-10 px-4 md:px-6">
             <QuoteSection />
         </section>
 
-        <section className="relative max-w-screen-lg md:mb-70 mx-auto p-2 flex items-center">
+        <section className="relative max-w-screen-lg mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6 flex items-center">
             <RecordSection />
         </section>
+        
         <div id="publications"></div>
-        <section id="books" className="relative my-10 md:my-30 p-2" >
+        
+        <section id="books" className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <BookHighlightSection />
         </section>
 
-        <section className="relative max-w-screen-lg mx-auto my-10 md:my-30 p-2">
+        <section className="relative max-w-screen-lg mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <MediaArchiveSection />
         </section>
 
-        <section className="relative max-w-screen-xl mx-auto p-2">
+        <section className="relative max-w-screen-xl mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifeSection />
         </section>
 

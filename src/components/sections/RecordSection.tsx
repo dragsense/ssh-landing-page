@@ -12,13 +12,13 @@ export default function RecordSection() {
 
     <>
 
-      <div className="grid md:grid-cols-2 gap-5 items-center h-3/4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
         {/* Text Side */}
         <div className="space-y-4">
-          <h2 className="text-5xl font-bold text-muted-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-4">
             WORLD RECORD LOOP OF 1958
           </h2>
-          <p className="text-sm leading-relaxed max-w-md">
+          <p className="text-sm md:text-base leading-relaxed max-w-md">
             On 2 February 1958, flying in the No. 3 position, F/L Haider was part of the 16 F-86 Sabres aerobatic team led by Wg. Cdr. Mitty Masud that set a world record performing a 16-aircraft diamond loop.
 
           </p>
@@ -58,18 +58,18 @@ export default function RecordSection() {
           </div>
 
           <div className="space-y-4">
-            <div className="flex items-center justify-between w-full">
-              <h3 className="text-md font-semibold">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-2 sm:gap-4">
+              <h3 className="text-sm md:text-base font-semibold">
                 DIAMOND LOOP
               </h3>
-              <h3 className="text-md font-semibold">
+              <h3 className="text-sm md:text-base font-semibold">
                 16 F-86 SABRE
               </h3>
-              <h3 className="text-md font-semibold">
+              <h3 className="text-sm md:text-base font-semibold">
                 FEBRUARY 2, 1958
               </h3>
             </div>
-            <div className="text-center text-muted text-6xl font-bold">
+            <div className="text-center text-muted text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               <span>
                 PAF - FALCONS
               </span>

@@ -13,14 +13,14 @@ export default function BusinessmanSection() {
 
   return (
     <div className="max-w-screen-lg mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 md:gap-12 lg:gap-18 z-10">
         {/* TEXT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, type: "spring" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="space-y-8"
+          className="space-y-6 md:space-y-8"
         >
           
           <TextRevealCard
@@ -54,7 +54,7 @@ export default function BusinessmanSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, type: "spring" }}
-          className="relative -mb-10"
+          className="relative -mb-6 md:-mb-10"
         >
           <div className="absolute -top-6 -left-6 w-5/6 h-5/6 border-2 border-primary/20 dark:border-white/30 rounded-tl-md rounded-tr-md rounded-bl-md z-0 dark:border-primary/10"></div>
 

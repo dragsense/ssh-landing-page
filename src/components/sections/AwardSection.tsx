@@ -61,7 +61,6 @@ export default function AwardSlider() {
       {/* Mobile version */}
       {isMobile ? (
         <div className="relative">
-
           {/* Scrollable slider */}
           <div className="flex gap-4 overflow-x-auto no-scrollbar px-2 snap-x snap-mandatory">
             {awards.map((award, idx) => (
@@ -77,6 +76,13 @@ export default function AwardSlider() {
                 <p className="mt-3 text-center font-medium">{award.label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Swipe indicator */}
+          <div className="flex justify-center mt-4">
+            <p className="text-sm text-muted-foreground flex items-center gap-2">
+              <span>← Swipe to see more awards →</span>
+            </p>
           </div>
         </div>
       ) : (

@@ -8,8 +8,8 @@ import Jet2 from '@/assets/images/jet2.png';
 export default function Footer() {
   return (
   
-      <footer className="relative max-w-screen-xl mx-auto mt-30 p-2">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] items-center justify-between gap-12">
+      <footer className="relative max-w-screen-xl mx-auto mt-16 md:mt-24 lg:mt-30 px-4 md:px-6 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] items-center justify-between gap-8 md:gap-12">
           {/* Left - SSH Logo Outline */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -21,7 +21,7 @@ export default function Footer() {
                 <motion.img
                   src={SSH_Logo_Footer}
                   alt="S. Sajad Haider Legacy"
-                  className="w-28 h-28 object-contain"
+                  className="w-24 h-24 md:w-28 md:h-28 object-contain mx-auto"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />
@@ -37,14 +37,18 @@ export default function Footer() {
             className="text-center"
           >
             <motion.h2 
-              className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-black/10 dark:from-white/10 to-gray-400 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-black/10 dark:from-white/10 to-gray-400 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
               A LEGACY
             </motion.h2>
-Legacy paragraph: Sajad Haider fought for the truth. He has left a lasting legacy, one that emphasizes honor, integrity, humility, and above all else, to have faith in Allah that He will help you in your time of need. </motion.div>
+            <TextGenerateEffect
+              words="Sajad Haider fought for the truth. He has left a lasting legacy, one that emphasizes honor, integrity, humility, and above all else, to have faith in Allah that He will help you in your time of need."
+              className="text-sm md:text-base leading-relaxed text-muted-foreground"
+            />
+          </motion.div>
 
           {/* Right - Jet Graphic */}
           <motion.div
@@ -68,7 +72,7 @@ Legacy paragraph: Sajad Haider fought for the truth. He has left a lasting legac
             <motion.img
               src={Jet2}
               alt="Jet flying into legacy"
-              className="w-full max-w-xs mx-auto"
+              className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-xs mx-auto"
               whileHover={{ 
                 scale: 1.05,
                 transition: { type: "spring", stiffness: 300 } 
@@ -83,7 +87,7 @@ Legacy paragraph: Sajad Haider fought for the truth. He has left a lasting legac
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
-          className="my-4 text-center text-xs text-gray-500"
+          className="mt-8 md:mt-12 text-center text-xs md:text-sm text-gray-500"
         >
           © {new Date().getFullYear()} S. Sajad Haider Legacy. All rights reserved.
         </motion.div>

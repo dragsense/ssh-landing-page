@@ -176,9 +176,9 @@ export default function MediaArchiveSection() {
     <>
       <Spotlight />
       <div className="z-10">
-        <h2 className="text-4xl 
+        <h2 className="text-2xl sm:text-3xl md:text-4xl 
         font-bold 
-        text-center mb-12 
+        text-center mb-8 md:mb-12 
         bg-gradient-to-b from-foreground 
         to-muted-foreground 
         bg-clip-text 
@@ -186,7 +186,7 @@ export default function MediaArchiveSection() {
           MEDIA ARCHIVE
         </h2>
 
-        <div className="relative h-[400px] w-full flex items-center justify-center">
+        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full flex items-center justify-center">
 
           <div className="relative w-full h-full">
             {mediaItems.map((item, i) => {
@@ -201,10 +201,10 @@ export default function MediaArchiveSection() {
                   className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
                   onClick={() => !isActive && (i > index ? next() : prev())}
                 >
-                  <Card className="w-[240px] md:w-[320px] border rounded-xl overflow-hidden shadow-lg pt-0">
+                  <Card className="w-[200px] sm:w-[240px] md:w-[320px] border rounded-xl overflow-hidden shadow-lg pt-0">
                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                       <CardHeader className="p-0">
-                        <div className="relative h-48 w-full overflow-hidden">
+                        <div className="relative h-36 sm:h-40 md:h-48 w-full overflow-hidden">
                           <motion.img
                             src={item.image}
                             alt={item.title}
@@ -225,9 +225,9 @@ export default function MediaArchiveSection() {
                           </div>
                         </div>
                       </CardHeader>
-                      <CardContent className="p-4">
-                        <h3 className="font-semibold text-lg line-clamp-2">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground mt-2">{item.source}</p>
+                      <CardContent className="p-3 md:p-4">
+                        <h3 className="font-semibold text-sm md:text-base lg:text-lg line-clamp-2">{item.title}</h3>
+                        <p className="text-xs md:text-sm text-muted-foreground mt-2">{item.source}</p>
                       </CardContent>
                     </a>
                   </Card>
@@ -238,7 +238,7 @@ export default function MediaArchiveSection() {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-center gap-4 mt-8">
+        <div className="flex justify-center gap-2 md:gap-4 mt-6 md:mt-8">
           <Button
             variant="outline"
             size="icon"

@@ -13,18 +13,18 @@ const educationText = [
 
 export default function EarlyLifeSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-start z-10">
+    <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12 items-start z-10">
       {/* Left Column */}
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-8 md:gap-12">
         {/* First Paragraph + Image */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center md:items-end gap-6"
+          className="flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-6"
         >
-          <p className="flex-1 text-base leading-relaxed">
+          <p className="flex-1 text-sm md:text-base leading-relaxed">
             Sajad Haider spent most of his early life within a tin-roofed home,
             two of which were gifted to his father by Nawab Mehran Khan Bugti in
             a complex of eight houses that he’d built. He grew up with Akbar
@@ -37,7 +37,7 @@ export default function EarlyLifeSection() {
           <motion.img
             src={S4_Image}
             alt="S. Sajad Haider youth"
-            className="w-full max-w-[250px] md:max-w-[280px] h-auto rounded-lg object-cover"
+            className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[280px] h-auto rounded-lg object-cover"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
           />
@@ -49,9 +49,9 @@ export default function EarlyLifeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse items-center md:items-end gap-6"
+          className="flex flex-col md:flex-row-reverse items-center md:items-end gap-4 md:gap-6"
         >
-          <p className="flex-1 text-base leading-relaxed text-right md:text-left">
+          <p className="flex-1 text-sm md:text-base leading-relaxed text-right md:text-left">
             As a teenager, he aspired to follow in the footsteps of his hero,
             Quaid-e-Azam, who he saw at his old school in Quetta, sitting just
             ”An arm’s length away… (he) sat on the floor of the stage and gaped
@@ -61,7 +61,7 @@ export default function EarlyLifeSection() {
           <motion.img
             src={S5_Image}
             alt="Young Haider in uniform"
-            className="w-full max-w-[300px] h-auto rounded-lg object-cover"
+            className="w-full max-w-[250px] sm:max-w-[300px] h-auto rounded-lg object-cover"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
           />
@@ -74,7 +74,7 @@ export default function EarlyLifeSection() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         viewport={{ once: true }}
-        className="relative dark:bg-black bg-accent rounded-xl shadow-lg p-6 flex flex-col items-center"
+        className="relative dark:bg-black bg-accent rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center"
       >
         <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-[#9b6dac] transition-colors">
           Read More &gt;&gt;
@@ -88,7 +88,7 @@ export default function EarlyLifeSection() {
           <img
             src={S6_Image}
             alt="Sajad Haider and son"
-            className="mx-auto w-full max-w-[280px] h-auto rounded-lg shadow-lg"
+            className="mx-auto w-full max-w-[240px] sm:max-w-[280px] h-auto rounded-lg shadow-lg"
           />
         </motion.div>
 

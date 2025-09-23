@@ -18,7 +18,7 @@ const achievementsText = `Haider personally destroyed four Indian aircraft, 11 I
 export default function TrueHeroComponent() {
   return (
 
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-20 items-start z-10 ">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 md:gap-12 lg:gap-20 items-start z-10">
       {/* Left Column */}
       <div className="flex flex-col gap-2 h-full">
 
@@ -52,7 +52,7 @@ export default function TrueHeroComponent() {
           </motion.div>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-8 md:space-y-12 lg:space-y-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function TrueHeroComponent() {
 
 
       {/* Right Column */}
-      <div className="space-y-5 flex flex-col justify-between">
+      <div className="space-y-4 md:space-y-6 lg:space-y-8 flex flex-col justify-between">
         {/* Hero Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

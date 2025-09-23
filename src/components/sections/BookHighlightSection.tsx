@@ -25,13 +25,13 @@ export default function BookHighlightSection() {
 
 
 
-      <div className="grid md:grid-cols-3 gap-8 items-center z-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center z-10">
         {/* Left Column - Title */}
         <div className="space-y-4 flex flex-col justify-between h-full">
-          <h2 className="text-4xl  font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Demolishing Myths of Indo Pak Wars 1965-1971
           </h2>
-          <p className="text-sm mt-4 text-muted-foreground">
+          <p className="text-sm md:text-base mt-4 text-muted-foreground">
             Biography by <br />
             <span className="font-semibold text-foreground">S. Sajad Haider</span>
           </p>
@@ -51,7 +51,7 @@ export default function BookHighlightSection() {
           <img
             src={DemoBook}
             alt="Flight of the Falcon"
-            className="w-auto md:w-72 rounded-lg shadow-xl"
+            className="w-full max-w-xs mx-auto md:w-72 rounded-lg shadow-xl"
           />
 
           <motion.div
@@ -65,10 +65,10 @@ export default function BookHighlightSection() {
         </motion.div>
 
         {/* Right Column - Description */}
-        <div className="flex flex-col justify-between h-full space-y-6">
+        <div className="flex flex-col justify-between h-full space-y-4 md:space-y-6">
           <TextGenerateEffect
             words={descriptionText}
-            className="text-sm font-semibold text-muted-background dark:text-muted-foreground"
+            className="text-sm md:text-base font-semibold text-muted-background dark:text-muted-foreground"
 
           />
          

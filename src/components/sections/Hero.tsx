@@ -32,7 +32,7 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, type: "spring" }}
-        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-contain bg-center bg-no-repeat"
+        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-[length:700px_400px] md:bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         {/* Mobile Heading */}
