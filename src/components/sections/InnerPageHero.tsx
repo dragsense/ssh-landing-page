@@ -54,7 +54,7 @@ export default function InnerPageHero({ title, content, image }: { title: string
                         className="p-0 border-none bg-transparent w-auto "
                         hoverClassName="bg-background"
                         revealTextClassName="text-dark dark:text-light"
-                        textClassName="text-dark dark:text-light text-xl md:text-2xl"
+                        textClassName="text-dark dark:text-light"
                     />
 
                     <TextGenerateEffect

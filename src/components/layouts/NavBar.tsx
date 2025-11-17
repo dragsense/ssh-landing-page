@@ -10,14 +10,34 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const { theme, toggleTheme } = useTheme();
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [mobileOpen]);
+
+    // Check if mobile on mount and resize
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     const navLinks = [
         { label: "Publications", href: "/#publications" },
         { label: "Early Life", to: "/early-life" },
         { label: "Life At Airforce", to: "/war-life" },
-                { label: "Businessman", to: "/business-man" },
-
+        { label: "Businessman", to: "/business-man" },
     ];
 
     useEffect(() => {
@@ -33,18 +53,24 @@ export default function Navbar() {
     const NavLinks = () => (
         <>
             {navLinks.map((link, i) => (
-                <motion.li key={link.href} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }}>
+                <motion.li 
+                    key={link.href || link.to} 
+                    initial={{ opacity: 0, x: 10 }} 
+                    animate={{ opacity: 1, x: 0 }} 
+                    transition={{ delay: i * 0.1 }}
+                    className="w-full md:w-auto"
+                >
                     {link.to ? <Link
                         to={link.to}
-                        className={linkClass}
-
+                        className={cn(linkClass, "block w-full text-center md:text-left md:w-auto")}
+                        onClick={() => setMobileOpen(false)}
                     >
                         {link.label}
                     </Link> :
                         <a
                             href={link.href}
-                            className={linkClass}
-
+                            className={cn(linkClass, "block w-full text-center md:text-left md:w-auto")}
+                            onClick={() => setMobileOpen(false)}
                         >
                             {link.label}
 
@@ -73,7 +99,7 @@ export default function Navbar() {
                             src={SSHLogo}
                             alt="SSH Logo"
                             className="w-auto"
-                            animate={{ height: scrolled ? 40 : 100 }}
+                            style={{ height: scrolled ? (isMobile ? 50 : 40) : (isMobile ? 60 : 100) }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                         />     </Link>           </motion.div>
 
@@ -86,10 +112,10 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <div className="md:hidden relative z-100">
+                <div className="md:hidden relative z-[101]">
                     <ul className="gap-2 flex items-center">
                         <li>
-                            <Button onClick={toggleTheme} variant="ghost">
+                            <Button onClick={toggleTheme} variant="ghost" size="icon">
                                 {theme === "dark" ? "🌙" : "☀️"}
                             </Button>
                         </li>
@@ -99,6 +125,7 @@ export default function Navbar() {
                                 size="icon"
                                 className="border border-white/20 bg-white/5 hover:bg-white/10"
                                 onClick={() => setMobileOpen(!mobileOpen)}
+                                aria-label="Toggle menu"
                             >
                                 {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                             </Button>
@@ -113,10 +140,14 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="fixed inset-0  backdrop-blur-xl border-b border-white/10 bg-white/5 flex flex-col items-center justify-center space-y-6 pt-20"
+                            className="fixed inset-0 z-[100] backdrop-blur-xl border-b border-white/10 bg-background/95 dark:bg-background/95 flex flex-col items-center justify-center space-y-6 pt-20"
+                            onClick={(e) => {
+                                if (e.target === e.currentTarget) {
+                                    setMobileOpen(false);
+                                }
+                            }}
                         >
-                            <ul className="gap-4 flex flex-col items-center">
-
+                            <ul className="gap-4 flex flex-col items-center w-full px-4" onClick={(e) => e.stopPropagation()}>
                                 <NavLinks />
                             </ul>
                         </motion.div>

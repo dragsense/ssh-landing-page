@@ -13,7 +13,7 @@ export default function SaviourOfLahoreSection() {
     return (
       
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-18 items-center z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 items-center z-10">
 
                 {/* TEXT CONTENT */}
                 <motion.div

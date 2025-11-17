@@ -23,7 +23,7 @@ export default function Home() {
             <ProfileSection />
         </section>
 
-        <section className="relative mt-28 mb-10 px-4 md:px-6">
+        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <QuoteSection />
         </section>
 
@@ -31,7 +31,7 @@ export default function Home() {
             <RecordSection />
         </section>
         
-        <div id="publications"></div>
+        <div id="publications" className="pt-10"></div>
         
         <section id="books" className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
             <BookHighlightSection />

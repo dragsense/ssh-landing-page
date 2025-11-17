@@ -1,6 +1,6 @@
 // components/MediaArchiveSection.tsx
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -76,6 +76,14 @@ const mediaItems = [
 export default function MediaArchiveSection() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 for right, -1 for left
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 768);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const next = () => {
     setDirection(1);
@@ -186,91 +194,157 @@ export default function MediaArchiveSection() {
           MEDIA ARCHIVE
         </h2>
 
-        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full flex items-center justify-center">
-
-          <div className="relative w-full h-full">
-            {mediaItems.map((item, i) => {
-              const style = getCardStyle(i);
-              const isActive = i === index;
-
-              return (
-                <motion.div
-                  key={i}
-                  initial={false}
-                  animate={style}
-                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
-                  onClick={() => !isActive && (i > index ? next() : prev())}
+        {/* Mobile version - Thumb slider */}
+        {isMobile ? (
+          <div className="relative">
+            {/* Scrollable slider */}
+            <div className="flex gap-4 overflow-x-auto no-scrollbar px-2 snap-x snap-mandatory pb-4">
+              {mediaItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex-shrink-0 w-[85%] snap-center"
+                  onClick={() => {
+                    setDirection(idx > index ? 1 : -1);
+                    setIndex(idx);
+                  }}
                 >
-                  <Card className="w-[200px] sm:w-[240px] md:w-[320px] border rounded-xl overflow-hidden shadow-lg pt-0">
+                  <Card className="border rounded-xl overflow-hidden shadow-lg">
                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                       <CardHeader className="p-0">
-                        <div className="relative h-36 sm:h-40 md:h-48 w-full overflow-hidden">
-                          <motion.img
+                        <div className="relative h-48 w-full overflow-hidden">
+                          <img
                             src={item.image}
                             alt={item.title}
                             className="w-full h-full object-cover"
-                            whileHover={{ scale: isActive ? 1.05 : 1.02 }}
-                            transition={{ duration: 0.3 }}
                           />
-                          <div className="absolute inset-0 
-                          bg-gradient-to-t
-                        from-black/80 
-                           to-transparent 
-                           opacity-0 
-                           hover:opacity-100 
-                           transition-opacity 
-                           flex 
-                           items-end p-4">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
                             <span className="text-white text-sm font-medium">Watch Now →</span>
                           </div>
                         </div>
                       </CardHeader>
-                      <CardContent className="p-3 md:p-4">
-                        <h3 className="font-semibold text-sm md:text-base lg:text-lg line-clamp-2">{item.title}</h3>
-                        <p className="text-xs md:text-sm text-muted-foreground mt-2">{item.source}</p>
+                      <CardContent className="p-4">
+                        <h3 className="font-semibold text-sm line-clamp-2">{item.title}</h3>
+                        <p className="text-xs text-muted-foreground mt-2">{item.source}</p>
                       </CardContent>
                     </a>
                   </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
+                </div>
+              ))}
+            </div>
 
-        {/* Navigation */}
-        <div className="flex justify-center gap-2 md:gap-4 mt-6 md:mt-8">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={prev}
-            className="rounded-full"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
-          <div className="flex items-center gap-1">
-            {mediaItems.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setDirection(i > index ? 1 : -1);
-                  setIndex(i);
-                }}
-                className={`w-2 h-2 rounded-full transition-all ${index === i
-                  ? "w-4 bg-primary"
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                  }`}
-              />
-            ))}
+            {/* Swipe indicator */}
+            <div className="flex justify-center mt-4">
+              <p className="text-sm text-muted-foreground flex items-center gap-2">
+                <span>← Swipe to see more videos →</span>
+              </p>
+            </div>
+
+            {/* Dots indicator */}
+            <div className="flex justify-center gap-1 mt-4">
+              {mediaItems.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setDirection(i > index ? 1 : -1);
+                    setIndex(i);
+                  }}
+                  className={`h-2 rounded-full transition-all ${index === i
+                    ? "w-6 bg-primary"
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                    }`}
+                />
+              ))}
+            </div>
           </div>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={next}
-            className="rounded-full"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </Button>
-        </div>
+        ) : (
+          /* Desktop version - 3D carousel */
+          <>
+            <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full flex items-center justify-center">
+              <div className="relative w-full h-full">
+                {mediaItems.map((item, i) => {
+                  const style = getCardStyle(i);
+                  const isActive = i === index;
+
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={false}
+                      animate={style}
+                      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+                      onClick={() => !isActive && (i > index ? next() : prev())}
+                    >
+                      <Card className="w-[200px] sm:w-[240px] md:w-[320px] border rounded-xl overflow-hidden shadow-lg pt-0">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                          <CardHeader className="p-0">
+                            <div className="relative h-36 sm:h-40 md:h-48 w-full overflow-hidden">
+                              <motion.img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover"
+                                whileHover={{ scale: isActive ? 1.05 : 1.02 }}
+                                transition={{ duration: 0.3 }}
+                              />
+                              <div className="absolute inset-0 
+                              bg-gradient-to-t
+                            from-black/80 
+                               to-transparent 
+                               opacity-0 
+                               hover:opacity-100 
+                               transition-opacity 
+                               flex 
+                               items-end p-4">
+                                <span className="text-white text-sm font-medium">Watch Now →</span>
+                              </div>
+                            </div>
+                          </CardHeader>
+                          <CardContent className="p-3 md:p-4">
+                            <h3 className="font-semibold text-sm md:text-base lg:text-lg line-clamp-2">{item.title}</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground mt-2">{item.source}</p>
+                          </CardContent>
+                        </a>
+                      </Card>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex justify-center gap-2 md:gap-4 mt-6 md:mt-8">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={prev}
+                className="rounded-full"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Button>
+              <div className="flex items-center gap-1">
+                {mediaItems.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      setDirection(i > index ? 1 : -1);
+                      setIndex(i);
+                    }}
+                    className={`w-2 h-2 rounded-full transition-all ${index === i
+                      ? "w-4 bg-primary"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                      }`}
+                  />
+                ))}
+              </div>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={next}
+                className="rounded-full"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </Button>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

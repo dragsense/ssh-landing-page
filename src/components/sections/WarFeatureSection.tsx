@@ -9,21 +9,7 @@ export default function WarFeatureSection() {
     return (
         <div className="min-h-screen">
 
-            <div className="overflow-hidden pointer-events-none select-none mb-30">
-                <motion.div
-                    animate={{ x: ["0%", "-100%"] }}
-                    transition={{
-                        duration: 30,
-                        repeat: Infinity,
-                        ease: "linear",
-                    }}
-                    className="text-[3rem] font-bold opacity-5 dark:opacity-[0.03] whitespace-nowrap tracking-wider"
-                >
-                    <span className="text-black dark:text-white">
-                        SAVIOUR OF LAHORE • NOSEY HAIDER • SAVIOUR OF LAHORE • NOSEY HAIDER • SAVIOUR OF LAHORE • NOSEY HAIDER
-                    </span>
-                </motion.div>
-            </div>
+           
 
             <div className="max-w-screen-lg mx-auto my-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
