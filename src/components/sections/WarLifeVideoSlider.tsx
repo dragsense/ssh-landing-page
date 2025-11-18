@@ -131,9 +131,10 @@ export default function WarLifeVideoSlider() {
 
     return (
         <div
-            className="relative h-screen px-4 py-24 flex flex-col justify-between"
+            className="background-contain relative md:h-screen h-[80vh] px-4 pb-24 flex flex-col justify-between"
             style={{
                 backgroundImage: `url(${sliderBackground})`,
+                backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
             }}

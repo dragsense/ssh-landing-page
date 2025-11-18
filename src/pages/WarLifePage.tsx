@@ -20,15 +20,15 @@ export default function WarLife() {
             <AirLifeGallerySlider />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-8 md:my-16 lg:my-30 px-4 md:px-6">
             <WarFeatureSection />
         </section>
 
-        <section className="relative max-w-screen-xl mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative max-w-screen-xl mx-auto my-16 md:my-16 lg:my-50 px-4 md:px-6">
             <SaviourOfLahoreSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative mt-30 md:my-16 lg:my-24 px-4 md:px-6">
             <LifeAtTheAirforce />
         </section>
 

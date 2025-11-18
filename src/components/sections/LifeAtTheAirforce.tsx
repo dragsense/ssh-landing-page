@@ -45,7 +45,7 @@ export function LifeAtTheAirforce() {
     };
 
     return (
-        <div className="w-full py-10 md:py-20 px-4 overflow-visible">
+        <div className="w-full py-10 md:py-20 md:px-4 overflow-visible">
             <div className="max-w-screen-2xl mx-auto overflow-visible">
                 <div className="flex items-center justify-center gap-2 md:gap-4 overflow-visible">
                     {/* Previous Button */}
@@ -120,7 +120,7 @@ export function LifeAtTheAirforce() {
                                                         <p className="text-xs md:text-sm mb-3 md:mb-4 line-clamp-3">{war.description}</p>
                                                         <a
                                                             href="#"
-                                                            className="px-4 py-1.5 md:px-6 md:py-2 bg-white text-black rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 transition-colors"
+                                                            className="px-4 py-1.5 md:px-6 md:py-2  text-sm md:text-base "
                                                         >
                                                             Read More
                                                         </a>
