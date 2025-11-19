@@ -117,7 +117,7 @@ export default function WarLifeVideoSlider() {
 
     return (
         <div
-            className="background-contain relative md:h-screen h-[80vh] px-4 pb-24 flex flex-col justify-between"
+            className="background-contain relative md:h-screen h-[90vh] px-4 pb-24 flex flex-col justify-between"
             style={{
                 backgroundImage: `url(${sliderBackground})`,
                 backgroundRepeat: "no-repeat",
@@ -217,7 +217,7 @@ export default function WarLifeVideoSlider() {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:block mx-auto max-w-screen-2xl w-full">
+            <div className="hidden lg:block mx-auto max-w-screen-xl w-full">
                 <div className="space-y-8">
                     <p className="text-6xl font-semibold uppercase">
                         Watch Now
