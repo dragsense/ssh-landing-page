@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
 import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
@@ -7,18 +8,21 @@ import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
 
 const wars = [
     {
+        id: "war-of-1965",
         title: "War of 1965",
         description: "Sajad Haider often lauded as the Saviour of Lahore and one of the key heroes of the 1965 War, led the Sherdils of No. 19 Squadron PAF as Squadron Leader.",
         image: S4_Image,
     },
     {
+        id: "war-of-1971",
         title: "War of 1971",
         description: "Sajad led the Wing in notable contributions, with No. 5 Squadron PAF conducting successful strike missions in India's Amritsar, Pathankot, and the famous strike on Mukerian railway station.",
         image: S5_Image,
     },
     {
-        title: "Early Career",
-        description: "Sajad Haider's journey as a Flight Cadet in the Pakistan Air Force, showcasing his early dedication and training.",
+        id: "early-career",
+        title: "PILOT LIFE",
+        description: "Sajad Haider's complete journey as a pilot in the Pakistan Air Force, from his first flight experiences to his reflections on war and leadership.",
         image: S6_Image,
     },
 ];
@@ -118,12 +122,12 @@ export function LifeAtTheAirforce() {
                                                     <div className="flex flex-col items-center h-full justify-center text-center text-white">
                                                         <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-3">{war.title}</h2>
                                                         <p className="text-xs md:text-sm mb-3 md:mb-4 line-clamp-3">{war.description}</p>
-                                                        <a
-                                                            href="#"
-                                                            className="px-4 py-1.5 md:px-6 md:py-2  text-sm md:text-base "
+                                                        <Link
+                                                            to={`/life-at-airforce/${war.id}`}
+                                                            className="px-4 py-1.5 md:px-6 md:py-2 text-sm md:text-base border border-white rounded-full hover:bg-white hover:text-black transition-colors"
                                                         >
                                                             Read More
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </motion.div>
                                             </div>

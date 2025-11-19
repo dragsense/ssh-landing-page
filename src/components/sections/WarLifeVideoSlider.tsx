@@ -19,30 +19,16 @@ export default function WarLifeVideoSlider() {
     const videos = useMemo<PreparedVideo[]>(() => {
         const list: VideoItem[] = [
             {
-                title: "Pathankot Strike – First-Person Briefing",
-                youtubeId: "fR8Gx95Y6bs",
-                keywords: ["1965 War", "Blitzkrieg", "Pathankot", "Air Strike"],
+                title: "Pathankot Strike",
+                youtubeId: "AHS8z3sy3ZU",
+                keywords: ["Pathankot Strike"],
             },
             {
-                title: "Air Combat Leadership Lessons",
-                youtubeId: "MGp5LdSES74",
-                keywords: ["Leadership", "Combat", "Discipline", "Courage"],
+                title: "Unravelling Pakistan's 1971 Pre-emptive Airtrikes!",
+                youtubeId: "_kkyTABh3U8",
+                keywords: ["Airtrikes"],
             },
-            {
-                title: "Life With No Margin For Error",
-                youtubeId: "fR8Gx95Y6bs",
-                keywords: ["Training", "Cadet", "Practice", "Excellence"],
-            },
-            {
-                title: "Recounting Srinagar Air Field Mission",
-                youtubeId: "MGp5LdSES74",
-                keywords: ["Srinagar", "Mission", "Tactics", "Victory"],
-            },
-            {
-                title: "Legacy, Mentorship & The Next Generation",
-                youtubeId: "fR8Gx95Y6bs",
-                keywords: ["Legacy", "Mentorship", "Future", "Inspiration"],
-            },
+           
         ];
 
         return list.map((video) => ({

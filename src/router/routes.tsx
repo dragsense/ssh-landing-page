@@ -4,6 +4,7 @@ import Home from "@/pages/HomePage";
 import EarlyLife from "@/pages/EarlyLifePage";
 import WarLife from "@/pages/WarLifePage";
 import BusinessMan from "@/pages/Businessman";
+import LifeAtTheAirforcePage from "@/pages/LifeAtTheAirforcePage";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/early-life", element: <EarlyLife /> },
        { path: "/war-life", element: <WarLife /> },
-        { path: "/business-man", element: <BusinessMan /> }
+        { path: "/business-man", element: <BusinessMan /> },
+        { path: "/life-at-airforce/:warId", element: <LifeAtTheAirforcePage /> }
     ]
   }
 ]);

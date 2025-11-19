@@ -1,0 +1,166 @@
+import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
+import InnerPageLayout from "@/components/layouts/InnerPageLayout";
+import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
+import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
+import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
+
+// All PILOT LIFE content organized chronologically
+const allPilotLifeContent = [
+    {
+        title: "First Flight Experiences",
+        content: "His first take-off in a WW-II Harvard was a feeling he described as \"euphoric, difficult to encapsulate in words.\" When his instructor uttered the magic words, \"You have the controls,\" Haider described it as a dream come true. He experienced his first loop, and his first blackout. An \"incredible feeling\" overcame him: a sense of freedom and self-esteem. The course distinguished Risalpur history with an approximately 80% pass rate. On \"The Big Day,\" receiving the pin of the flying wing was a moment wedged in memory."
+    },
+    {
+        title: "Fighter Conversion and Squadron Life",
+        content: "Haider's fighter training emphasised airmanship for the Tempest, but was conducted on the dual Fury. This conversion was the first fully Pakistani-run operation, though the aircraft were dilapidated. It was here that Haider had his first altercation and almost resigned. But his Squadron leader Ashraf Chaudhry tore up the resignation, saying, \"Go boy, and fly well, you will make a fine fighter pilot.\" He placed second in the conversion course, behind Sarfraz Rafiqui, a martyr of the 1965 war. He was then posted to No. 14 Fighter Bomber Squadron in Peshawar."
+    },
+    {
+        title: "Fighter Conversion Section",
+        content: "Accompanied by his mother, father, sister, Bunyad, and Jawwad for tearful goodbyes from Quetta, he arrived in Peshawar, settling in the Bachelor's Officer Quarters (BOQs), rooming with good friend Pilot Officer Zaheer Hassan (\"Tinchoo\"). He met senior pilot Flg Off Muniruddin Ahmed (\"Bha Munir\") and adopted sharing a jug of shandy (beer in lemonade) as a symbolic drink with companions. Flying the Sea Furies, which were superior to Tempests, the squadron echoed a WWII RAF gung-ho style with little flight safety regard. After two months, Wing Cdr Rahim Khan (\"Shantay Khan\") took over—a fearsome but kind-hearted commander. A major event was the deployment of No. 14 to Dhaka for a month, the first fighter squadron to cross India for East Pakistan goodwill, landing meticulously and deliberately aggressively at Palam for national pride. At the Dhaka Club, the Begum of Dhaka hosted Haider and companions. Haider noted that politically aware Bengalis saw the goodwill visit as a threat, not goodwill, aware of discontent seeds from dishonest West Pakistani bureaucracy. He specifically pointed to the removal of Bengali Prime Minister Khawaja Nazimuddin in a conspiracy by Gen. Ghulam Mohammad and army C-in-C Ayub Khan, after which East Pakistanis began dreaming independence."
+    },
+    {
+        title: "First Postings and the Dawn of Jet Power",
+        content: "Sajad Haider left Quetta with his family for Peshawar, joining the Bachelor's Officer Quarters and training with his flight companions under a demanding flying culture. He participated in a landmark goodwill mission to Dhaka, observing early signs of Bengali resentment toward West Pakistan's political dominance. Later, assigned to No. 11 Squadron—the PAF's first jet unit—Haider faced gruelling flying conditions that shaped his discipline and skill under exacting mentors. Upon Dhaka return, Haider and Tinchoo were assigned to No. 11 squadron by Sqn Ldr Masroor Hossain—the PAF's first and only jet squadron then. This posting was a significant leap for young pilots. He met the beloved Butch (Alauddin Ahmed), who explained the Super Marine Attacker. Flying the Attacker was described as the toughest flying anywhere: no heating/cooling or navigational aids, and bad manual controls, making formation aerobatics deadly. He experienced the bends often, once using a fuel tank opener to tear his gum to relieve excruciating pain, all while maintaining formation. He was surrounded by motivating superiors like Sqn Ldr FS Hussain (a world-class legend whose first interaction involved an upside-down 50 feet off the ground inverted loop), Mitty Masud, and Corny Karim, who were \"terrors\" and sticklers for tight flying. Flt Lt Corny Karim \"bullied the life out of me\" for formation, which Haider later thanked him for after advancing from position 5 to 3 in a year. Stunts for commanders were common despite little safety culture. He was around the same time called \"Nosy\" while Plt Off MA Shamim returned from training called \"Pinky\" for his ruddy complexion."
+    },
+    {
+        title: "Near Miss",
+        content: "Haider was on a single-craft run trying new weapons. On his way back he was informed that his jet was on fire. With adrenaline spiking and stomach turning, and with no option to bail out, he landed and ran from the cockpit immediately after cutting the fuel, with the rear aflame from a severed exhaust pipe leaking flames. 10-15 seconds more, and he would have died there."
+    },
+    {
+        title: "Against Afghan Mercenaries",
+        content: "There was an incident where Haider took the initiative to help the Frontier Corps against Afghan mercenaries. He felt strongly about leaving the Frontier Corps soldiers hanging when they had specifically requested air support. He flew with a team, performing tight manoeuvres in the mountainous region of Northern Pakistan, killing three of the mercenaries while sparing the life of another."
+    },
+    {
+        title: "Sajad Haider's view on the 1965 war",
+        content: "Haider viewed the '65 war as a disastrous military failure driven by the egos and incompetence of Pakistan's leadership, particularly President Ayub Khan. He criticised Operation Grand Slam, which failed due to strategic missteps and leadership confusion, including the removal of General Akhtar Malik just before a crucial attack. The PAF, despite efforts by Musa Khan to keep them out of the loop, demonstrated effective leadership and tactical prowess, playing a key role in defending Pakistan. Haider argues that Pakistan owes its survival to the bravery of its soldiers and not its leaders, emphasising the need to acknowledge past mistakes to ensure a better future."
+    },
+    {
+        title: "Rann of Kutch Skirmish",
+        content: "The PAF had been told to sit the skirmish out due to distance and the defensive depth of the Indian position. Had the IAF committed their forces to the fight, he wrote, the Pakistani army would have been decimated, but Air Marshal Asghar Khan negotiated with the IAF to keep both air forces out of the combat to minimise losses, and this was one of the reasons why the IAF didn't enter this skirmish, the other being poor intelligence of Pakistani air bases."
+    },
+    {
+        title: "War Clouds",
+        content: "On 28th June, Sajad Haider and the PAF command chain discussed strategies regarding plans of attack: war was brewing, and the element of surprise was integral. In the event of an attack order, Sajad was to lead the largest single attack with 16 F-86 aircraft against Ambala airfield. However, due to the military keeping operational intelligence from the PAF, they were unable to lead an attack and had to defend Lahore and Sialkot, and were thus unable to strike pre-emptively as was their plan, only going on high alert in August."
+    },
+    {
+        title: "Internal struggles in Pakistan's Military",
+        content: "Sajad wrote that Asghar Khan's role was overlooked by General Musa, suggesting that cowardice was the reason for Asghar not wanting to commit the PAF forces. The real \"chicken\", as per a classified report by the US Air Attache on May 15 1965 that detailed an intrusion by the IAF near Lahore's airspace, showed Ayub Khan as the one who refused retaliation against the IAF, fearing escalation. The Indian craft was able to complete its intelligence gathering mission and returned to India, and the \"PAF was livid\". This was part of the key information that allowed \"Op Ablaze\" to go forward in September 1965."
+    },
+    {
+        title: "Later Reflections and Personal Challenges",
+        content: "Haider held high opinions of Air Marshal Asghar Khan and A.M. Nur Khan. He referred to Ayub Khan (AK) as a dictator, arguing that since AK appointed Gen. Musa, no significant progress was expected. He asserted that the armed forces served gallantly and shouldn't be the people's punching bag today, noting controversial events and bad decisions were edited from official versions by non-historians. Haider strongly criticised the official PAF narrative of the 1965 India-Pakistan Air War (IPAW): \"The PAF did well in the war. It's a pity that its government and leadership saw it fit to denigrate its achievements by making claims that have ensured that the PAF is associated with bragging as opposed to its actual praiseworthy achievements.\" He was indignant that no candid attempts had been made to paint the true picture. He felt \"patently cheated and enraged\" at the loss of gallant men who were martyred believing in a \"sacred cause\" based on what he perceived as a dishonest official version. He concluded, \"It is my conviction that an honest study of the past can throw up the answers to our perpetual national morass. The root cause of our misfortunes has to do with a bankruptcy of leadership.\" In his later business life, his company, Cormorant, was targeted by two generals from the Defence Procurement Division for kickbacks. He wrote, \"With the endemic corruption and coercion by the sitting Director General Defence Procurement (DGDP), it had become obvious that either I resorted to giving kickbacks, or packed up.\" He decided to pull the shutters down on his company by 1990, \"while honour was still an option.\" This coincided with difficult matrimonial decisions (noting a third wife). His father passed away on July 3, 1986, at the age of 104, while Haider was in Geneva."
+    }
+];
+
+const wars = [
+    {
+        id: "war-of-1965",
+        title: "War of 1965",
+        description: "Sajad Haider often lauded as the Saviour of Lahore and one of the key heroes of the 1965 War, led the Sherdils of No. 19 Squadron PAF as Squadron Leader.",
+        image: S4_Image,
+        sections: allPilotLifeContent.filter(s => 
+            s.title.includes("1965") || 
+            s.title.includes("Rann") || 
+            s.title.includes("War Clouds") || 
+            s.title.includes("Internal struggles")
+        )
+    },
+    {
+        id: "war-of-1971",
+        title: "War of 1971",
+        description: "Sajad led the Wing in notable contributions, with No. 5 Squadron PAF conducting successful strike missions in India's Amritsar, Pathankot, and the famous strike on Mukerian railway station.",
+        image: S5_Image,
+        sections: [
+            {
+                title: "War of 1971",
+                content: "Sajad led the Wing in notable contributions, with No. 5 Squadron PAF conducting successful strike missions in India's Amritsar, Pathankot, and the famous strike on Mukerian railway station. His tactical expertise and courage during these operations demonstrated his exceptional leadership capabilities and dedication to his country."
+            }
+        ]
+    },
+    {
+        id: "early-career",
+        title: "PILOT LIFE",
+        description: "Sajad Haider's complete journey as a pilot in the Pakistan Air Force, from his first flight experiences to his reflections on war and leadership.",
+        image: S6_Image,
+        sections: allPilotLifeContent
+    },
+];
+
+export default function LifeAtTheAirforcePage() {
+    const { warId } = useParams<{ warId: string }>();
+    const navigate = useNavigate();
+    
+    const war = wars.find(w => w.id === warId) || wars[0];
+
+    return (
+        <InnerPageLayout 
+            title={war.title}
+            content={war.description}
+            image={war.image}
+        >
+            <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+                <div className="max-w-4xl mx-auto">
+                    {/* Back Button */}
+                    <motion.button
+                        onClick={() => navigate(-1)}
+                        className="flex items-center gap-2 mb-8 text-black dark:text-white hover:opacity-70 transition-opacity"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <ArrowLeft className="h-5 w-5" />
+                        <span>Back</span>
+                    </motion.button>
+
+                    {/* Content */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="space-y-8"
+                    >
+                        <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                            <img
+                                src={war.image}
+                                alt={war.title}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        
+                        <div className="prose prose-lg max-w-none dark:prose-invert">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                                {war.title}
+                            </h2>
+                            
+                            {war.sections && war.sections.length > 0 ? (
+                                war.sections.map((section, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        className="mb-10 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
+                                    >
+                                        <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+                                            {section.title}
+                                        </h3>
+                                        <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                                            {section.content}
+                                        </p>
+                                    </motion.div>
+                                ))
+                            ) : (
+                                <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    {war.description}
+                                </p>
+                            )}
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+        </InnerPageLayout>
+    );
+}
+

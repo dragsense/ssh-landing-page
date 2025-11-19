@@ -7,11 +7,11 @@ import Minar_E_Pakistan_Image from "@/assets/images/mira-pakistan.png";
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function SaviourOfLahoreSection() {
-    const descriptionText = `Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.`;
-    const descriptionText2 = `He was also an author, columnist, businessman, defence analyst, political commentator, and philanthropist.`;
+    const descriptionText = `On 6th September, Haider’s 19 Squadron provided close air support by destroying Indian tanks, artillery, preventing them from entering Lahore. He also led a daring strike to attack the air base at Pathankot Air Force Station the same day, despite the mission being beyond their range. Under his leadership, the formation claimed destruction of 13 Indian aircraft on the ground and inflicted significant damage, earning him the decoration Sitara‑e‑Jurat for courage and flying skill.`;
+    const descriptionText2 = ``;
 
     return (
-      
+       
 
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-18 items-center z-10">
 

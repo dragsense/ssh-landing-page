@@ -20,10 +20,7 @@ export default function WarFeatureSection() {
                     className="flex justify-between flex-col"
                 >
                     <p className="font-normal mb-5">
-                        Haider personally destroyed four Indian aircraft, 11 Indian tanks and damaged another three. The formation destroyed a total of 13 Indian aircraft including 2 MiG-21s. The following day, Haider led his pilots to Srinagar Air Force Station where they destroyed another three aircraft.
-                    </p>
-                    <p className="font-normal mb-10">
-                        He was also an author, columnist, businessman, defence analyst, political commentator, and philanthropist.</p>
+                        His first take-off in a WW-II Harvard was a feeling he described as "euphoric, difficult to encapsulate in words." When his instructor uttered the magic words, "You have the controls," Haider described it as a dream come true. He experienced his first loop, and his first blackout. An "incredible feeling" overcame him: a sense of freedom and self-esteem. The course distinguished Risalpur history with an approximately 80% pass rate. On "The Big Day," receiving the pin of the flying wing was a moment wedged in memory.                    </p>
                     <motion.img
                         src={S17_Image}
                         alt="S. Sajad Haider youth"
