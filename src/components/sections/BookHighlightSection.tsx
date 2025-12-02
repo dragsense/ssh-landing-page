@@ -1,6 +1,6 @@
 // components/BookHighlightSection.tsx
 import React from "react";
-import {  ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import DemoBook from "@/assets/images/bookcover.jpg";
@@ -45,13 +45,13 @@ export default function BookHighlightSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           whileHover={{ y: -10 }}
           className="flex flex-col justify-center"
-       
+
         >
-       
+
           <img
             src={DemoBook}
             alt="Flight of the Falcon"
-            className="w-full max-w-xs mx-auto md:w-72 rounded-lg shadow-xl"
+            className="w-full max-w-xs md:mx-auto md:w-72 rounded-lg shadow-xl"
           />
 
           <motion.div
@@ -60,7 +60,7 @@ export default function BookHighlightSection() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className=""
           >
-            
+
           </motion.div>
         </motion.div>
 
@@ -71,16 +71,16 @@ export default function BookHighlightSection() {
             className="text-sm md:text-base font-semibold text-muted-background dark:text-muted-foreground"
 
           />
-         
+
 
 
           <GradientFillButton className="font-semibold">
 
-            <div className="flex gap-3 flex-wrap">
-              <>
-                <ShoppingCart className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                Buy Now
-              </>
+            <div className="flex gap-3 flex-wrap text-center">
+              <ShoppingCart className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <p className="text-sm md:text-base text-center flex-1">
+                Buy the book
+              </p>
 
             </div>
 

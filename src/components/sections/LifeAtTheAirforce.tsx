@@ -121,7 +121,7 @@ export function LifeAtTheAirforce() {
                                                 >
                                                     <div className="flex flex-col items-center h-full justify-center text-center text-white">
                                                         <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-3">{war.title}</h2>
-                                                        <p className="text-xs md:text-sm mb-3 md:mb-4 line-clamp-3">{war.description}</p>
+                                                        <p className="text-sm md:text-lg mb-3 md:mb-4 line-clamp-8">{war.description}</p>
                                                         <Link
                                                             to={`/life-at-airforce/${war.id}`}
                                                             className="px-4 py-1.5 md:px-6 md:py-2 text-sm md:text-base border border-white rounded-full hover:bg-white hover:text-black transition-colors"

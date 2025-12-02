@@ -34,10 +34,11 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
+        { label: "Home", to: "/" },
         { label: "Publications", href: "/#publications" },
         { label: "Early Life", to: "/early-life" },
-        { label: "Life At Airforce", to: "/war-life" },
-        { label: "Businessman", to: "/business-man" },
+        { label: "Airforce Life", to: "/war-life" },
+        { label: "Business Life", to: "/business-man" },
     ];
 
     useEffect(() => {
@@ -49,6 +50,33 @@ export default function Navbar() {
      const linkClass =
         "relative px-4 py-2 rounded-lg text-[18px] font-semibold text-foreground/80 hover:text-primary transition";
 
+    const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        const [path, hash] = href.split('#');
+        const currentPath = window.location.pathname;
+        
+        if (currentPath !== path && hash) {
+            // If we're on a different page, let the navigation happen, then scroll after page loads
+            e.preventDefault();
+            window.location.href = href;
+            // The scroll will be handled by HomePage useEffect when it loads
+        } else if (hash) {
+            // If we're already on the page, just scroll
+            e.preventDefault();
+            setTimeout(() => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    const offset = 100;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 50);
+        }
+        setMobileOpen(false);
+    };
 
     const NavLinks = () => (
         <>
@@ -60,17 +88,17 @@ export default function Navbar() {
                     transition={{ delay: i * 0.1 }}
                     className="w-full md:w-auto"
                 >
-                    {link.to ? <Link
-                        to={link.to}
-                        className={cn(linkClass, "block w-full text-center md:text-left md:w-auto")}
+                    {link.to ? <a
+                        href={link.to}
+                        className={cn(linkClass, "block w-full text-center md:text-left md:w-auto cursor-pointer")}
                         onClick={() => setMobileOpen(false)}
                     >
                         {link.label}
-                    </Link> :
+                    </a> :
                         <a
                             href={link.href}
-                            className={cn(linkClass, "block w-full text-center md:text-left md:w-auto")}
-                            onClick={() => setMobileOpen(false)}
+                            className={cn(linkClass, "block w-full text-center md:text-left md:w-auto cursor-pointer")}
+                            onClick={(e) => handleHashClick(e, link.href!)}
                         >
                             {link.label}
 

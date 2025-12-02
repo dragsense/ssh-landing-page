@@ -2,74 +2,47 @@
 import { motion } from "framer-motion";
 
 
-import S1_Image from '@/assets/images/earlylife/Image (16).jpg';
-import S2_Image from '@/assets/images/earlylife/Image (17).jpg';
 import S3_Image from '@/assets/images/earlylife/Image (18).jpg';
 import S4_Image from '@/assets/images/earlylife/Image (19).jpg';
 import S5a_Image from '@/assets/images/earlylife/Image (21).jpg';
+import S6_Image from '@/assets/images/earlylife/Image (22).jpg';
+import S7_Image from '@/assets/images/earlylife/Image (25).jpg';
+import S8_Image from '@/assets/images/earlylife/Image (31).jpg';
 
-import S5_Image from "@/assets/images/s6.png";
-import S6_Image from "@/assets/images/s4.png";
-
-import S7_Image from '@/assets/images/earlylife/Image (22).jpg';
-import S8_Image from '@/assets/images/earlylife/Image (23).jpg';
-import S9_Image from '@/assets/images/earlylife/Image (24).jpg';
-import S10_Image from '@/assets/images/earlylife/Image (25).jpg';
-import S11_Image from '@/assets/images/earlylife/Image (26).jpg';
-import S12_Image from '@/assets/images/earlylife/Image (31).jpg';
-import S13_Image from '@/assets/images/earlylife/Image (2).jpg';
-import S14_Image from '@/assets/images/earlylife/Image (3).jpg';
-import S15_Image from '@/assets/images/earlylife/Image (5).jpg';
-
+import S16_Image from '@/assets/images/earlylife/i5.jpg';
 
 import { ThreeDMarquee } from "../ui/3d-marquee";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 
 const images = [
-    S1_Image,
-    S2_Image,
+    S16_Image,
     S3_Image,
     S4_Image,
     S5a_Image,
+    S8_Image,
+    S8_Image,
+    S6_Image,
+    S16_Image,
+    S16_Image,
+    S7_Image,
+    S16_Image,
+    S6_Image,
     S7_Image,
     S8_Image,
-    S9_Image,
-    S10_Image,
-    S11_Image,
-    S12_Image,
-    S13_Image,
-    S14_Image,
-    S15_Image,
-     S1_Image,
-    S2_Image,
-    S3_Image,
+    S7_Image,
+    S6_Image,
+    S7_Image,
+    S16_Image,
+  
+    S8_Image,
+    S16_Image,
+    
+
+        S3_Image,
     S4_Image,
     S5a_Image,
-    S6_Image,
-    S7_Image,
-    S8_Image,
-    S9_Image,
-    S10_Image,
-    S11_Image,
-    S12_Image,
-    S13_Image,
-    S14_Image,
-    S15_Image,
-     S1_Image,
-    S2_Image,
-    S3_Image,
-    S4_Image,
-    S6_Image,
-    S7_Image,
-    S8_Image,
-    S9_Image,
-    S10_Image,
-    S11_Image,
-    S12_Image,
-    S13_Image,
-    S14_Image,
-    S15_Image
+    
 
 
 ];
@@ -120,7 +93,7 @@ export default function EarlyLifePicsSection() {
                             className="flex flex-col md:flex-row items-end gap-6"
                         >
                             <motion.img
-                                src={S5_Image}
+                                src={S16_Image}
                                 alt="Young Haider in uniform"
                                 className="w-64 h-auto rounded-lg"
                                 whileHover={{ scale: 1.03 }}

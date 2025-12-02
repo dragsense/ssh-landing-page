@@ -23,6 +23,12 @@ export default function WarLifeVideoSlider() {
                 youtubeId: "AHS8z3sy3ZU",
                 keywords: ["Pathankot Strike"],
             },
+         
+            {
+                title: "Pathankot Strike",
+                youtubeId: "AHS8z3sy3ZU",
+                keywords: ["Pathankot Strike"],
+            },
             {
                 title: "Unravelling Pakistan's 1971 Pre-emptive Airtrikes!",
                 youtubeId: "_kkyTABh3U8",
@@ -117,7 +123,7 @@ export default function WarLifeVideoSlider() {
 
     return (
         <div
-            className="background-contain relative md:h-screen h-[90vh] px-4 pb-24 flex flex-col justify-between"
+            className="background-contain relative md:h-screen md:h-[90vh] px-4 pb-24 flex flex-col justify-between"
             style={{
                 backgroundImage: `url(${sliderBackground})`,
                 backgroundRepeat: "no-repeat",
@@ -126,7 +132,7 @@ export default function WarLifeVideoSlider() {
             }}
         >
 
-            <div className="overflow-hidden pointer-events-none select-none ">
+            <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
                 <motion.div
                     animate={{ x: ["0%", "-100%"] }}
                     transition={{

@@ -1,13 +1,16 @@
-import S6_Image from "@/assets/images/s6.png";
+import S7_Image from "@/assets/images/s7.png";
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
+import BusinessmanContentSection from "@/components/sections/BusinessmanContentSection";
 
 export default function BusinessMan() {
     return (<InnerPageLayout 
         title="Business Man" 
     content="SLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-    image={S6_Image}
+    image={S7_Image}
     >
-   <></>
+        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+            <BusinessmanContentSection />
+        </section>
 
     </InnerPageLayout>)
 }

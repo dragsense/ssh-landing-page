@@ -26,7 +26,7 @@ export const ThreeDMarquee = ({
         <div className="size-[1720px] shrink-0 scale-20 sm:scale-75 lg:scale-120">
           <div
             style={{
-              transform: "rotateX(55deg) rotateY(0deg) rotateZ(-24deg)",
+              transform: "rotateX(20deg) rotateY(0deg) rotateZ(-24deg)",
             }}
             className="relative top-96 right-[26%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
           >

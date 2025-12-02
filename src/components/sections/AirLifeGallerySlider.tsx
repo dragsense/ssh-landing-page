@@ -8,12 +8,26 @@ import s5 from "@/assets/images/airforce/s5.jpg";
 import s6 from "@/assets/images/airforce/s6.jpg";
 import s7 from "@/assets/images/airforce/s7.jpg";
 import s8 from "@/assets/images/airforce/s8.jpg";
-import s9 from "@/assets/images/airforce/s9.jpg";
 import s10 from "@/assets/images/airforce/s10.jpg";
 import s11 from "@/assets/images/airforce/s11.jpg";
 import s12 from "@/assets/images/airforce/s12.jpg";
 
-const images = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12];
+import S1_Image from '@/assets/images/airforce/Image (16).jpg';
+import S2_Image from '@/assets/images/airforce/Image (17).jpg';
+import S3_Image from '@/assets/images/airforce/Image (18).jpg';
+import S4_Image from '@/assets/images/airforce/Image (19).jpg';
+import S6_Image from '@/assets/images/airforce/Image (21).jpg';
+import S7_Image from '@/assets/images/airforce/Image (22).jpg';
+import S8_Image from '@/assets/images/airforce/Image (23).jpg';
+import S9_Image from '@/assets/images/airforce/Image (24).jpg';
+import S10_Image from '@/assets/images/airforce/Image (25).jpg';
+import S11_Image from '@/assets/images/airforce/Image (26).jpg';
+import S12_Image from '@/assets/images/airforce/i2.jpg';
+import S13_Image from '@/assets/images/airforce/i3.jpg';
+import S14_Image from '@/assets/images/airforce/i4.jpg';
+
+
+const images = [s1, s2,  s4, s5, s6, s7, s8, s10, s11, s12, S1_Image, S2_Image, S3_Image, S4_Image, S6_Image, S7_Image, S8_Image, S9_Image, S10_Image, S11_Image, S12_Image, S13_Image, S14_Image];
 
 export default function AirLifeGallerySlider() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -73,7 +87,7 @@ export default function AirLifeGallerySlider() {
                 </div>
 
                 {/* Slider Container - Images side by side */}
-                <div 
+                <div
                     className="relative overflow-hidden"
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}

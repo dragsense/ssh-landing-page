@@ -9,7 +9,7 @@ import badge3 from "@/assets/hero/badge-3.png";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center">
+    <div className="relative w-full h-screen  flex flex-col justify-center items-center bg-background/50">
       {/* Background + Sparkles */}
       <div className="absolute inset-0 -z-10">
         <div
@@ -32,11 +32,11 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, type: "spring" }}
-        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-[length:700px_400px] md:bg-contain bg-center bg-no-repeat"
+        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-[length:800px] md:bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         {/* Mobile Heading */}
-        <div className="md:hidden absolute top-16 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+        <div className="md:hidden absolute top-16 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
             Sajad
           </h1>
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Timeline */}
-        <div className="mt-4 flex items-center justify-center text-sm sm:text-base md:text-lg px-2 w-full">
+        <div className="mt-100 md:mt-4 flex items-center justify-center text-sm sm:text-base md:text-lg px-12 w-full">
           <span className="dark:text-white text-black">1932</span>
           <div className="flex-1 mx-2 sm:mx-4 h-0.5 bg-gradient-to-r from-black/40 via-transparent to-black/40 dark:from-white/40 dark:via-transparent dark:to-white/40" />
           <span className="dark:text-white text-black">2025</span>
@@ -60,12 +60,12 @@ export default function Hero() {
       </motion.div>
 
       {/* Badges + Button */}
-      <div className="absolute bottom-6 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
+      <div className="absolute -bottom-10 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
         {/* Left Badge */}
         <motion.img
           src={badge1}
           alt="Badge 1"
-          className="h-14 sm:h-16 md:h-20 object-contain drop-shadow-xl mb-4 md:mb-0"
+          className="h-20 w-auto object-contain drop-shadow-xl mb-4 md:mb-0"
           initial={{ x: -60, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -79,7 +79,7 @@ export default function Hero() {
               key={index}
               src={badge}
               alt={`Badge ${index + 2}`}
-              className="h-14 sm:h-16 md:h-20 object-contain drop-shadow-xl"
+              className="h-20 w-auto object-contain drop-shadow-xl"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.2, duration: 0.6 }}

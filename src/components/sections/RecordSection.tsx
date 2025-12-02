@@ -58,18 +58,18 @@ export default function RecordSection() {
           </div>
 
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-2 sm:gap-4">
-              <h3 className="text-sm md:text-base font-semibold">
+            <div className="flex flex-row items-start sm:items-center justify-between w-full gap-2 sm:gap-4">
+              <h3 className="text-base font-semibold">
                 DIAMOND LOOP
               </h3>
-              <h3 className="text-sm md:text-base font-semibold">
+              <h3 className="text-base font-semibold">
                 16 F-86 SABRE
               </h3>
-              <h3 className="text-sm md:text-base font-semibold">
+              <h3 className="text-base font-semibold">
                 FEBRUARY 2, 1958
               </h3>
             </div>
-            <div className="text-center text-muted text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+            <div className="text-center text-muted-foreground/50 text-5xl lg:text-6xl font-bold">
               <span>
                 PAF - FALCONS
               </span>
