@@ -78,10 +78,11 @@ export default function BookHighlightSection() {
 
             <div className="flex gap-3 flex-wrap text-center">
               <ShoppingCart className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <a href="https://vanguardbooks.com/products/flight-of-the-falcon" target="_blank" rel="noopener noreferrer">
               <p className="text-sm md:text-base text-center flex-1">
                 Buy the book
               </p>
-
+              </a>
             </div>
 
           </GradientFillButton>
