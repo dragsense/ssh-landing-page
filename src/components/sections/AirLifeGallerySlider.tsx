@@ -83,7 +83,7 @@ export default function AirLifeGallerySlider() {
             <div className="max-w-screen-2xl mx-auto px-4">
                 <div className="mb-8 text-center">
                     <p className="text-sm uppercase tracking-widest mb-4">Gallery with air life images</p>
-                    <h2 className="text-5xl md:text-6xl font-bold">Lorem ipsum</h2>
+                    <h2 className="text-5xl md:text-6xl font-bold">Air Life</h2>
                 </div>
 
                 {/* Slider Container - Images side by side */}

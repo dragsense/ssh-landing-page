@@ -1,54 +1,79 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
-import sliderBackground from "@/assets/images/war-life-slider-bg.png";
-import youtube_icon from "@/assets/icons/youtube.png";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import sliderBackground from "@/assets/images/cormorant background.png";
+import carmorant_logo from "@/assets/logo/cormorant-logo.png";
+import image1 from "@/assets/business/1.jpg";
+import image2 from "@/assets/business/2.jpg";
+import image3 from "@/assets/business/3.jpg";
+import image4 from "@/assets/business/4.jpg";
+import image5 from "@/assets/business/5.jpg";
+import image6 from "@/assets/business/6.jpg";
 
-type VideoItem = {
+type ImageItem = {
     title: string;
-    youtubeId: string;
+    desc: string;
+    image: string;
     keywords?: string[];
 };
 
-type PreparedVideo = VideoItem & {
+type PreparedImage = ImageItem & {
     thumbnail: string;
-    link: string;
 };
 
-export default function WarLifeVideoSlider() {
-    const videos = useMemo<PreparedVideo[]>(() => {
-        const list: VideoItem[] = [
+export default function BusinessImageSlider() {
+    const images = useMemo<PreparedImage[]>(() => {
+        const list: ImageItem[] = [
             {
-                title: "Pathankot Strike",
-                youtubeId: "AHS8z3sy3ZU",
-                keywords: ["Pathankot Strike"],
-            },
-         
-            {
-                title: "Pathankot Strike",
-                youtubeId: "AHS8z3sy3ZU",
-                keywords: ["Pathankot Strike"],
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image1,
+                keywords: ["Armored Jeep"],
             },
             {
-                title: "Unravelling Pakistan's 1971 Pre-emptive Airtrikes!",
-                youtubeId: "_kkyTABh3U8",
-                keywords: ["Airtrikes"],
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image2,
+                keywords: ["Armored Truck"],
             },
-           
+            {
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image3,
+                keywords: ["Military Aircraft"],
+            },
+            {
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image4,
+                keywords: ["Night Vision Goggles"],
+            },
+            
+            {
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image5,
+                keywords: ["Military Weapons"],
+            },
+            {
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image6,
+                keywords: ["Teletype Equipment"],
+            },
         ];
 
-        return list.map((video) => ({
-            ...video,
-            link: `https://www.youtube.com/watch?v=${video.youtubeId}`,
-            thumbnail: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
+        return list.map((image) => ({
+            ...image,
+            thumbnail: image.image,
         }));
     }, []);
 
     const [visibleCount, setVisibleCount] = useState(3);
     const [sliderIndex, setSliderIndex] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-    const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [viewingImageIndex, setViewingImageIndex] = useState<number | null>(null);
 
     useEffect(() => {
         const updateVisibleCount = () => {
@@ -70,13 +95,13 @@ export default function WarLifeVideoSlider() {
 
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
-            if (e.key === "Escape" && isVideoModalOpen) {
-                setIsVideoModalOpen(false);
-                setPlayingVideoId(null);
+            if (e.key === "Escape" && isImageModalOpen) {
+                setIsImageModalOpen(false);
+                setViewingImageIndex(null);
             }
         };
 
-        if (isVideoModalOpen) {
+        if (isImageModalOpen) {
             document.addEventListener("keydown", handleEscape);
             document.body.style.overflow = "hidden";
         }
@@ -85,41 +110,54 @@ export default function WarLifeVideoSlider() {
             document.removeEventListener("keydown", handleEscape);
             document.body.style.overflow = "unset";
         };
-    }, [isVideoModalOpen]);
+    }, [isImageModalOpen]);
 
-    const preparedVisibleCount = Math.min(visibleCount, videos.length);
+    const preparedVisibleCount = Math.min(visibleCount, images.length);
 
-    const visibleVideos = useMemo(() => {
+    const visibleImages = useMemo(() => {
         return Array.from({ length: preparedVisibleCount }, (_, visibleIdx) => {
-            const absoluteIndex = (sliderIndex + visibleIdx) % videos.length;
-            return { data: videos[absoluteIndex], absoluteIndex, relativeIndex: visibleIdx };
+            const absoluteIndex = (sliderIndex + visibleIdx) % images.length;
+            return { data: images[absoluteIndex], absoluteIndex, relativeIndex: visibleIdx };
         });
-    }, [preparedVisibleCount, sliderIndex, videos]);
+    }, [preparedVisibleCount, sliderIndex, images]);
 
-    const activeVideo = videos[activeIndex];
+    const activeImage = images[activeIndex];
     const featuredRelativeIndex = Math.floor(preparedVisibleCount / 2);
 
     const handleMove = (direction: "next" | "prev") => {
         setSliderIndex((prev) => {
             const nextIndex =
                 direction === "next"
-                    ? (prev + 1) % videos.length
-                    : (prev - 1 + videos.length) % videos.length;
+                    ? (prev + 1) % images.length
+                    : (prev - 1 + images.length) % images.length;
             setActiveIndex(nextIndex);
             return nextIndex;
         });
     };
 
-    const handlePlayVideo = (videoId: string, e: React.MouseEvent) => {
-        e.stopPropagation();
-        setPlayingVideoId(videoId);
-        setIsVideoModalOpen(true);
+    const handleOpenImageModal = (imageIndex: number, e?: React.MouseEvent) => {
+        if (e) {
+            e.stopPropagation();
+        }
+        setViewingImageIndex(imageIndex);
+        setIsImageModalOpen(true);
     };
 
     const handleCloseModal = () => {
-        setIsVideoModalOpen(false);
-        setPlayingVideoId(null);
+        setIsImageModalOpen(false);
+        setViewingImageIndex(null);
     };
+
+    const handleModalNavigation = (direction: "next" | "prev") => {
+        if (viewingImageIndex === null) return;
+        const nextIndex =
+            direction === "next"
+                ? (viewingImageIndex + 1) % images.length
+                : (viewingImageIndex - 1 + images.length) % images.length;
+        setViewingImageIndex(nextIndex);
+    };
+
+    const viewingImage = viewingImageIndex !== null ? images[viewingImageIndex] : null;
 
     return (
         <div
@@ -131,8 +169,8 @@ export default function WarLifeVideoSlider() {
                 backgroundPosition: "center",
             }}
         >
-
-            <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
+                <div></div>
+         {/*    <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
                 <motion.div
                     animate={{ x: ["0%", "-100%"] }}
                     transition={{
@@ -146,12 +184,12 @@ export default function WarLifeVideoSlider() {
                         SAVIOUR OF LAHORE • NOSEY HAIDER • SAVIOUR OF LAHORE • NOSEY HAIDER • SAVIOUR OF LAHORE • NOSEY HAIDER
                     </span>
                 </motion.div>
-            </div>
+            </div> */}
 
             {/* Mobile Simple Slideshow */}
             <div className="lg:hidden mx-auto w-full max-w-md px-4">
                 <div className="space-y-6">
-                    <p className="text-4xl font-semibold uppercase text-center">Watch Now</p>
+                    <p className="text-4xl font-semibold uppercase text-center">Gallery</p>
                     
                     <div className="relative">
                         <motion.div
@@ -160,63 +198,37 @@ export default function WarLifeVideoSlider() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="relative w-full aspect-video rounded-2xl overflow-hidden border shadow-lg"
+                            className="relative w-full aspect-video rounded-2xl overflow-hidden border shadow-lg cursor-pointer"
+                            onClick={() => handleOpenImageModal(activeIndex)}
                         >
                             <img
-                                src={activeVideo.thumbnail}
-                                alt={activeVideo.title}
+                                src={activeImage.thumbnail}
+                                alt={activeImage.title}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                            <button
-                                onClick={(e) => handlePlayVideo(activeVideo.youtubeId, e)}
-                                className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
-                            >
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-red-500 shadow hover:bg-red-500 hover:text-white transition duration-300">
-                                    <Play className="h-6 w-6" />
-                                </div>
-                            </button>
                         </motion.div>
                         
                         <div className="flex items-center justify-between mt-4">
                             <button
                                 onClick={() => handleMove("prev")}
-                                aria-label="Previous video"
+                                aria-label="Previous image"
                                 className="rounded-full border border-black p-3 shadow"
                             >
                                 <ChevronLeft className="h-5 w-5" />
                             </button>
                             
                             <div className="flex-1 px-4 text-center">
-                                <h3 className="text-lg font-semibold">{activeVideo.title}</h3>
+                                <h3 className="text-lg font-semibold">1980 - 1990</h3>
                             </div>
                             
                             <button
                                 onClick={() => handleMove("next")}
-                                aria-label="Next video"
+                                aria-label="Next image"
                                 className="rounded-full border border-black p-3 shadow"
                             >
                                 <ChevronRight className="h-5 w-5" />
                             </button>
-                        </div>
-                        
-                        <div className="flex flex-col items-center gap-3 mt-4">
-                            <a
-                                href={activeVideo.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-block"
-                            >
-                                <img src={youtube_icon} alt="YouTube" className="h-8" />
-                            </a>
-                            <a
-                                href={activeVideo.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-xs font-medium underline decoration-dotted text-center"
-                            >
-                                {activeVideo.link}
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -224,55 +236,44 @@ export default function WarLifeVideoSlider() {
 
             {/* Desktop Layout */}
             <div className="hidden lg:block mx-auto max-w-screen-xl w-full">
-                <div className="space-y-8">
+                <div className="space-y-3">
                     <p className="text-6xl font-semibold uppercase">
-                        Watch Now
+                    <img
+                                src={carmorant_logo}
+                                alt="Cormorant Logo"
+                                className="w-64"
+                            />
                     </p>
 
-                    <div className="h-12 flex items-center">
-                        <motion.h3
-                            key={activeIndex}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.2 }}
-                            className="text-3xl font-semibold"
-                        >
-                            {activeVideo.title}
-                        </motion.h3>
+                    <div className="space-y-4 w-70">
+                        <h3 className="text-3xl font-semibold">
+                            1980 - 1990
+                        </h3>
+                        
                     </div>
                 </div>
 
-                <div className="mx-auto flex flex-col items-end justify-center gap-12 lg:flex-row">
-                    <div className="space-y-4">
-                        <a
-                            href={activeVideo.link}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img src={youtube_icon} alt="YouTube" />
-                        </a>
-                        <a
-                            href={activeVideo.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="block text-sm font-medium underline decoration-dotted"
-                        >
-                            {activeVideo.link}
-                        </a>
+                <div className="mx-auto flex flex-col items-start justify-center gap-12 lg:flex-row">
+                    
+                      <div className="w-50 mt-3">
+                        
+                      <p>
+                            Representative around 80 of the to fortune 500 companies
+                        </p>
                     </div>
 
                     <div className="flex flex-1 flex-col sm:flex-row gap-6 items-end justify-end">
-                        <div className="flex items-center justify-end gap-3">
+                        <div className="flex items-center gap-3 mr-10">
                             <button
                                 onClick={() => handleMove("prev")}
-                                aria-label="Previous videos"
+                                aria-label="Previous images"
                                 className="rounded-full border border-black p-3 shadow cursor-pointer"
                             >
                                 <ChevronLeft className="h-5 w-5" />
                             </button>
                             <button
                                 onClick={() => handleMove("next")}
-                                aria-label="Next videos"
+                                aria-label="Next images"
                                 className="rounded-full border border-black p-3 shadow cursor-pointer"
                             >
                                 <ChevronRight className="h-5 w-5" />
@@ -283,11 +284,11 @@ export default function WarLifeVideoSlider() {
                             layout
                             className="flex flex-col h-full flex-1 gap-4 sm:flex-row items-end"
                         >
-                            {visibleVideos.map(({ data, absoluteIndex, relativeIndex }) => {
+                            {visibleImages.map(({ data, absoluteIndex, relativeIndex }) => {
                                 const isFeatured = relativeIndex === featuredRelativeIndex;
                                 return (
-                                    <div key={`wrapper-${data.youtubeId}-${absoluteIndex}`} className="relative flex-1">
-                                        {/* Scanner Marker - only for featured video */}
+                                    <div key={`wrapper-${data.image}-${absoluteIndex}`} className="relative flex-1">
+                                        {/* Scanner Marker - only for featured image */}
                                         {isFeatured && (
                                             <motion.div
                                                 key={`scanner-${absoluteIndex}`}
@@ -334,8 +335,11 @@ export default function WarLifeVideoSlider() {
                                                 stiffness: 200,
                                                 damping: 20,
                                             }}
-                                            onClick={() => setActiveIndex(absoluteIndex)}
-                                            className={`group relative w-full overflow-hidden rounded-2xl border text-left shadow-sm transition-all ${isFeatured
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleOpenImageModal(absoluteIndex, e);
+                                            }}
+                                            className={`group relative w-full overflow-hidden rounded-2xl border text-left shadow-sm transition-all cursor-pointer ${isFeatured
                                                 ? "sm:h-42"
                                                 : "sm:h-30"
                                                 } h-42`}
@@ -346,14 +350,6 @@ export default function WarLifeVideoSlider() {
                                                 className={`h-full w-full object-cover`}
                                             />
                                             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                                            <button
-                                                onClick={(e) => handlePlayVideo(data.youtubeId, e)}
-                                                className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
-                                            >
-                                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-red-500 shadow transition duration-300 hover:bg-red-500 hover:text-white">
-                                                    <Play className="h-5 w-5" />
-                                                </div>
-                                            </button>
                                         </motion.button>
                                     </div>
                                 );
@@ -363,9 +359,9 @@ export default function WarLifeVideoSlider() {
                 </div>
             </div>
 
-            {/* Fullscreen Video Modal */}
+            {/* Fullscreen Image Modal */}
             <AnimatePresence>
-                {isVideoModalOpen && playingVideoId && (
+                {isImageModalOpen && viewingImage && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -384,19 +380,43 @@ export default function WarLifeVideoSlider() {
                             <button
                                 onClick={handleCloseModal}
                                 className="absolute top-4 right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
-                                aria-label="Close video"
+                                aria-label="Close image"
                             >
                                 <X className="h-6 w-6" />
                             </button>
+
+                            {/* Navigation buttons */}
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleModalNavigation("prev");
+                                }}
+                                className="absolute left-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
+                                aria-label="Previous image"
+                            >
+                                <ChevronLeft className="h-6 w-6" />
+                            </button>
+
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleModalNavigation("next");
+                                }}
+                                className="absolute right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
+                                aria-label="Next image"
+                            >
+                                <ChevronRight className="h-6 w-6" />
+                            </button>
                             
-                            <div className="w-full aspect-video">
-                                <iframe
-                                    src={`https://www.youtube.com/embed/${playingVideoId}?autoplay=1&rel=0`}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen
-                                    className="w-full h-full rounded-lg"
+                            <div className="w-full h-full flex flex-col items-center justify-center">
+                                <img
+                                    src={viewingImage.image}
+                                    alt={viewingImage.title}
+                                    className="max-w-full max-h-full object-contain rounded-lg"
                                 />
+                                <h3 className="mt-4 text-white text-xl font-semibold text-center">
+                                    {viewingImage.title}
+                                </h3>
                             </div>
                         </motion.div>
                     </motion.div>

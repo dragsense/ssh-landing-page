@@ -6,13 +6,14 @@ import JetImage from "@/assets/images/jet.png";
 
 const quotes = [
   {
-    text: "Sajad Haider is one of the gallant few who helped save Pakistan in 1965",
-    author: "Former C-in-C of the PAF, Air Marshal Asghar Khan",
-  },
-  {
     text: "As Chief of Operations during the 1965 war, I can say Squadron Leader Sajad Haider emerged as one of the outstanding commanders. Under his able and inspiring leadership, No. 19 Squadron's contribution was second to none and at times beyond all expectations. Whenever there was a difficult task to be carried out effectively, I always called upon No. 19 Squadron to do it and it was always done in the best traditions of the Pakistan Air Force.",
     author: "Former C-in-C of the PAF, Air Marshal Abdur Rahim Khan",
   },
+  {
+    text: "Sajad Haider is one of the gallant few who helped save Pakistan in 1965",
+    author: "Former C-in-C of the PAF, Air Marshal Asghar Khan",
+  },
+
   {
     text: "A brother and mentor, Sajad Haider inspired me in the very incipient stage of my career to always 'aim high', a lesson I never forgot and pursued with vigor. Surely then I owe him much for what Allah bestowed on me later.",
     author: "Former Chief of Air Staff, Air Chief Marshal Abbas Khattak",

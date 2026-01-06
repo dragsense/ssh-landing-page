@@ -37,7 +37,7 @@ export default function Navbar() {
         { label: "Home", to: "/" },
         { label: "Publications", href: "/#publications" },
         { label: "Early Life", to: "/early-life" },
-        { label: "Airforce Life", to: "/war-life" },
+        { label: "Airforce Life", to: "/airforce-life" },
         { label: "Business Life", to: "/business-man" },
     ];
 

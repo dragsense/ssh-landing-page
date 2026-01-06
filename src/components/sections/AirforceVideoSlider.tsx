@@ -15,7 +15,7 @@ type PreparedVideo = VideoItem & {
     link: string;
 };
 
-export default function WarLifeVideoSlider() {
+export default function AirLifeGallerySlider() {
     const videos = useMemo<PreparedVideo[]>(() => {
         const list: VideoItem[] = [
             {

@@ -9,10 +9,10 @@ import CertificateSection from "@/components/sections/CertificateSection";
 export default function BusinessMan() {
     return (<InnerPageLayout 
         title="Business Man" 
-    content="SLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    content="The fighter pilot who left the Air Force with just Rs17,000 in his pocket."
     image={S7_Image}
     >
-         <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+         <section className="relative my-8 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
             <BusinessImageSlider />
         </section>
         <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
@@ -23,7 +23,7 @@ export default function BusinessMan() {
             <BusinessmanFeatureSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6 hidden">
             <BusinessmanGallerySlider />
         </section>
 

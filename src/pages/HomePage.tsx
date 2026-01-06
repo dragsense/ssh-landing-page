@@ -36,7 +36,7 @@ export default function Home() {
 
     return (<HomePageLayout>
 
-        <section className="relative max-w-screen-lg mx-auto my-8 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative max-w-screen-lg mx-auto my-8 mt-40 md:my-16 lg:my-24 px-4 md:px-6">
             <TrueHeroSection />
         </section>
 

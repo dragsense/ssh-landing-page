@@ -4,7 +4,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 import S16_Image from '@/assets/images/s16.png'
 import S17_Image from '@/assets/images/s17.png'
 
-export default function WarFeatureSection() {
+export default function AirforceFeatureSection() {
 
     return (
 

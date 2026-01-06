@@ -81,19 +81,21 @@ export default function Footer() {
           </motion.div>
         </div>
 
+<div className="flex justify-center">
         {/* Copyright */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-8 md:mt-12 text-center text-xs md:text-sm text-gray-500"
+          className="mt-8 md:mt-12 text-center text-xs md:text-sm text-gray-500 md:w-3/5"
         >
            <p className="text-sm md:text-base leading-relaxed text-muted-foreground my-2">
             A joint family initiative, led by son, Zohare Haider. All material and references are sourced for the project. Public submissions are welcome and can be submitted <a href="mailto:zoharehaider@gmail.com" className="text-blue-500 hover:text-blue-600">here</a>.
               </p>
           © {new Date().getFullYear()} S. Sajad Haider. All rights reserved.
         </motion.div>
+        </div>
       </footer>
   );
 }

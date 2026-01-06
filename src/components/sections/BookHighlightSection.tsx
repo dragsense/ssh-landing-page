@@ -74,7 +74,7 @@ export default function BookHighlightSection() {
 
 
 
-          <GradientFillButton className="font-semibold">
+          <GradientFillButton className="font-semibold w-fit">
 
             <div className="flex gap-3 flex-wrap text-center">
               <ShoppingCart className="w-4 h-4 mr-2 group-hover:animate-bounce" />

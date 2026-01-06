@@ -32,11 +32,11 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, type: "spring" }}
-        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-[length:800px] md:bg-contain bg-center bg-no-repeat"
+        className="relative w-full h-full mt-20 flex flex-col justify-center items-center bg-[length:600px] md:bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         {/* Mobile Heading */}
-        <div className="md:hidden absolute top-16 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+        <div className="md:hidden absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
             Sajad
           </h1>
@@ -60,12 +60,12 @@ export default function Hero() {
       </motion.div>
 
       {/* Badges + Button */}
-      <div className="absolute -bottom-10 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
+      <div className="absolute -bottom-25 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
         {/* Left Badge */}
         <motion.img
           src={badge1}
           alt="Badge 1"
-          className="h-20 w-auto object-contain drop-shadow-xl mb-4 md:mb-0"
+          className="h-20 w-auto object-contain drop-shadow-xl mb-4 md:mb-0 invisible"
           initial={{ x: -60, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}

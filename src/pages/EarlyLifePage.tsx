@@ -9,11 +9,11 @@ export default function EarlyLife() {
     content="Syed Sajjad Haider was born in Sargodha on 25 or 26 December 1932, at midnight. His parents were Syed Fazal Shah (1882–1986) and Rashida Begum. He has an older sister named Kausar and two younger brothers, Bunyad Haider (1936–2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey and the youngest, Jawwad Haider."
     image={S6_Image}
     >
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-8 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifeInspirationSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-8 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifePicsSection />
         </section>
 

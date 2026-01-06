@@ -11,7 +11,7 @@ export default function InnerPageHero({ title, content, image }: { title: string
 
     return (
         <div
-            className="h-screen max-w-screen-xl mx-auto mt-10 md:mt-20 flex flex-col items-center justify-center overflow-hidden p-5"
+            className="h-screen max-w-screen-xl mx-auto mt-30 md:mt-20 flex flex-col items-center justify-center overflow-hidden p-5"
         >
              <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60 z-100"
