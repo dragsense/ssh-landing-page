@@ -187,9 +187,19 @@ export default function BusinessImageSlider() {
             </div> */}
 
             {/* Mobile Simple Slideshow */}
-            <div className="lg:hidden mx-auto w-full max-w-md px-4">
+            <div className="lg:hidden mx-auto w-full max-w-md md:px-4">
                 <div className="space-y-6">
-                    <p className="text-4xl font-semibold uppercase text-center">Gallery</p>
+                    <p className="text-4xl font-semibold uppercase text-center">
+                    <img
+                                src={carmorant_logo}
+                                alt="Cormorant Logo"
+                                className="w-64"
+                            />
+                    
+                    </p>
+                    <p className="text-center">
+                            Representative around 80 of the to fortune 500 companies
+                        </p>
                     
                     <div className="relative">
                         <motion.div

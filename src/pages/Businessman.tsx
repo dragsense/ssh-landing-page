@@ -12,7 +12,7 @@ export default function BusinessMan() {
     content="The fighter pilot who left the Air Force with just Rs17,000 in his pocket."
     image={S7_Image}
     >
-         <section className="relative my-8 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
+         <section className="relative my-8 mt-10 md:my-16 lg:my-24 px-4 md:px-6">
             <BusinessImageSlider />
         </section>
         <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">

@@ -120,7 +120,7 @@ export default function Navbar() {
             )}
         >
             <div className="mx-auto flex justify-between items-center relative">
-                <motion.div whileHover={{ y: -3, transition: { type: "spring", stiffness: 400 } }}>
+                <motion.div className="z-[101]" whileHover={{ y: -3, transition: { type: "spring", stiffness: 400 } }}>
                     <Link
                         to="/">
                         <motion.img
@@ -168,14 +168,14 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="fixed inset-0 z-[100] backdrop-blur-xl border-b border-white/10 bg-background/95 dark:bg-background/95 flex flex-col items-center justify-center space-y-6 pt-20"
+                            className="fixed inset-0 z-[100] h-screen backdrop-blur-xl border-b border-white/10 bg-background/95 dark:bg-background/95 flex flex-col items-center justify-center space-y-6 pt-20"
                             onClick={(e) => {
                                 if (e.target === e.currentTarget) {
                                     setMobileOpen(false);
                                 }
                             }}
                         >
-                            <ul className="gap-4 flex flex-col items-center w-full px-4" onClick={(e) => e.stopPropagation()}>
+                            <ul className="gap-4 flex flex-col items-center w-full  px-4" onClick={(e) => e.stopPropagation()}>
                                 <NavLinks />
                             </ul>
                         </motion.div>

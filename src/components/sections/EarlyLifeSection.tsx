@@ -77,7 +77,7 @@ export default function EarlyLifeSection() {
         className="relative dark:bg-black bg-accent rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center"
       >
         <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-[#9b6dac] transition-colors">
-          Read More &gt;&gt;
+          <a href="/early-life">Read More &gt;&gt;</a>
         </p>
 
         <motion.div
