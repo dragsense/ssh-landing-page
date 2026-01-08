@@ -36,19 +36,20 @@ export default function Hero() {
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         {/* Mobile Heading */}
-        <div className="md:hidden absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+        <div className="md:hidden absolute top-8 w-full left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
-            Sajad
+            Sajad Haider
           </h1>
-          <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
-            Haider
-          </h1>
+          <h3 className="font-semibold drop-shadow-lg leading-tight">Air Commodore (R) S.J.</h3>
+
         </div>
 
         {/* Desktop Heading */}
-        <div className="hidden md:flex gap-20 lg:gap-40 justify-center">
-          <h1 className="text-6xl lg:text-[10rem] font-bold">Sajad</h1>
-          <h1 className="text-6xl lg:text-[10rem] font-bold">Haider</h1>
+        <div className="hidden relative md:flex gap-20 lg:gap-40 justify-center">
+          <h1 className="text-4xl md:text-[7rem] lg:text-[10rem] font-bold">Sajad</h1>
+          <h1 className="text-4xl md:text-[7rem] lg:text-[10rem] font-bold">Haider</h1>
+          <h2 className="absolute top-28 lg:top-38 right-0 text-2xl font-semibold drop-shadow-lg leading-tight">Air Commodore (R) S.J.</h2>
+
         </div>
 
         {/* Timeline */}
