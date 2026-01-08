@@ -19,7 +19,7 @@ module.exports = {
       ref: "origin/main",
       repo: "git@github.com:dragsense/ssh-landing-page.git",
       path: "/var/www/ssh_demo_web_usr/data/www/ssh-demo.websight.digital",
-      key: "C:/Users/.ssh/ds-server",
+      key: "C:/.ssh/ds-server",
       "post-setup": "",
       "post-deploy": "sh ./deploy.sh",
     },
