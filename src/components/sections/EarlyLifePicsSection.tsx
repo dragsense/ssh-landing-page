@@ -2,12 +2,13 @@
 import { motion } from "framer-motion";
 
 
-import S3_Image from '@/assets/images/earlylife/Image (18).jpg';
-import S4_Image from '@/assets/images/earlylife/Image (19).jpg';
-import S5a_Image from '@/assets/images/earlylife/Image (21).jpg';
-import S6_Image from '@/assets/images/earlylife/Image (22).jpg';
-import S7_Image from '@/assets/images/earlylife/Image (25).jpg';
-import S8_Image from '@/assets/images/earlylife/Image (31).jpg';
+import i1 from '@/assets/images/earlylife/Image (18).jpg';
+import i4 from '@/assets/images/earlylife/Image (22).jpg';
+import i7 from '@/assets/images/earlylife/img (1).jpg';
+import i8 from '@/assets/images/earlylife/img (2).jpg';
+import i9 from '@/assets/images/earlylife/img (3).jpg';
+import i10 from '@/assets/images/earlylife/img (4).jpg';
+import i11 from '@/assets/images/earlylife/img (5).jpg';
 
 import S16_Image from '@/assets/images/earlylife/i5.jpg';
 
@@ -17,33 +18,42 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 
 const images = [
     S16_Image,
-    S3_Image,
-    S4_Image,
-    S5a_Image,
-    S8_Image,
-    S8_Image,
-    S6_Image,
-    S16_Image,
-    S16_Image,
-    S7_Image,
-    S16_Image,
-    S6_Image,
-    S7_Image,
-    S8_Image,
-    S7_Image,
-    S6_Image,
-    S7_Image,
+    i1,
+    
+    i7,
+    i8,
+    i9,
+    i1,
+    i10,
+    i11,
     S16_Image,
   
-    S8_Image,
+    i7,
     S16_Image,
+    i1,
+    i7,
+    i8,
+    i9,
+    i1,
+    i10,
+    i9,
+    i10,
+   
+   
+  
+    i8,
+    i9,
+    i1,
+    i10,
+    i11,
+    S16_Image,
+  
+   
+    i7,
     
-
-        S3_Image,
-    S4_Image,
-    S5a_Image,
-    
-
+    i8,
+  
+    i11,
 
 ];
 
@@ -55,14 +65,14 @@ export default function EarlyLifePicsSection() {
 
             <div className="z-10">
                 <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-transparent">
-                    EALRY LIFE ARCHIVE
+                    EARLY LIFE ARCHIVE
                 </h2>
 
                 <div className="mx-auto my-10 rounded-3xl p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
                     <ThreeDMarquee images={images} />
                 </div>
 
-                <div className="mx-auto mt-10 md:mt-30 p-2 max-w-screen-md">
+                <div className="mx-auto mt-10 md:mt-30 p-2 max-w-screen-md hidden">
                     <div className="space-y-20">
 
                         <motion.div
@@ -76,7 +86,7 @@ export default function EarlyLifePicsSection() {
                                 His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons.
                             </p>
                             <motion.img
-                                src={S6_Image}
+                                src={i4}
                                 alt="S. Sajad Haider youth"
                                 className="w-64 h-auto rounded-lg"
                                 whileHover={{ scale: 1.03 }}

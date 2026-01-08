@@ -31,11 +31,8 @@ export default function BusinessmanContentSection() {
                 {/* Right Side - Paragraph */}
                 <div className="space-y-4">
                     <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                        Sajad Haider ended his military career in 1980; he resigned with no land, no assets, and a meagre bank balance. His only possession was a ten-year-old Toyota. Having to provide for his family without a pension that could sustain them, he was forced to enter the civilian world to earn an income.
-                    </p>
-                    <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                         <strong>Beginning of the businessman</strong> <br/>
-                        Sajad’s transition into the commercial sector was facilitated by his friends, the Gokals, who were prominent shipping magnets. Mustafa Gokal, then Zia-ul-Haq’s shipping minister, suggested that Sajad enter the defence business. Sajad initially resisted, famously stating he only knew "how to spell business" but had no idea what it actually was, even stating that, “I did not know what an LC (Letter of Credit) was.”
+                        Sajad’s transition into the commercial sector was facilitated by his friends, the Gokals, who were prominent shipping magnets. Mustafa Gokal, then Zia-ul-Haq’s shipping minister, suggested that Sajad enter the defence business. Sajad initially resisted, famously stating he only knew "how to spell business" but had no idea what it actually was, even stating that, “I did not know what an LC (Letter of Credit) was.” 
                         <br/>“They told me I didn’t have the experience. They were right — but I had intent.” <br/>
                         Sajad travelled to the US and was given a single opportunity: a 30-day trial contract with AM General. With no formal business background, he learned procurement, pricing, and negotiation on the job. By undercutting existing government-to-government deals and delivering real savings, he earned the confidence of senior military leadership, which earned him more deals as the years progressed.
 

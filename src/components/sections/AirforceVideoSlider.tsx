@@ -30,9 +30,9 @@ export default function AirLifeGallerySlider() {
                 keywords: ["Pathankot Strike"],
             },
             {
-                title: "Unravelling Pakistan's 1971 Pre-emptive Airtrikes!",
+                title: "Unravelling Pakistan's 1971 Pre-emptive Airstrikes!",
                 youtubeId: "_kkyTABh3U8",
-                keywords: ["Airtrikes"],
+                keywords: ["Airstrikes"],
             },
            
         ];

@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import S4_Image from "@/assets/images/s4.png";
 import S5_Image from "@/assets/images/s5.png";
 import S6_Image from "@/assets/images/s6.png";
+import S16_Image from '@/assets/images/earlylife/i5.jpg';
 
 const sections = [
     {
@@ -11,6 +12,12 @@ const sections = [
         title: "Early Life and Inspiration",
         content: "Haider's formative years were spent in Quetta, first in the Bugti house and then the Bugti Complex, a gift to his parents from Nawab Mehran Khan. His father, known as \"Baba-e-Baluch,\" lunched daily with Nawab Sahib, leading Haider and his sister Kausar to spend many years there. Kausar was the closest to their parents among the siblings, which also included Bunyad and Jawwad. Surrounded by fierce, hard men in a hardcore Baloch and Pashtun culture, he made friends with children from those clans, as well as Hindus and Sikhs, fostering strong intercommunal ties and describing life in that multicultural community as wonderful and uncomplicated, with a focus on communal wellbeing.\n\nA pivotal moment for Haider was witnessing Quaid-e-Azam Muhammad Ali Jinnah speak at his old school in Quetta, sitting an arm's length away in sheer awe. Jinnah's powerful words, urging that \"some of you will choose to defend your country with your lives as members of the army, navy, or the air force,\" inspired Haider. He viewed Jinnah as truly the only one worthy of the title Quaid-e-Azam, having created Pakistan single-handedly. Initially seeing himself in an army uniform while living in a largely army cantonment, he shifted his aspiration to the air force after encountering fighter pilots at Cafe Stanley and witnessing Spitfires perform intricate manoeuvres the next day. He stated, \"To me it will always be that momentous occasion and the Quaid's powerful words that motivated me with passion towards flying as a defender of my country.\"",
         image: S6_Image,
+    },
+    {
+        id: "early-life-inspiration-2",
+        title: "His hero, Quaid-e-Azam",
+        content: "As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan.",
+        image: S16_Image,
     },
     {
         id: "rigorous-training",
@@ -51,7 +58,7 @@ export default function EarlyLifeInspirationSection() {
             <div className="space-y-4">
                 {sections.map((section, index) => {
                     const isExpanded = expandedSection === section.id;
-                    
+
                     return (
                         <motion.div
                             key={section.id}

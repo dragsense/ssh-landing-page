@@ -128,7 +128,7 @@ export default function TrueHeroComponent() {
         >
 
           <GradientFillButton className="font-semibold">
-            <span className="mr-2"><a href="/war-life">Explore Full Story</a></span>
+            <span className="mr-2"><a href="/airforce-life">Explore Full Story</a></span>
             <span className="group-hover:translate-x-1 transition-transform">
               &rarr;
             </span>
