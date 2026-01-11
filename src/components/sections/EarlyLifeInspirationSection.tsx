@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import S5_Image from "@/assets/images/s5.png";
-import S6_Image from "@/assets/images/s6.png";
+import S5_Image from "@/assets/images/ui/s5.png";
+import S6_Image from "@/assets/images/ui/s6.png";
 import S16_Image from '@/assets/images/earlylife/i5.jpg';
 
 const sections = [

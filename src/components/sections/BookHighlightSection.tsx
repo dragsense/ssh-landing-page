@@ -3,7 +3,7 @@ import React from "react";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import DemoBook from "@/assets/images/bookcover.jpg";
+import DemoBook from "@/assets/images/books/bookcover.jpg";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
 export default function BookHighlightSection() {

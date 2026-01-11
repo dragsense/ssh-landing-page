@@ -1,4 +1,4 @@
-import S6_Image from "@/assets/images/s6.png";
+import S6_Image from "@/assets/images/ui/s6.png";
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import EarlyLifePicsSection from "@/components/sections/EarlyLifePicsSection";
 import EarlyLifeInspirationSection from "@/components/sections/EarlyLifeInspirationSection";

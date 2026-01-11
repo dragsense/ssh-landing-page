@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import JetImage from "@/assets/images/jet.png";
+import JetImage from "@/assets/images/ui/jet.png";
 
 const quotes = [
   {

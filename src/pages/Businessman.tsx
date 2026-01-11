@@ -1,4 +1,4 @@
-import S7_Image from "@/assets/images/S7.png";
+import S7_Image from "@/assets/images/ui/S7.png";
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import BusinessmanContentSection from "@/components/sections/BusinessmanContentSection";
 import BusinessImageSlider from "@/components/sections/BusinessImageSlider";

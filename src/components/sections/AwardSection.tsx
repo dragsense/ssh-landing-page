@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Award1 from "@/assets/images/220px-Sitara_-_i_-Jurat_.png";
-import Award3 from "@/assets/images/PAF_GoldenEagleAward.png";
-import Award4 from "@/assets/images/Tamgha-e-Diffa_Medal_Obverse.png";
-import Award5 from "@/assets/images/Sitara-e-Harb_1965_War_Ribbon.png";
-import Award6 from "@/assets/images/Sitara-e-Harb_1971_War.png";
-import Award7 from "@/assets/images/Tamgha-e-Jang 71.png";
-import Award8 from "@/assets/images/War_Medal_1965(Tamgha-e-Jang,_A.H.1385).png";
+import Award1 from "@/assets/images/awards/220px-Sitara_-_i_-Jurat_.png";
+import Award3 from "@/assets/images/awards/PAF_GoldenEagleAward.png";
+import Award4 from "@/assets/images/awards/Tamgha-e-Diffa_Medal_Obverse.png";
+import Award5 from "@/assets/images/awards/Sitara-e-Harb_1965_War_Ribbon.png";
+import Award6 from "@/assets/images/awards/Sitara-e-Harb_1971_War.png";
+import Award7 from "@/assets/images/awards/Tamgha-e-Jang 71.png";
+import Award8 from "@/assets/images/awards/War_Medal_1965(Tamgha-e-Jang,_A.H.1385).png";
 
 import { Button } from "../ui/button";
 

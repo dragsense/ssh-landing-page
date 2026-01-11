@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import S1_Image from "@/assets/images/s1.png";
-import S2_Image from "@/assets/images/s2.png";
-import S3_Image from "@/assets/images/s3.png";
+import S1_Image from "@/assets/images/ui/s1.png";
+import S2_Image from "@/assets/images/ui/s2.png";
+import S3_Image from "@/assets/images/ui/s3.png";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 

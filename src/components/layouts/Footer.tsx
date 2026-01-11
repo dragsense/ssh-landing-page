@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import SSH_Logo_Footer from "@/assets/logo/ssh-logo-footer.png";
-import Jet2 from '@/assets/images/footer-img.png';
+import Jet2 from '@/assets/images/ui/footer-img.png';
 
 
 

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import sliderBackground from "@/assets/images/cormorant background.png";
+import sliderBackground from "@/assets/images/backgrounds/cormorant background.png";
 import carmorant_logo from "@/assets/logo/cormorant-logo.png";
 import image1 from "@/assets/business/1.jpg";
 import image2 from "@/assets/business/2.jpg";

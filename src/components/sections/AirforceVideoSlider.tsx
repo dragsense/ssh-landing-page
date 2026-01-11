@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
-import sliderBackground from "@/assets/images/war-life-slider-bg.png";
+import sliderBackground from "@/assets/images/backgrounds/war-life-slider-bg.png";
 import youtube_icon from "@/assets/icons/youtube.png";
 
 type VideoItem = {
