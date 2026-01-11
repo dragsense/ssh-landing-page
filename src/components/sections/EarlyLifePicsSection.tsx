@@ -2,13 +2,20 @@
 import { motion } from "framer-motion";
 
 
-import i1 from '@/assets/images/earlylife/Image (18).jpg';
-import i4 from '@/assets/images/earlylife/Image (22).jpg';
 import i7 from '@/assets/images/earlylife/img (1).jpg';
 import i8 from '@/assets/images/earlylife/img (2).jpg';
 import i9 from '@/assets/images/earlylife/img (3).jpg';
 import i10 from '@/assets/images/earlylife/img (4).jpg';
 import i11 from '@/assets/images/earlylife/img (5).jpg';
+import i12 from '@/assets/images/earlylife/fm (1).jpg';
+import i13 from '@/assets/images/earlylife/fm (2).jpg';
+import i14 from '@/assets/images/earlylife/fm (3).jpg';
+import i15 from '@/assets/images/earlylife/fm (4).jpg';
+import i16 from '@/assets/images/earlylife/fm (5).jpg';
+import i17 from '@/assets/images/earlylife/fm (6).jpg';
+import i18 from '@/assets/images/earlylife/fm (7).jpg';
+import i19 from '@/assets/images/earlylife/fm (8).jpg';
+import i20 from '@/assets/images/earlylife/fm (9).jpg';
 
 import S16_Image from '@/assets/images/earlylife/i5.jpg';
 
@@ -18,43 +25,34 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 
 const images = [
     S16_Image,
-    i1,
+    i7,
+    i8,
+    i9,
+    i10,
+    i11,
+    i12,
+    i13,
+    i14,
+    i15,
+    i16,
+    i17,
+    i18,
+    i19,
+    i20,
+    i7,
+    i8,
+    i9,
+    i10,
+    i11,
+    i12,
+    i13,
+    i14,
+    i15,
     
-    i7,
-    i8,
-    i9,
-    i1,
-    i10,
-    i11,
-    S16_Image,
-  
-    i7,
-    S16_Image,
-    i1,
-    i7,
-    i8,
-    i9,
-    i1,
-    i10,
-    i9,
-    i10,
-   
-   
-  
-    i8,
-    i9,
-    i1,
-    i10,
-    i11,
-    S16_Image,
-  
-   
-    i7,
-    
-    i8,
-  
-    i11,
-
+    i17,
+    i18,
+    i19,
+    i20,
 ];
 
 export default function EarlyLifePicsSection() {
@@ -86,7 +84,7 @@ export default function EarlyLifePicsSection() {
                                 His family initially lived in Bugti House before moving into a small tin-roofed home within a complex of eight houses built by Nawab Mehran Khan Bugti. Mehran, a friend of Sajad's father, gifted him two of the homes. Sajad grew up with Akbar Bugti and his siblings after moving in. He recalled Akbar as a "stunning and fearsome person" who always called him chapeit or scrawny boy. His younger brother, Ahmed Nawaz Bugti, would take Sajad with him every day for driving lessons.
                             </p>
                             <motion.img
-                                src={i4}
+                                src={i12}
                                 alt="S. Sajad Haider youth"
                                 className="w-64 h-auto rounded-lg"
                                 whileHover={{ scale: 1.03 }}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import placeHolderImage from '@/assets/images/videoframe_14891.png';
-import imageReocrd from '@/assets/images/record.png';
+import imageReocrd from '@/assets/images/air-planes.jpg';
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function RecordSection() {

@@ -24,11 +24,7 @@ export default function AirLifeGallerySlider() {
                 keywords: ["Pathankot Strike"],
             },
          
-            {
-                title: "Pathankot Strike",
-                youtubeId: "AHS8z3sy3ZU",
-                keywords: ["Pathankot Strike"],
-            },
+          
             {
                 title: "Unravelling Pakistan's 1971 Pre-emptive Airstrikes!",
                 youtubeId: "_kkyTABh3U8",
@@ -293,7 +289,7 @@ export default function AirLifeGallerySlider() {
                                                 key={`scanner-${absoluteIndex}`}
                                                 initial={{ opacity: 0, y: -10 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                className="absolute -top-45 right-2 transform hidden sm:flex items-start justify-center -z-1"
+                                                className="absolute -top-45 left-2 transform hidden sm:flex items-start justify-center -z-1"
                                             >
                                                 <div className="flex flex-col items-center relative">
                                                     {/* Dot on top */}

@@ -5,6 +5,17 @@ import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
 import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
 import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
+import S7_Image from '@/assets/images/airforce/Image (23).jpg';
+import S8_Image from '@/assets/images/airforce/Image (24).jpg';
+
+import fl1 from '@/assets/images/airforce/fl (1).jpeg';
+import fl2 from '@/assets/images/airforce/fl (2).jpeg';
+import fl3 from '@/assets/images/airforce/fl (3).jpeg';
+import fl4 from '@/assets/images/airforce/fl (4).jpeg';
+
+import md1 from '@/assets/images/airforce/md (1).jpeg';
+import md2 from '@/assets/images/airforce/md (2).jpeg';
+import md3 from '@/assets/images/airforce/md (3).jpeg';
 
 // All PILOT LIFE content organized chronologically
 const allPilotLifeContent = [
@@ -33,6 +44,14 @@ const allPilotLifeContent = [
         content: "There was an incident where Haider took the initiative to help the Frontier Corps against Afghan mercenaries. He felt strongly about leaving the Frontier Corps soldiers hanging when they had specifically requested air support. He flew with a team, performing tight manoeuvres in the mountainous region of Northern Pakistan, killing three of the mercenaries while sparing the life of another."
     },
     {
+        title: "Medals",
+        images: [
+            md1,
+            md2,
+            md3,
+        ]
+    },
+    {
         title: "Sajad Haider's view on the 1965 war",
         content: "Haider viewed the '65 war as a disastrous military failure driven by the egos and incompetence of Pakistan's leadership, particularly President Ayub Khan. He criticised Operation Grand Slam, which failed due to strategic missteps and leadership confusion, including the removal of General Akhtar Malik just before a crucial attack. The PAF, despite efforts by Musa Khan to keep them out of the loop, demonstrated effective leadership and tactical prowess, playing a key role in defending Pakistan. Haider argues that Pakistan owes its survival to the bravery of its soldiers and not its leaders, emphasising the need to acknowledge past mistakes to ensure a better future."
     },
@@ -51,7 +70,49 @@ const allPilotLifeContent = [
     {
         title: "Later Reflections and Personal Challenges",
         content: "Haider held high opinions of Air Marshal Asghar Khan and A.M. Nur Khan. He referred to Ayub Khan (AK) as a dictator, arguing that since AK appointed Gen. Musa, no significant progress was expected. He asserted that the armed forces served gallantly and shouldn't be the people's punching bag today, noting controversial events and bad decisions were edited from official versions by non-historians. Haider strongly criticised the official PAF narrative of the 1965 India-Pakistan Air War (IPAW): \"The PAF did well in the war. It's a pity that its government and leadership saw it fit to denigrate its achievements by making claims that have ensured that the PAF is associated with bragging as opposed to its actual praiseworthy achievements.\" He was indignant that no candid attempts had been made to paint the true picture. He felt \"patently cheated and enraged\" at the loss of gallant men who were martyred believing in a \"sacred cause\" based on what he perceived as a dishonest official version. He concluded, \"It is my conviction that an honest study of the past can throw up the answers to our perpetual national morass. The root cause of our misfortunes has to do with a bankruptcy of leadership.\" In his later business life, his company, Cormorant, was targeted by two generals from the Defence Procurement Division for kickbacks. He wrote, \"With the endemic corruption and coercion by the sitting Director General Defence Procurement (DGDP), it had become obvious that either I resorted to giving kickbacks, or packed up.\" He decided to pull the shutters down on his company by 1990, \"while honour was still an option.\" This coincided with difficult matrimonial decisions (noting a third wife). His father passed away on July 3, 1986, at the age of 104, while Haider was in Geneva."
-    }
+    },
+    {
+        title: "Pathankot Strike",
+        content: "On 6 September 1965, Sqn Ldr Sajad Haider led a formation of eight F-86 Sabres from No. 19 Squadron in a pre-emptive strike against the Pathankot airfield, a mission that remains one of the most successful in PAF history. Utilising a Hi-Lo-Hi flight profile to avoid detection by Indian radar, the formation achieved complete surprise, reaching the target area at the precisely coordinated time of 17:05 hours. Upon arrival, Haider spotted numerous aircraft, including Mystères and two MiG-21s, parked in the northern dispersal area. Although the original orders specified a single pass, Haider directed his pilots through three devastating strafing attacks, using their .50 calibre guns to ignite an inferno on the ground. According to IAF records confirmed by the sources, the raid resulted in the destruction of ten aircraft—specifically six Mysteres, two MiG-21s, one Gnat, and a Fairchild Packet—while damaging three others. Despite facing a \"wall of flak\" from heavy anti-aircraft guns, the entire ten-ship formation, including the two tactical escorts, returned safely to Peshawar, an achievement that contributed to Haider being awarded the Sitara-e-Jurat."
+    },
+    {
+        title: "Wagah Border",
+        content: "Before the attack, the Indian Army high command was so confident that they reportedly issued invitations to journalists for a celebration at the Lahore Gymkhana, an audacity that was crushed when Haider’s formation intercepted their leading columns at the Wagha border. Upon spotting the Indian roundels on the tanks, Haider ordered his pilots to set their weapons to \"hot\" and aggressively engaged the armour with rockets and guns. The squadron remained over the target for roughly 17 minutes, conducting devastating runs that incapacitated the Indian 3 Jat battalion and destroyed mortars, RCL guns, and numerous tanks. Sources confirm that this intervention was the decisive factor that stalled the Indian advance, preventing the enemy from pouring across the BRB canal into the city and earning the 19th Squadron a legacy as the force that saved Lahore."
+    },
+    {
+        title: "Flight Logs",
+        images: [
+            fl1,
+            fl2,
+            fl3,
+            fl4,
+        ]
+
+    },
+    {
+        title: "1971 War",
+        content: "Sajad Haider's primary role during the 1971 War was the Officer Commanding (OC) Flying Wing at Sargodha (No 33 Wing), a position he took in mid-September. He immediately focused on operational readiness but lamented the loss of the classical pre-emption opportunity because the political leadership delayed launching a counter-air and land assault after the Indian Army invaded East Pakistan. When the war officially began on December 3rd, the first Mirage strike against Pathankot missed its target, hampered by darkness and timing issues. His F-6 Squadrons provided constant Close Air Support, using their 30 mm guns effectively against Indian armour, particularly in the critical Shakargarh and Sialkot sectors. The conflict concluded abruptly for him when a crucial Mirage bombing mission he was escorting against the Ferozpur marshalling yard on December 17th was falsely recalled by a senior staff officer, wasting a strategic opportunity and severely demoralising his crews"
+    },
+    {
+        title: "Air Battle over Dhaka",
+        content: "On the Western Front, the PAF launched a series of strikes on 3 December targeting Indian airfields like Amritsar, Pathankot, and Srinagar. Unlike 1965, the focus was on cratering runways because the IAF had moved their aircraft into hardened concrete shelters, and while Sajad did not fly the mission himself (as much as he wanted to relive his memories of 1965), he was persuaded to stay behind by Wg Cdr Hakimullah to supervise the conduct of operations. Hakimullah led a particularly successful Mirage mission that decimated a large assembly of Indian tanks at the Mukerian railway station. However, the campaign also saw the loss of the legendary Wg Cdr Mervyn Middlecoat, who was shot down in his F-104 by a MiG-21 on 12 December."
+    },
+    {
+        title: "Defence of Sialkot",
+        content: "As Officer Commanding (OC) No. 33 Flying Wing at Sargodha, Sajad Haider defended the Shakargarh and Sialkot sectors during the 1971 War. Under his leadership, the wing launched between 50 and 80 missions daily into the intense tank battles at Phillora and Chawinda, where Sajad mandated the use of 1,000 lb bombs to halt Indian armoured thrusts. Sajad did not merely command from the ground; he personally flew 20 operational missions during the conflict, including a notable sortie on 13 December in the Shakargarh salient. During that mission, after witnessing his wingman, Flt Lt Cecil Chaudhry, bail out behind enemy lines, Sajad conducted aggressive strafing runs to deter Indian soldiers and provide cover until Chaudhry could be reached by Pakistani troops. Sajad’s wing was celebrated by the Army’s Chief of General Staff, Lt Gen Gul Hassan, for its spectacular performance in saving Sialkot"
+    },
+    {
+        title: "Sajad Haider’s Combat and the Ferozpur Incident",
+        content: "Sajad Haider personally flew 20 operational missions during the conflict. On 13 December, while flying a Mirage-IIIE, he engaged in a high-speed chase of two Indian Su-7s near Shakargarh. Due to a weapon switching error and the low altitude of the bandits, his missiles failed to lock, and he narrowly avoided overflying Pathankot airfield while exiting the combat zone with critically low fuel. \n\n On 17 December, Sajad prepared a strike of 4 Mirages to bomb the Ferozpur marshalling yard. Moments before the attack, Air Vice Mshl Saeedullah Khan ordered a recall over the radio, falsely claiming it was the Air Chief's instruction. This botched command, which confused a sector-specific dust haze with the target area, caused the mission to be aborted."
+    },
+    {
+        title: "The Attock Conspiracy",
+        content: "The Attock Conspiracy, unearthed in March 1973, was a plot to overthrow Zulfiqar Ali Bhutto’s legitimate government by criminal force, masterminded by Brigadier F.B. Ali and Colonel Aleem Afridi, as per Sajad. This event was immediately seized upon by the PAF high command (Air Marshal Zafar Chaudhry's cabal) as a pretext to frame critics, resulting in Sajad Haider's arrest in May 1973 and subsequent solitary confinement in a sub-detention centre near Badaber for many months. Haider defied intense pressure and threats, refusing to sign a coerced confession that would have implicated Air Commodore Zulfiqar Ali Khan. He maintained a \"Plea of No Case\" at the General Court-Martial, leading to his unanimous exoneration; however, the Air Chief, driven by malice, unlawfully ordered him kept under arrest following the verdict, necessitating intervention from the Defence Minister to secure his final release. The fallout from the conspiracy resulted in the conviction of Wing Commander Hashmi and Squadron Leader Ghaus, but also the official removal of the others from their posts for intrigue and vindictive witch-hunting. In an extremely rare case, Sajad Haider was not only exonerated but reinstated to his position, which is unheard of after court martials, as that usually ends in honourable discharge if innocent.",
+    },
+    {
+        title: "End of an Era",
+        content: "Sajad Haider's experience with General Zia ul Haq was marked by escalating disillusionment culminating in his resignation from the PAF in 1980. Sajad developed a revulsion for Zia ul Haq following Zulfiqar Ali Bhutto's unlawful murder and Zia's subsequent imposition of the Hadood melodrama and hypocritical use of Islam, earning Zia the derogatory alias Lash ul Haq (Whipper of truth). His career under Zia was jeopardised when he gave a strongly worded note during a presentation to the President, criticising Zia's rule and his assertion that the army would run the country indefinitely. This confrontation, which Sajad felt compelled to make out of sincerity, convinced him that the PIA job was history and that his military career was ending. Concluding that he felt uneasy and did not wish to serve under Zia's rule anymore, Sajad requested to quit, stating, \"Enough was enough\" and that he should be allowed to quit while honour was still an option. He left the PAF with a bank balance of just Rs 17,000."
+    },
 ];
 
 const wars = [
@@ -64,7 +125,10 @@ const wars = [
             s.title.includes("1965") || 
             s.title.includes("Rann") || 
             s.title.includes("War Clouds") || 
-            s.title.includes("Internal struggles")
+            s.title.includes("Internal struggles") ||
+            s.title.includes("Wagah Border") ||
+            s.title.includes("Pathankot Strike") ||
+            s.title.includes("Flight Logs")
         )
     },
     {
@@ -72,19 +136,44 @@ const wars = [
         title: "War of 1971",
         description: "Sajad led the Wing in notable contributions, with No. 5 Squadron PAF conducting successful strike missions in India's Amritsar, Pathankot, and the famous strike on Mukerian railway station.",
         image: S5_Image,
-        sections: [
-            {
-                title: "War of 1971",
-                content: "Sajad led the Wing in notable contributions, with No. 5 Squadron PAF conducting successful strike missions in India's Amritsar, Pathankot, and the famous strike on Mukerian railway station. His tactical expertise and courage during these operations demonstrated his exceptional leadership capabilities and dedication to his country."
-            }
-        ]
+        sections: allPilotLifeContent.filter(s => 
+            s.title.includes("1971 War") ||
+            s.title.includes("Air Battle over Dhaka") ||
+            s.title.includes("Defence of Sialkot") ||
+            s.title.includes("Sajad Haider’s Combat and the Ferozpur Incident")
+        )
     },
     {
-        id: "early-career",
+        id: "pilot-life",
         title: "PILOT LIFE",
         description: "Sajad Haider's complete journey as a pilot in the Pakistan Air Force, from his first flight experiences to his reflections on war and leadership.",
         image: S6_Image,
-        sections: allPilotLifeContent
+        sections: allPilotLifeContent.filter(s => 
+            s.title.includes("First Flight Experience") ||
+            s.title.includes("Fighter Conversion and Squadron Life") ||
+            s.title.includes("First Postings and the Dawn of Jet Power") ||
+            s.title.includes("Near Miss") || 
+            s.title.includes("Against Afghan Mercenaries") ||
+            s.title.includes("Medals")
+        )
+    },
+    {
+        id: "the-attock-conspiracy",
+        title: "The Attock Conspiracy",
+        description: "he Attock Conspiracy, unearthed in March 1973, was a plot to overthrow Zulfiqar Ali Bhutto’s legitimate government by criminal force, masterminded by Brigadier F.B. Ali and Colonel Aleem Afridi, as per Sajad.",
+        image: S7_Image,
+        sections: allPilotLifeContent.filter(s => 
+            s.title.includes("The Attock Conspiracy")
+        )
+    },
+    {
+        id: "the-final-stand",
+        title: "The Final Stand",
+        description: "Sajad Haider's experience with General Zia ul Haq was marked by escalating disillusionment culminating in his resignation from the PAF in 1980.",
+        image: S8_Image,
+        sections: allPilotLifeContent.filter(s => 
+            s.title.includes("End of an Era")
+        )
     },
 ];
 
@@ -105,7 +194,7 @@ export default function LifeAtTheAirforcePage() {
                     {/* Back Button */}
                     <motion.button
                         onClick={() => navigate(-1)}
-                        className="flex items-center gap-2 mb-8 text-black dark:text-white hover:opacity-70 transition-opacity"
+                        className="flex items-center cursor-pointer gap-2 mb-8 text-black dark:text-white hover:opacity-70 transition-opacity"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3 }}
@@ -149,6 +238,13 @@ export default function LifeAtTheAirforcePage() {
                                         <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 whitespace-pre-line">
                                             {section.content}
                                         </p>
+                                        {section.images && section.images.length > 0 && (
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                {section.images.map((image, index) => (
+                                                    <img key={index} src={image} alt={section.title} className="w-full h-full object-cover" />
+                                                ))}
+                                            </div>
+                                        )}
                                     </motion.div>
                                 ))
                             ) : (

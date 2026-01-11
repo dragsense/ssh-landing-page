@@ -27,13 +27,23 @@ import S13_Image from '@/assets/images/airforce/i3.jpg';
 import S14_Image from '@/assets/images/airforce/i4.jpg';
 
 
-const images = [s1, s2,  s4, s5, s6, s7, s8, s10, s11, s12, S1_Image, S2_Image, S3_Image, S4_Image, S6_Image, S7_Image, S8_Image, S9_Image, S10_Image, S11_Image, S12_Image, S13_Image, S14_Image];
+import s31 from "@/assets/images/airforce/airforce (1).jpeg";
+import s32 from "@/assets/images/airforce/airforce (2).jpg";
+import s33 from "@/assets/images/airforce/airforce (3).jpg";
+import s34 from "@/assets/images/airforce/airforce (4).jpg";
+import s35 from "@/assets/images/airforce/airforce (1).jpg";
+
+const images = [ s32, s33,  s31, s34, s35, s1, s2,  s4, s5, s6, s7, s8, s10, s11, s12, S1_Image, S2_Image, S3_Image, S4_Image, S6_Image, S7_Image, S8_Image, S9_Image, S10_Image, S11_Image, S12_Image, S13_Image, S14_Image];
 
 export default function AirLifeGallerySlider() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [totalWidth, setTotalWidth] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStartX, setDragStartX] = useState(0);
+    const [dragStartPosition, setDragStartPosition] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     // Duplicate images for seamless infinite scroll
     const duplicatedImages = [...images, ...images, ...images];
@@ -66,7 +76,7 @@ export default function AirLifeGallerySlider() {
     }, []);
 
     useEffect(() => {
-        if (totalWidth === 0 || isPaused) return;
+        if (totalWidth === 0 || isPaused || isDragging) return;
 
         const interval = setInterval(() => {
             setScrollPosition((prev) => {
@@ -76,7 +86,49 @@ export default function AirLifeGallerySlider() {
         }, 30);
 
         return () => clearInterval(interval);
-    }, [totalWidth, isPaused]);
+    }, [totalWidth, isPaused, isDragging]);
+
+    // Mouse drag handlers
+    const handleMouseDown = (e: React.MouseEvent) => {
+        setIsDragging(true);
+        setIsPaused(true);
+        setDragStartX(e.clientX);
+        setDragStartPosition(scrollPosition);
+        e.preventDefault();
+    };
+
+    // Global mouse events for smooth dragging
+    useEffect(() => {
+        if (!isDragging) return;
+
+        const handleGlobalMouseMove = (e: MouseEvent) => {
+            const startPos = dragStartPosition;
+            const deltaX = dragStartX - e.clientX; // Inverted: dragging left scrolls right
+            let newPosition = startPos + deltaX;
+            
+            // Handle wrapping for seamless infinite scroll
+            while (newPosition < 0 && totalWidth > 0) {
+                newPosition += totalWidth;
+            }
+            while (newPosition >= totalWidth && totalWidth > 0) {
+                newPosition -= totalWidth;
+            }
+            
+            setScrollPosition(newPosition);
+        };
+
+        const handleGlobalMouseUp = () => {
+            setIsDragging(false);
+        };
+
+        window.addEventListener("mousemove", handleGlobalMouseMove);
+        window.addEventListener("mouseup", handleGlobalMouseUp);
+
+        return () => {
+            window.removeEventListener("mousemove", handleGlobalMouseMove);
+            window.removeEventListener("mouseup", handleGlobalMouseUp);
+        };
+    }, [isDragging, dragStartX, dragStartPosition, totalWidth]);
 
     return (
         <div className="w-full py-12">
@@ -88,9 +140,15 @@ export default function AirLifeGallerySlider() {
 
                 {/* Slider Container - Images side by side */}
                 <div
-                    className="relative overflow-hidden"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
+                    ref={containerRef}
+                    className="relative overflow-hidden cursor-grab active:cursor-grabbing select-none"
+                    onMouseEnter={() => {
+                        if (!isDragging) setIsPaused(true);
+                    }}
+                    onMouseLeave={() => {
+                        if (!isDragging) setIsPaused(false);
+                    }}
+                    onMouseDown={handleMouseDown}
                 >
                     <motion.div
                         ref={sliderRef}
@@ -99,8 +157,11 @@ export default function AirLifeGallerySlider() {
                             x: `-${scrollPosition}px`,
                         }}
                         transition={{
-                            duration: 0.03,
+                            duration: isDragging ? 0 : 0.03,
                             ease: "linear",
+                        }}
+                        style={{
+                            userSelect: "none",
                         }}
                     >
                         {duplicatedImages.map((image, index) => (

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import BusinessmanImage from "@/assets/images/earlylife/Image (31).jpg";
+import BusinessmanImage from "@/assets/business/bussiness-3.jpeg";
 
 export default function BusinessmanContentSection() {
     return (

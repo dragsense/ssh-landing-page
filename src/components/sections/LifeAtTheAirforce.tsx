@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
 import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
 import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
+import S7_Image from '@/assets/images/airforce/Image (23).jpg';
+import S8_Image from '@/assets/images/airforce/Image (24).jpg';
 
 const wars = [
     {
@@ -20,11 +22,23 @@ const wars = [
         image: S5_Image,
     },
     {
-        id: "early-career",
+        id: "pilot-life",
         title: "PILOT LIFE",
         description: "Sajad Haider's complete journey as a pilot in the Pakistan Air Force, from his first flight experiences to his reflections on war and leadership.",
         image: S6_Image,
     },
+    {
+        id: "the-attock-conspiracy",
+        title: "The Attock Conspiracy",
+        description: "The Attock Conspiracy, unearthed in March 1973, was a plot to overthrow Zulfiqar Ali Bhutto’s legitimate government by criminal force, masterminded by Brigadier F.B. Ali and Colonel Aleem Afridi, as per Sajad.",
+        image: S7_Image,
+    },
+    {
+        id: "the-final-stand",
+        title: "The Final Stand",
+        description: "Sajad Haider's experience with General Zia ul Haq was marked by escalating disillusionment culminating in his resignation from the PAF in 1980.",
+        image: S8_Image,
+    }
 ];
 
 export function LifeAtTheAirforce() {

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import BussinessmanImage from "@/assets/images/bussinessman.png";
+import BussinessmanImage from "@/assets/business/bussiness-3.jpeg";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 

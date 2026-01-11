@@ -9,6 +9,7 @@ import image3 from "@/assets/business/3.jpg";
 import image4 from "@/assets/business/4.jpg";
 import image5 from "@/assets/business/5.jpg";
 import image6 from "@/assets/business/6.jpg";
+import image7 from "@/assets/business/7.jpeg";
 
 type ImageItem = {
     title: string;
@@ -60,6 +61,12 @@ export default function BusinessImageSlider() {
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image6,
                 keywords: ["Teletype Equipment"],
+            },
+            {
+                title: "1980 - 1990",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image7,
+                keywords: ["H1 Hummer"],
             },
         ];
 
