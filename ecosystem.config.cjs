@@ -23,5 +23,15 @@ module.exports = {
       "post-setup": "",
       "post-deploy": "sh ./deploy.sh",
     },
+    prod: {
+      user: "root",
+      host: "66.103.211.113",
+      ref: "origin/main",
+      repo: "git@github.com:dragsense/ssh-landing-page.git",
+      path: "/var/www/sajadhaider.com/data/www/sajadhaider.com",
+      key: "C:/.ssh/ds-server",
+      "post-setup": "",
+      "post-deploy": "sh ./deploy.sh",
+    },
   },
 };
