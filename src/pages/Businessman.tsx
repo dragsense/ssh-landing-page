@@ -10,7 +10,7 @@ import CertificateSection from "@/components/sections/CertificateSection";
 export default function BusinessMan() {
     useSEO({
         title: 'Business Career - Cormorant Company | Sajad Haider',
-        description: 'Discover Sajad Haider\'s transition from fighter pilot to successful businessman. Learn about Cormorant, the defense company he founded in 1980, representing Fortune 500 companies and maintaining strict ethical standards.',
+        description: 'Sajad Haider business career: Founded Cormorant defense company 1980. Fortune 500 representative, ethical standards.',
         keywords: 'Sajad Haider business, Cormorant company, defense industry Pakistan, military business, ethical business practices',
         structuredData: {
             '@context': 'https://schema.org',

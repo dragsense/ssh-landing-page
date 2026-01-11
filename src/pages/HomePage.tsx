@@ -13,8 +13,8 @@ import TrueHeroSection from "@/components/sections/TrueHeroSection";
 
 export default function Home() {
     useSEO({
-        title: 'Air Commodore (R) Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
-        description: 'Official website of Air Commodore (Retired) Sajad Haider, hero of the 1965 and 1971 wars, Saviour of Lahore, and distinguished Pakistan Air Force pilot. Explore his life, achievements, awards, and contributions to Pakistan\'s defense.',
+        title: 'Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
+        description: 'Sajad Haider, Pakistan Air Force hero, Saviour of Lahore. 1965 & 1971 war veteran, Pathankot Strike leader.',
         keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
         structuredData: {
             '@context': 'https://schema.org',
@@ -68,7 +68,7 @@ export default function Home() {
     }, [location]);
 
     return (<HomePageLayout>
-
+        <h1 className="sr-only">Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero</h1>
         <section className="relative max-w-screen-lg mx-auto my-8 mt-40 md:my-16 lg:my-24 px-4 md:px-6">
             <TrueHeroSection />
         </section>

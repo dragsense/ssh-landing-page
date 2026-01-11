@@ -9,8 +9,8 @@ import AirLifeGallerySlider from "@/components/sections/AirLifeGallerySlider";
 
 export default function AirforceLife() {
     useSEO({
-        title: 'Fighter Pilot Career - Air Commodore Sajad Haider | PAF Hero',
-        description: 'Explore the distinguished military career of Air Commodore (R) Sajad Haider, known as the Saviour of Lahore. Learn about his role in the 1965 Pathankot Strike, 1971 War, and his legendary service in the Pakistan Air Force.',
+        title: 'Fighter Pilot Career - Sajad Haider | PAF Hero',
+        description: 'Sajad Haider fighter pilot career: Saviour of Lahore, Pathankot Strike 1965 leader, PAF 1965 & 1971 war hero.',
         keywords: 'Sajad Haider fighter pilot, Pathankot Strike 1965, Saviour of Lahore, Pakistan Air Force career, PAF 1965 War, PAF 1971 War',
         structuredData: {
             '@context': 'https://schema.org',

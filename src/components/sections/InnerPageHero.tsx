@@ -49,14 +49,16 @@ export default function InnerPageHero({ title, content, image }: { title: string
                     viewport={{ once: true, margin: "-100px" }}
                     className="space-y-6 md:space-y-8 flex-1 order-2 md:order-1"
                 >
-                    <TextRevealCard
-                        text={title}
-                        revealText="S. Sajad Haider"
-                        className="p-0 border-none bg-transparent w-auto "
-                        hoverClassName="bg-background"
-                        revealTextClassName="text-dark dark:text-light"
-                        textClassName="text-2xl text-dark dark:text-light"
-                    />
+                    <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                        <TextRevealCard
+                            text={title}
+                            revealText="S. Sajad Haider"
+                            className="p-0 border-none bg-transparent w-auto "
+                            hoverClassName="bg-background"
+                            revealTextClassName="text-dark dark:text-light"
+                            textClassName="text-2xl text-dark dark:text-light"
+                        />
+                    </h1>
 
                     <TextGenerateEffect
                         words={content}

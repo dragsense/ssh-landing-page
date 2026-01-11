@@ -6,8 +6,8 @@ import EarlyLifeInspirationSection from "@/components/sections/EarlyLifeInspirat
 
 export default function EarlyLife() {
     useSEO({
-        title: 'Early Life and Education - Sajad Haider | Pakistan Air Force Hero',
-        description: 'Learn about the early life and education of Air Commodore (R) Sajad Haider, born in Sargodha in 1932. Discover his family background, childhood in Quetta, and the inspiration that led him to join the Pakistan Air Force.',
+        title: 'Early Life - Sajad Haider | Pakistan Air Force Hero',
+        description: 'Sajad Haider early life: born Sargodha 1932, Quetta childhood, family background. Pakistan Air Force inspiration.',
         keywords: 'Sajad Haider early life, Sajad Haider education, Sajad Haider family, Quetta childhood, Pakistan Air Force history',
         structuredData: {
             '@context': 'https://schema.org',

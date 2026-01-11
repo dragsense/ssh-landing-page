@@ -185,8 +185,8 @@ export default function LifeAtTheAirforcePage() {
     const war = wars.find(w => w.id === warId) || wars[0];
     
     useSEO({
-        title: `${war.title} - Sajad Haider | Pakistan Air Force`,
-        description: war.description,
+        title: `${war.title} - Sajad Haider | PAF`,
+        description: war.description.length > 160 ? war.description.substring(0, 157) + '...' : war.description,
         keywords: `Sajad Haider, ${war.title}, Pakistan Air Force, PAF, ${warId}`,
         structuredData: {
             '@context': 'https://schema.org',

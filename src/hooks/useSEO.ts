@@ -12,8 +12,8 @@ interface SEOConfig {
 }
 
 const defaultConfig = {
-  title: 'Air Commodore (R) Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
-  description: 'Official website of Air Commodore (Retired) Sajad Haider, hero of the 1965 and 1971 wars, Saviour of Lahore, and distinguished Pakistan Air Force pilot.',
+  title: 'Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
+  description: 'Sajad Haider, Pakistan Air Force hero, Saviour of Lahore. 1965 & 1971 war veteran, Pathankot Strike leader.',
   keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore',
   image: '/og-image.jpg',
   type: 'website',
@@ -61,6 +61,7 @@ export function useSEO(config: SEOConfig = {}) {
     updateMeta('og:type', seo.type || 'website', true);
     updateMeta('og:site_name', 'Sajad Haider - Official Website', true);
     updateMeta('og:locale', 'en_US', true);
+    updateMeta('og:updated_time', new Date().toISOString(), true);
 
     // Twitter Card
     updateMeta('twitter:card', 'summary_large_image');

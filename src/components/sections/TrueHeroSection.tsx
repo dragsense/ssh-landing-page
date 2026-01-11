@@ -29,15 +29,16 @@ export default function TrueHeroComponent() {
             transition={{ duration: 0.6, type: "spring" }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <TextRevealCard
-              text="A True Hero"
-              revealText="S. Sajad Haider"
-              className="p-0 border-none bg-transparent"
-              hoverClassName="bg-background"
-              revealTextClassName="text-dark dark:text-light shadow-none"
-              textClassName="text-foreground font-semibold text-4xl"
-
-            />
+            <h2 className="text-4xl font-bold mb-4">
+              <TextRevealCard
+                text="A True Hero"
+                revealText="S. Sajad Haider"
+                className="p-0 border-none bg-transparent"
+                hoverClassName="bg-background"
+                revealTextClassName="text-dark dark:text-light shadow-none"
+                textClassName="text-foreground font-semibold text-4xl"
+              />
+            </h2>
           </motion.div>
 
 

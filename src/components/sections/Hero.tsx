@@ -38,9 +38,9 @@ export default function Hero() {
         {/* Mobile Heading */}
         <div className="md:hidden absolute top-8 w-full left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
-            Sajad Haider
+            Sajad Haider - Saviour of Lahore
           </h1>
-          <h3 className="font-semibold drop-shadow-lg leading-tight">Air Commodore (R) S.J.</h3>
+          <h2 className="font-semibold drop-shadow-lg leading-tight">Air Commodore (R) S.J.</h2>
 
         </div>
 
