@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import s1 from "@/assets/images/airforce/s1.jpg";
 import s2 from "@/assets/images/airforce/s2.jpg";
-import s3 from "@/assets/images/airforce/s3.jpg";
 import s4 from "@/assets/images/airforce/s4.jpg";
 import s5 from "@/assets/images/airforce/s5.jpg";
 import s6 from "@/assets/images/airforce/s6.jpg";

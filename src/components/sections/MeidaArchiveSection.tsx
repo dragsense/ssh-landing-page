@@ -5,9 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight-new";
-import News1 from "@/assets/archive/news-1.png";
-import News2 from "@/assets/archive/news-2.png";
-import News3 from "@/assets/archive/news-3.png";
 
 const mediaItems = [
   {
