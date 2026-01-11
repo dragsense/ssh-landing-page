@@ -2,11 +2,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
-import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
-import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
-import S7_Image from '@/assets/images/airforce/Image (23).jpg';
-import S8_Image from '@/assets/images/airforce/Image (24).jpg';
+import S4_Image from '@/assets/images/airforce/paf-f86-sabres-1965-war.jpg';
+import S5_Image from '@/assets/images/airforce/pakistani-sherdil-pilots-pathankot-1965.jpg';
+import S6_Image from '@/assets/images/airforce/sajad-haider-1965-war.png';
+import S7_Image from '@/assets/images/airforce/airforce-war-1971-3.jpg';
+import S8_Image from '@/assets/images/airforce/airforce-war-1971-4.jpg';
 
 const wars = [
     {

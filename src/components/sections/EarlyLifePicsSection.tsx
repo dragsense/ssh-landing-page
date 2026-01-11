@@ -2,22 +2,22 @@
 import { motion } from "framer-motion";
 
 
-import i7 from '@/assets/images/earlylife/img (1).jpg';
-import i8 from '@/assets/images/earlylife/img (2).jpg';
-import i9 from '@/assets/images/earlylife/img (3).jpg';
-import i10 from '@/assets/images/earlylife/img (4).jpg';
-import i11 from '@/assets/images/earlylife/img (5).jpg';
-import i12 from '@/assets/images/earlylife/fm (1).jpg';
-import i13 from '@/assets/images/earlylife/fm (2).jpg';
-import i14 from '@/assets/images/earlylife/fm (3).jpg';
-import i15 from '@/assets/images/earlylife/fm (4).jpg';
-import i16 from '@/assets/images/earlylife/fm (5).jpg';
-import i17 from '@/assets/images/earlylife/fm (6).jpg';
-import i18 from '@/assets/images/earlylife/fm (7).jpg';
-import i19 from '@/assets/images/earlylife/fm (8).jpg';
-import i20 from '@/assets/images/earlylife/fm (9).jpg';
+import i7 from '@/assets/images/earlylife/early-life-quetta-1.jpg';
+import i8 from '@/assets/images/earlylife/early-life-quetta-2.jpg';
+import i9 from '@/assets/images/earlylife/early-life-quetta-3.jpg';
+import i10 from '@/assets/images/earlylife/early-life-quetta-4.jpg';
+import i11 from '@/assets/images/earlylife/early-life-quetta-5.jpg';
+import i12 from '@/assets/images/earlylife/family-memories-1.jpg';
+import i13 from '@/assets/images/earlylife/family-memories-2.jpg';
+import i14 from '@/assets/images/earlylife/family-memories-3.jpg';
+import i15 from '@/assets/images/earlylife/family-memories-4.jpg';
+import i16 from '@/assets/images/earlylife/family-memories-5.jpg';
+import i17 from '@/assets/images/earlylife/family-memories-6.jpg';
+import i18 from '@/assets/images/earlylife/family-memories-7.jpg';
+import i19 from '@/assets/images/earlylife/family-memories-8.jpg';
+import i20 from '@/assets/images/earlylife/family-memories-9.jpg';
 
-import S16_Image from '@/assets/images/earlylife/i5.jpg';
+import S16_Image from '@/assets/images/earlylife/early-life-inspiration.jpg';
 
 import { ThreeDMarquee } from "../ui/3d-marquee";
 import { BackgroundGradient } from "../ui/background-gradient";
@@ -85,10 +85,11 @@ export default function EarlyLifePicsSection() {
                             </p>
                             <motion.img
                                 src={i12}
-                                alt="S. Sajad Haider youth"
+                                alt="Sajad Haider in his youth during early life in Quetta"
                                 className="w-64 h-auto rounded-lg"
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                loading="lazy"
                             />
 
                         </motion.div>
@@ -102,10 +103,11 @@ export default function EarlyLifePicsSection() {
                         >
                             <motion.img
                                 src={S16_Image}
-                                alt="Young Haider in uniform"
+                                alt="Young Sajad Haider in Pakistan Air Force uniform - Early inspiration from Quaid-e-Azam"
                                 className="w-64 h-auto rounded-lg"
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                loading="lazy"
                             />
                             <p className="flex-1">
                                 As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan.

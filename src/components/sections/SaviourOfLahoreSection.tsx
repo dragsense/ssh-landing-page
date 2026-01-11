@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import Minar_E_Pakistan_Image from "@/assets/images/ui/mira-pakistan.png";
+import Minar_E_Pakistan_Image from '@/assets/images/ui/minar-e-pakistan.png';
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function SaviourOfLahoreSection() {

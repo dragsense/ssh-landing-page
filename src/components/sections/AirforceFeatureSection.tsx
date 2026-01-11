@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BackgroundGradient } from "../ui/background-gradient";
-import S16_Image from '@/assets/images/ui/s16.png'
-import S17_Image from '@/assets/images/ui/s17.png'
+import S16_Image from '@/assets/images/ui/ui-section-16.png'
+import S17_Image from '@/assets/images/ui/ui-section-17.png'
 
 export default function AirforceFeatureSection() {
 

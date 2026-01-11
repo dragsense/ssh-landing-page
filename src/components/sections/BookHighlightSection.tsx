@@ -3,7 +3,7 @@ import React from "react";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import DemoBook from "@/assets/images/books/bookcover.jpg";
+import DemoBook from '@/assets/images/books/book-cover-sajad-haider.jpg';
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
 export default function BookHighlightSection() {
@@ -50,8 +50,9 @@ export default function BookHighlightSection() {
 
           <img
             src={DemoBook}
-            alt="Flight of the Falcon"
+            alt="Book Cover: Demolishing Myths of Indo Pak Wars 1965-1971 by S. Sajad Haider"
             className="w-full max-w-xs md:mx-auto md:w-72 rounded-lg shadow-xl"
+            loading="lazy"
           />
 
           <motion.div

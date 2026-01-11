@@ -125,7 +125,7 @@ export default function Navbar() {
                         to="/">
                         <motion.img
                             src={SSHLogo}
-                            alt="SSH Logo"
+                            alt="Sajad Haider Official Website Logo"
                             className="w-auto"
                             style={{ height: scrolled ? (isMobile ? 50 : 40) : (isMobile ? 60 : 100) }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}

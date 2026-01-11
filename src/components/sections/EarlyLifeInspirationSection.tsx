@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import S5_Image from "@/assets/images/ui/s5.png";
-import S6_Image from "@/assets/images/ui/s6.png";
-import S16_Image from '@/assets/images/earlylife/i5.jpg';
+import S5_Image from '@/assets/images/ui/ui-section-5.png';
+import S6_Image from '@/assets/images/ui/ui-section-6.png';
+import S16_Image from '@/assets/images/earlylife/early-life-inspiration.jpg';
 
 const sections = [
     {

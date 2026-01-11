@@ -20,10 +20,11 @@ export default function Footer() {
        
                 <motion.img
                   src={SSH_Logo_Footer}
-                  alt="S. Sajad Haider Legacy"
+                  alt="Sajad Haider Official Logo - Legacy of Pakistan Air Force Hero"
                   className="w-24 h-24 md:w-28 md:h-28 object-contain mx-auto"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  loading="eager"
                 />
             
           </motion.div>
@@ -71,12 +72,14 @@ export default function Footer() {
             />
             <motion.img
               src={Jet2}
-              alt="Jet flying into legacy"
+              alt="Pakistan Air Force fighter jet illustration - Symbol of Sajad Haider's legacy"
               className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-xs mx-auto"
               whileHover={{ 
                 scale: 1.05,
                 transition: { type: "spring", stiffness: 300 } 
               }}
+              loading="lazy"
+              aria-hidden="true"
             />
           </motion.div>
         </div>

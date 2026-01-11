@@ -1,9 +1,39 @@
-import S6_Image from "@/assets/images/ui/s6.png";
+import { useSEO } from "@/hooks/useSEO";
+import S6_Image from '@/assets/images/ui/ui-section-6.png';
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import EarlyLifePicsSection from "@/components/sections/EarlyLifePicsSection";
 import EarlyLifeInspirationSection from "@/components/sections/EarlyLifeInspirationSection";
 
 export default function EarlyLife() {
+    useSEO({
+        title: 'Early Life and Education - Sajad Haider | Pakistan Air Force Hero',
+        description: 'Learn about the early life and education of Air Commodore (R) Sajad Haider, born in Sargodha in 1932. Discover his family background, childhood in Quetta, and the inspiration that led him to join the Pakistan Air Force.',
+        keywords: 'Sajad Haider early life, Sajad Haider education, Sajad Haider family, Quetta childhood, Pakistan Air Force history',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Early Life and Education - Sajad Haider',
+            description: 'Early life and education of Air Commodore (R) Sajad Haider',
+            url: typeof window !== 'undefined' ? `${window.location.origin}/early-life` : 'https://sajadhaider.com/early-life',
+            breadcrumb: {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    {
+                        '@type': 'ListItem',
+                        position: 1,
+                        name: 'Home',
+                        item: typeof window !== 'undefined' ? window.location.origin : 'https://sajadhaider.com',
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 2,
+                        name: 'Early Life',
+                        item: typeof window !== 'undefined' ? `${window.location.origin}/early-life` : 'https://sajadhaider.com/early-life',
+                    },
+                ],
+            },
+        },
+    });
     return (<InnerPageLayout 
         title="EARLY LIFE AND EDUCATION" 
     content="Sajad was born in Sargodha on 25 and 26 of December 1932, at midnight. 

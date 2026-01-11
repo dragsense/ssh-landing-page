@@ -31,10 +31,11 @@ export default function InnerPageHero({ title, content, image }: { title: string
 
                         <motion.img
                             src={image}
-                            alt="EarlyLife"
+                            alt={`${title} - Sajad Haider`}
                             className="relative z-10 rounded-xl w-auto h-80 md:h-120 shadow-2xl object-contain object-top"
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                            loading="eager"
                         />
 
 

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
-import placeHolderImage from '@/assets/images/ui/videoframe_14891.png';
-import imageReocrd from '@/assets/images/air-planes.jpg';
+import placeHolderImage from '@/assets/images/ui/video-frame.png';
+import imageReocrd from '@/assets/images/pakistan-air-force-planes.jpg';
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function RecordSection() {
@@ -25,9 +25,10 @@ export default function RecordSection() {
 
           <motion.img
             src={imageReocrd}
-            alt="Record"
+            alt="Pakistan Air Force F-86 Sabre aircraft formation - World Record Diamond Loop 1958"
             className="rounded-md object-cover w-full h-full max-w-md"
             whileHover={{ scale: 1.02 }}
+            loading="lazy"
           />
         </div>
 
@@ -37,9 +38,10 @@ export default function RecordSection() {
           <div className="relative w-full h-full">
             <motion.img
               src={placeHolderImage}
-              alt="Loop Thumbnail"
+              alt="Video thumbnail: Pakistan Air Force World Record 16-aircraft diamond loop formation, February 2, 1958"
               className="object-cover w-full h-full rounded-md"
               whileHover={{ scale: 1.02 }}
+              loading="lazy"
             />
 
             {/* Play Button Overlay (only on image) */}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 import HomePageLayout from "@/components/layouts/HomePageLayout";
 import AwardSection from "@/components/sections/AwardSection";
 import BookHighlightSection from "@/components/sections/BookHighlightSection";
@@ -11,6 +12,38 @@ import RecordSection from "@/components/sections/RecordSection";
 import TrueHeroSection from "@/components/sections/TrueHeroSection";
 
 export default function Home() {
+    useSEO({
+        title: 'Air Commodore (R) Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
+        description: 'Official website of Air Commodore (Retired) Sajad Haider, hero of the 1965 and 1971 wars, Saviour of Lahore, and distinguished Pakistan Air Force pilot. Explore his life, achievements, awards, and contributions to Pakistan\'s defense.',
+        keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Sajad Haider',
+            alternateName: 'Air Commodore (R) Sajad Haider',
+            jobTitle: 'Retired Air Commodore',
+            worksFor: {
+                '@type': 'Organization',
+                name: 'Pakistan Air Force',
+            },
+            description: 'Air Commodore (Retired) Sajad Haider, hero of the 1965 and 1971 wars, Saviour of Lahore, and distinguished Pakistan Air Force pilot.',
+            url: typeof window !== 'undefined' ? window.location.origin : 'https://sajadhaider.com',
+            image: typeof window !== 'undefined' ? `${window.location.origin}/og-image.jpg` : 'https://sajadhaider.com/og-image.jpg',
+            knowsAbout: [
+                'Military Aviation',
+                'Pakistan Air Force',
+                '1965 Indo-Pakistan War',
+                '1971 Indo-Pakistan War',
+                'Fighter Pilot Training',
+            ],
+            award: [
+                'Sitara-e-Jurat',
+                'Sitara-e-Harb',
+                'Tamgha-e-Jang',
+                'Tamgha-e-Diffa',
+            ],
+        },
+    });
     const location = useLocation();
 
     useEffect(() => {

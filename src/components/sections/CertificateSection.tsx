@@ -57,11 +57,12 @@ export default function CertificateSection() {
             >
                 <motion.img
                     src={CertificateImage}
-                    alt="Certificate"
+                    alt="Sajad Haider Military Certificate and Recognition"
                     className="md:w-1/3 h-auto rounded-lg shadow-lg object-contain cursor-pointer"
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     onClick={handleOpenModal}
+                    loading="lazy"
                 />
             </motion.div>
 
@@ -93,8 +94,9 @@ export default function CertificateSection() {
                             
                             <img
                                 src={CertificateImage}
-                                alt="Certificate"
+                                alt="Sajad Haider Military Certificate and Recognition - Full View"
                                 className="max-w-full max-h-full object-contain rounded-lg"
+                                loading="eager"
                             />
                         </motion.div>
                     </motion.div>

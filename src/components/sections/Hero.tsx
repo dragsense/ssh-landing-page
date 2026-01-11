@@ -65,12 +65,13 @@ export default function Hero() {
         {/* Left Badge */}
         <motion.img
           src={badge1}
-          alt="Badge 1"
+          alt="Pakistan Air Force Military Award Badge"
           className="h-20 w-auto object-contain drop-shadow-xl mb-4 md:mb-0 invisible"
           initial={{ x: -60, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           whileHover={{ y: -5 }}
+          aria-hidden="true"
         />
 
         {/* Right Badges + Button */}
@@ -79,7 +80,7 @@ export default function Hero() {
             <motion.img
               key={index}
               src={badge}
-              alt={`Badge ${index + 2}`}
+              alt={`Sajad Haider Military Award Badge ${index + 2}`}
               className="h-20 w-auto object-contain drop-shadow-xl"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

@@ -1,21 +1,22 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
-import S4_Image from '@/assets/images/airforce/PAF_F-86_Sabres_1965_War.jpg';
-import S5_Image from '@/assets/images/airforce/Pakistani_Sherdil_Pilots_Planning_Pathankot_Airstrikes_(1965_War).jpg';
-import S6_Image from '@/assets/images/airforce/SajadHaider1965.png';
-import S7_Image from '@/assets/images/airforce/Image (23).jpg';
-import S8_Image from '@/assets/images/airforce/Image (24).jpg';
+import S4_Image from '@/assets/images/airforce/paf-f86-sabres-1965-war.jpg';
+import S5_Image from '@/assets/images/airforce/pakistani-sherdil-pilots-pathankot-1965.jpg';
+import S6_Image from '@/assets/images/airforce/sajad-haider-1965-war.png';
+import S7_Image from '@/assets/images/airforce/airforce-war-1971-3.jpg';
+import S8_Image from '@/assets/images/airforce/airforce-war-1971-4.jpg';
 
-import fl1 from '@/assets/images/airforce/fl (1).jpeg';
-import fl2 from '@/assets/images/airforce/fl (2).jpeg';
-import fl3 from '@/assets/images/airforce/fl (3).jpeg';
-import fl4 from '@/assets/images/airforce/fl (4).jpeg';
+import fl1 from '@/assets/images/airforce/flight-log-1.jpeg';
+import fl2 from '@/assets/images/airforce/flight-log-2.jpeg';
+import fl3 from '@/assets/images/airforce/flight-log-3.jpeg';
+import fl4 from '@/assets/images/airforce/flight-log-4.jpeg';
 
-import md1 from '@/assets/images/airforce/md (1).jpeg';
-import md2 from '@/assets/images/airforce/md (2).jpeg';
-import md3 from '@/assets/images/airforce/md (3).jpeg';
+import md1 from '@/assets/images/airforce/medal-display-1.jpeg';
+import md2 from '@/assets/images/airforce/medal-display-2.jpeg';
+import md3 from '@/assets/images/airforce/medal-display-3.jpeg';
 
 // All PILOT LIFE content organized chronologically
 const allPilotLifeContent = [
@@ -182,6 +183,52 @@ export default function LifeAtTheAirforcePage() {
     const navigate = useNavigate();
     
     const war = wars.find(w => w.id === warId) || wars[0];
+    
+    useSEO({
+        title: `${war.title} - Sajad Haider | Pakistan Air Force`,
+        description: war.description,
+        keywords: `Sajad Haider, ${war.title}, Pakistan Air Force, PAF, ${warId}`,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: war.title,
+            description: war.description,
+            author: {
+                '@type': 'Person',
+                name: 'Sajad Haider',
+            },
+            publisher: {
+                '@type': 'Organization',
+                name: 'Sajad Haider Official Website',
+            },
+            url: typeof window !== 'undefined' ? `${window.location.origin}/life-at-airforce/${warId}` : `https://sajadhaider.com/life-at-airforce/${warId}`,
+            image: typeof window !== 'undefined' ? `${window.location.origin}${war.image}` : `https://sajadhaider.com${war.image}`,
+            datePublished: '2025-01-15',
+            breadcrumb: {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    {
+                        '@type': 'ListItem',
+                        position: 1,
+                        name: 'Home',
+                        item: typeof window !== 'undefined' ? window.location.origin : 'https://sajadhaider.com',
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 2,
+                        name: 'Airforce Life',
+                        item: typeof window !== 'undefined' ? `${window.location.origin}/airforce-life` : 'https://sajadhaider.com/airforce-life',
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: war.title,
+                        item: typeof window !== 'undefined' ? `${window.location.origin}/life-at-airforce/${warId}` : `https://sajadhaider.com/life-at-airforce/${warId}`,
+                    },
+                ],
+            },
+        },
+    });
 
     return (
         <InnerPageLayout 
@@ -213,8 +260,9 @@ export default function LifeAtTheAirforcePage() {
                         <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src={war.image}
-                                alt={war.title}
+                                alt={`${war.title} - ${war.description}`}
                                 className="w-full h-full object-cover"
+                                loading="eager"
                             />
                         </div>
                         
@@ -241,7 +289,13 @@ export default function LifeAtTheAirforcePage() {
                                         {section.images && section.images.length > 0 && (
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 {section.images.map((image, index) => (
-                                                    <img key={index} src={image} alt={section.title} className="w-full h-full object-cover" />
+                                                    <img 
+                                                        key={index} 
+                                                        src={image} 
+                                                        alt={`${section.title} - Historical Image ${index + 1}`}
+                                                        className="w-full h-full object-cover"
+                                                        loading={index < 2 ? "eager" : "lazy"}
+                                                    />
                                                 ))}
                                             </div>
                                         )}

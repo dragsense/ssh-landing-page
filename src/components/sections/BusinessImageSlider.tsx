@@ -1,15 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import sliderBackground from "@/assets/images/backgrounds/cormorant background.png";
-import carmorant_logo from "@/assets/logo/cormorant-logo.png";
-import image1 from "@/assets/business/1.jpg";
-import image2 from "@/assets/business/2.jpg";
-import image3 from "@/assets/business/3.jpg";
-import image4 from "@/assets/business/4.jpg";
-import image5 from "@/assets/business/5.jpg";
-import image6 from "@/assets/business/6.jpg";
-import image7 from "@/assets/business/7.jpeg";
+import sliderBackground from '@/assets/images/backgrounds/cormorant-background.png';
+import carmorant_logo from '@/assets/logo/cormorant-logo.png';
+import image1 from '@/assets/business/cormorant-armored-vehicle-1.jpg';
+import image2 from '@/assets/business/cormorant-armored-vehicle-2.jpg';
+import image3 from '@/assets/business/cormorant-military-aircraft.jpg';
+import image4 from '@/assets/business/cormorant-night-vision-equipment.jpg';
+import image5 from '@/assets/business/cormorant-military-weapons.jpg';
+import image6 from '@/assets/business/cormorant-teletype-equipment.jpg';
+import image7 from '@/assets/business/cormorant-hummer-vehicle.jpeg';
 
 type ImageItem = {
     title: string;
@@ -199,8 +199,9 @@ export default function BusinessImageSlider() {
                     <p className="text-4xl font-semibold uppercase text-center">
                     <img
                                 src={carmorant_logo}
-                                alt="Cormorant Logo"
+                                alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
                                 className="w-64"
+                                loading="eager"
                             />
                     
                     </p>
@@ -220,8 +221,9 @@ export default function BusinessImageSlider() {
                         >
                             <img
                                 src={activeImage.thumbnail}
-                                alt={activeImage.title}
+                                alt={`${activeImage.title} - ${activeImage.desc} - Cormorant Company Defense Equipment`}
                                 className="w-full h-full object-cover"
+                                loading="eager"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                         </motion.div>
@@ -428,7 +430,7 @@ export default function BusinessImageSlider() {
                             <div className="w-full h-full flex flex-col items-center justify-center">
                                 <img
                                     src={viewingImage.image}
-                                    alt={viewingImage.title}
+                                    alt={`${viewingImage.title} - ${viewingImage.desc} - Cormorant Company Defense Equipment`}
                                     className="max-w-full max-h-full object-contain rounded-lg"
                                 />
                                 <h3 className="mt-4 text-white text-xl font-semibold text-center">

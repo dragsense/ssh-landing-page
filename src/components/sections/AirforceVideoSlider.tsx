@@ -160,7 +160,7 @@ export default function AirLifeGallerySlider() {
                         >
                             <img
                                 src={activeVideo.thumbnail}
-                                alt={activeVideo.title}
+                                alt={`Video thumbnail: ${activeVideo.title} - Pakistan Air Force Historical Video`}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -203,7 +203,7 @@ export default function AirLifeGallerySlider() {
                                 rel="noreferrer"
                                 className="inline-block"
                             >
-                                <img src={youtube_icon} alt="YouTube" className="h-8" />
+                                <img src={youtube_icon} alt="YouTube Video Platform Icon" className="h-8" />
                             </a>
                             <a
                                 href={activeVideo.link}

@@ -1,4 +1,5 @@
-import S7_Image from "@/assets/images/airforce/SSH.jpg";
+import { useSEO } from "@/hooks/useSEO";
+import S7_Image from '@/assets/images/airforce/sajad-haider-portrait.jpg';
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import { LifeAtTheAirforce } from "@/components/sections/LifeAtTheAirforce";
 import SaviourOfLahoreSection from "@/components/sections/SaviourOfLahoreSection";
@@ -7,6 +8,35 @@ import AirforceVideoSlider from "@/components/sections/AirforceVideoSlider";
 import AirLifeGallerySlider from "@/components/sections/AirLifeGallerySlider";
 
 export default function AirforceLife() {
+    useSEO({
+        title: 'Fighter Pilot Career - Air Commodore Sajad Haider | PAF Hero',
+        description: 'Explore the distinguished military career of Air Commodore (R) Sajad Haider, known as the Saviour of Lahore. Learn about his role in the 1965 Pathankot Strike, 1971 War, and his legendary service in the Pakistan Air Force.',
+        keywords: 'Sajad Haider fighter pilot, Pathankot Strike 1965, Saviour of Lahore, Pakistan Air Force career, PAF 1965 War, PAF 1971 War',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Fighter Pilot Career - Air Commodore Sajad Haider',
+            description: 'Military career of Air Commodore (R) Sajad Haider in the Pakistan Air Force',
+            url: typeof window !== 'undefined' ? `${window.location.origin}/airforce-life` : 'https://sajadhaider.com/airforce-life',
+            breadcrumb: {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    {
+                        '@type': 'ListItem',
+                        position: 1,
+                        name: 'Home',
+                        item: typeof window !== 'undefined' ? window.location.origin : 'https://sajadhaider.com',
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 2,
+                        name: 'Airforce Life',
+                        item: typeof window !== 'undefined' ? `${window.location.origin}/airforce-life` : 'https://sajadhaider.com/airforce-life',
+                    },
+                ],
+            },
+        },
+    });
     return (<InnerPageLayout 
         title="Fighter pilot . Air Commodore" 
     content="Syed Sajad Haider(26 December 1932 – 3 January 2025), better known by his aliases as Nosey Haider and Saviour of Lahore, was a Pakistani fighter pilot and one-star rank officer in the Pakistan Air Force (PAF). He is best known for leading a devastating Blitzkrieg on the Pathankot airbase in India on 6 September during the Indo-Pakistani air war of 1965. "

@@ -1,9 +1,9 @@
 // components/MediaArchiveSection.tsx
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight-new";
 
 const mediaItems = [
@@ -112,7 +112,7 @@ export default function MediaArchiveSection() {
         opacity: 1,
         filter: "brightness(1)",
         transition: {
-          type: "spring",
+          type: "spring" as const,
           stiffness: 300,
           damping: 30,
           delay: direction === 0 ? i * 0.1 : 0
@@ -211,8 +211,9 @@ export default function MediaArchiveSection() {
                         <div className="relative h-48 w-full overflow-hidden">
                           <img
                             src={item.image}
-                            alt={item.title}
+                            alt={`Video thumbnail: ${item.title} - ${item.source}`}
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
                             <span className="text-white text-sm font-medium">Watch Now →</span>
@@ -266,7 +267,7 @@ export default function MediaArchiveSection() {
                     <motion.div
                       key={i}
                       initial={false}
-                      animate={style}
+                      animate={style as any}
                       className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
                       onClick={() => !isActive && (i > index ? next() : prev())}
                     >

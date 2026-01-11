@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BackgroundGradient } from "../ui/background-gradient";
-import B1 from '@/assets/business/bussiness-1.jpeg'
-import B2 from '@/assets/business/bussiness-2.jpeg'
+import B1 from '@/assets/business/cormorant-company-1.jpeg'
+import B2 from '@/assets/business/cormorant-company-2.jpeg'
 
 export default function BusinessmanFeatureSection() {
 

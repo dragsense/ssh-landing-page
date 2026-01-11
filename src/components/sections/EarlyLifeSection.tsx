@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import S4_Image from "@/assets/images/ui/s4.png";
-import S5_Image from "@/assets/images/ui/s5.png";
-import S6_Image from "@/assets/images/ui/s6.png";
+import S4_Image from '@/assets/images/ui/ui-section-4.png';
+import S5_Image from '@/assets/images/ui/ui-section-5.png';
+import S6_Image from '@/assets/images/ui/ui-section-6.png';
 
 const educationText = [
   { text: "Early" },

@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Award1 from "@/assets/images/awards/220px-Sitara_-_i_-Jurat_.png";
-import Award3 from "@/assets/images/awards/PAF_GoldenEagleAward.png";
-import Award4 from "@/assets/images/awards/Tamgha-e-Diffa_Medal_Obverse.png";
-import Award5 from "@/assets/images/awards/Sitara-e-Harb_1965_War_Ribbon.png";
-import Award6 from "@/assets/images/awards/Sitara-e-Harb_1971_War.png";
-import Award7 from "@/assets/images/awards/Tamgha-e-Jang 71.png";
-import Award8 from "@/assets/images/awards/War_Medal_1965(Tamgha-e-Jang,_A.H.1385).png";
+import Award1 from '@/assets/images/awards/sitara-e-jurat-medal.png';
+import Award3 from '@/assets/images/awards/paf-golden-eagle-award.png';
+import Award4 from '@/assets/images/awards/tamgha-e-diffa.png';
+import Award5 from '@/assets/images/awards/sitara-e-harb-1965-ribbon.png';
+import Award6 from '@/assets/images/awards/sitara-e-harb-1971.png';
+import Award7 from '@/assets/images/awards/tamgha-e-jang-71.png';
+import Award8 from '@/assets/images/awards/war-medal-1965-tamgha-e-jang.png';
 
 import { Button } from "../ui/button";
 
@@ -70,8 +70,9 @@ export default function AwardSlider() {
               >
                 <img
                   src={award.src}
-                  alt={award.label}
+                  alt={`${award.label} - Military Award Medal`}
                   className="h-40 object-contain mx-auto"
+                  loading="lazy"
                 />
                 <p className="mt-3 text-center font-medium">{award.label}</p>
               </div>
@@ -137,8 +138,9 @@ export default function AwardSlider() {
                     <div className="flex flex-col items-center p-4 rounded-xl bg-background/80">
                       <img
                         src={award.src}
-                        alt={award.label}
+                        alt={`${award.label} - Military Award Medal`}
                         className="h-44 object-contain"
+                        loading="lazy"
                       />
                       <span className="mt-2 text-sm font-medium">
                         {award.label}

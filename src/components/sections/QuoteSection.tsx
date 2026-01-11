@@ -131,13 +131,15 @@ export default function QuoteSlider() {
         <motion.img
           key={index} // re-trigger animation on slide change
           src={JetImage}
-          alt="Jet"
+          alt="Pakistan Air Force fighter jet illustration"
           className="absolute -top-20 md:-top-25 lg:-top-35 right-0 w-[120px] md:w-[160px] lg:w-[200px] rotate-[2deg] z-5"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.6 }}
           style={{ bottom: "-20px" }}
+          loading="lazy"
+          aria-hidden="true"
         />
       </div>
     </div>

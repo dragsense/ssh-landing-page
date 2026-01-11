@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import BussinessmanImage from "@/assets/business/bussiness-3.jpeg";
+import BussinessmanImage from '@/assets/business/cormorant-company-3.jpeg';
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
@@ -60,10 +60,11 @@ export default function BusinessmanSection() {
 
           <motion.img
             src={BussinessmanImage}
-            alt="Businessman"
+            alt="Sajad Haider - Businessman and former Pakistan Air Force Air Commodore"
             className="relative z-10 rounded-xl w-full h-auto shadow-2xl"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            loading="lazy"
           />
 
 
