@@ -6,7 +6,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm use node
 
 # stop app before build
-pm2 stop ssh-app || true
+pm2 stop ssh-app-prod || true
 
 # install deps
 pnpm install --frozen-lockfile
@@ -15,4 +15,4 @@ pnpm install --frozen-lockfile
 npm run build
 
 # reload app
-pm2 reload ecosystem.config.cjs --only ssh-app
+pm2 reload ecosystem.config.cjs --only ssh-app-prod
