@@ -13,7 +13,7 @@ module.exports = {
     {
       name: "ssh-app-prod",
       script: "npx",
-      args: ["serve", "-s", "dist", "-l", "3001"],
+      args: ["serve", "-s", "dist", "-l", "3002"],
       cwd: "/var/www/sajadhaider.com/data/www/sajadhaider.com/current",
       env: {
         NODE_ENV: "production",
