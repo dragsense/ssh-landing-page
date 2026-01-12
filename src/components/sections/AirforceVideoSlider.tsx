@@ -221,7 +221,7 @@ export default function AirLifeGallerySlider() {
 
             {/* Desktop Layout */}
             <div className="hidden lg:block mx-auto max-w-screen-xl w-full">
-                <div className="space-y-8">
+                <div className="space-y-8 w-1/2">
                     <p className="text-6xl font-semibold uppercase">
                         Watch Now
                     </p>
@@ -282,21 +282,22 @@ export default function AirLifeGallerySlider() {
                         >
                             {visibleVideos.map(({ data, absoluteIndex, relativeIndex }) => {
                                 const isFeatured = relativeIndex === featuredRelativeIndex;
+                                const isActive = absoluteIndex === activeIndex;
                                 return (
                                     <div key={`wrapper-${data.youtubeId}-${absoluteIndex}`} className="relative flex-1">
-                                        {/* Scanner Marker - only for featured video */}
-                                        {isFeatured && (
+                                        {/* Scanner Marker - only for active video */}
+                                        {isActive && (
                                             <motion.div
                                                 key={`scanner-${absoluteIndex}`}
                                                 initial={{ opacity: 0, y: -10 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                className="absolute -top-45 left-2 transform hidden sm:flex items-start justify-center -z-1"
+                                                className="absolute -top-45 right-2 transform hidden sm:flex items-start justify-center -z-1"
                                             >
                                                 <div className="flex flex-col items-center relative">
                                                     {/* Dot on top */}
                                                     <div className="w-3 h-3 rounded-full bg-black dark:bg-white relative">
                                                         {/* Scanner Box with single tag - positioned at top right of dot */}
-                                                        {data.keywords && data.keywords.length > 0 && (
+                                                        {activeVideo.keywords && activeVideo.keywords.length > 0 && (
                                                             <div className="absolute left-full ml-2 top-1">
                                                                 <div className="relative p-2">
                                                                     {/* Scanner corner brackets */}
@@ -308,7 +309,7 @@ export default function AirLifeGallerySlider() {
                                                                     {/* Single tag */}
                                                                     <div className="relative z-10">
                                                                         <span className="text-sm font-semibold text-black dark:text-white">
-                                                                            {data.keywords[0]}
+                                                                            {activeVideo.keywords[0]}
                                                                         </span>
                                                                     </div>
                                                                 </div>
