@@ -14,7 +14,8 @@ rm -rf dist
 # install deps
 pnpm install --no-frozen-lockfile
 
-# build client and server
+# build client and server (NODE_ENV is set in the script)
+export NODE_ENV=production
 npm run build:static
 
 # ensure server.js is in the right place (it should be copied to dist or run from root)
