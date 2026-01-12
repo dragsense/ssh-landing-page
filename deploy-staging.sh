@@ -9,7 +9,7 @@ nvm use node
 pm2 stop ssh-app-staging || true
 
 # install deps
-pnpm install --frozen-lockfile
+pnpm install --no-frozen-lockfile
 
 # build server
 npm run build
