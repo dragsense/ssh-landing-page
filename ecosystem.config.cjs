@@ -3,21 +3,33 @@ module.exports = {
   apps: [
     {
       name: "ssh-app-staging",
-      script: "npx",
-      args: ["serve", "-s", "dist", "-l", "3001"],
+      script: "server.js",
       cwd: "/var/www/sajadhaider.com/data/www/sajadhaider.com/staging/current",
       env: {
-        NODE_ENV: "staging",
+        NODE_ENV: "production",
+        PORT: 3001,
       },
+      instances: 1,
+      exec_mode: "fork",
+      watch: false,
+      max_memory_restart: "500M",
+      error_file: "./logs/staging-err.log",
+      out_file: "./logs/staging-out.log",
     },
     {
       name: "ssh-app-prod",
-      script: "npx",
-      args: ["serve", "-s", "dist", "-l", "3002"],
+      script: "server.js",
       cwd: "/var/www/sajadhaider.com/data/www/sajadhaider.com/current",
       env: {
         NODE_ENV: "production",
+        PORT: 3002,
       },
+      instances: 1,
+      exec_mode: "fork",
+      watch: false,
+      max_memory_restart: "500M",
+      error_file: "./logs/prod-err.log",
+      out_file: "./logs/prod-out.log",
     },
   ],
 

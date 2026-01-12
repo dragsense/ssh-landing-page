@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
@@ -10,8 +10,6 @@ import S7_Image from '@/assets/images/airforce/airforce-war-1971-3.jpg';
 import S8_Image from '@/assets/images/airforce/airforce-war-1971-4.jpg';
 
 import fl1 from '@/assets/images/airforce/flight-log-1.jpeg';
-import fl2 from '@/assets/images/airforce/flight-log-2.jpeg';
-import fl3 from '@/assets/images/airforce/flight-log-3.jpeg';
 import fl4 from '@/assets/images/airforce/flight-log-4.jpeg';
 
 import md1 from '@/assets/images/airforce/medal-display-1.jpeg';
@@ -84,8 +82,6 @@ const allPilotLifeContent = [
         title: "Flight Logs",
         images: [
             fl1,
-            fl2,
-            fl3,
             fl4,
         ]
 

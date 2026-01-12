@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import S4_Image from '@/assets/images/airforce/paf-f86-sabres-1965-war.jpg';
 import S5_Image from '@/assets/images/airforce/pakistani-sherdil-pilots-pathankot-1965.jpg';

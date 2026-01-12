@@ -91,11 +91,12 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-8 md:mt-12 text-center text-xs md:text-sm text-gray-500 md:w-3/5"
+          className="mt-8 md:mt-12 text-center text-xs text-gray-500 md:w-3/5"
         >
-           <p className="text-sm md:text-base leading-relaxed text-muted-foreground my-2">
+           <p className="text-xs leading-relaxed text-muted-foreground my-2">
             A joint family initiative, led by son, Zohare Haider. All material and references are sourced for the project. Public submissions are welcome and can be submitted <a href="mailto:zoharehaider@gmail.com" className="text-blue-500 hover:text-blue-600">here</a>.
               </p>
+              <hr className="my-2" />
           © {new Date().getFullYear()} S. Sajad Haider. All rights reserved.
         </motion.div>
         </div>

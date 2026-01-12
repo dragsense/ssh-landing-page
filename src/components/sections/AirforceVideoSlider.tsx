@@ -18,18 +18,19 @@ type PreparedVideo = VideoItem & {
 export default function AirLifeGallerySlider() {
     const videos = useMemo<PreparedVideo[]>(() => {
         const list: VideoItem[] = [
+           
             {
                 title: "Pathankot Strike",
                 youtubeId: "AHS8z3sy3ZU",
                 keywords: ["Pathankot Strike"],
             },
-         
-          
             {
                 title: "Unravelling Pakistan's 1971 Pre-emptive Airstrikes!",
                 youtubeId: "_kkyTABh3U8",
                 keywords: ["Airstrikes"],
             },
+          
+         
            
         ];
 

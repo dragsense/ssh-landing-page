@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 import S4_Image from '@/assets/images/ui/ui-section-4.png';
 import S5_Image from '@/assets/images/ui/ui-section-5.png';
 import S6_Image from '@/assets/images/ui/ui-section-6.png';
@@ -13,7 +16,28 @@ const educationText = [
 
 export default function EarlyLifeSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12 items-start z-10">
+    <div className="flex flex-col gap-8 md:gap-12 z-10">
+      {/* Section Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl 
+        font-bold 
+        text-center mb-8 md:mb-12 
+        bg-gradient-to-b from-foreground 
+        to-muted-foreground 
+        bg-clip-text 
+        text-transparent">
+          FORMATIVE YEARS
+        </h2>
+      </motion.div>
+
+      {/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12 items-start">
       {/* Left Column */}
       <div className="flex flex-col gap-8 md:gap-12">
         {/* First Paragraph + Image */}
@@ -76,10 +100,6 @@ export default function EarlyLifeSection() {
         viewport={{ once: true }}
         className="relative dark:bg-black bg-accent rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center"
       >
-        <p className="text-xs text-right w-full text-muted-foreground underline mb-4 cursor-pointer hover:text-[#9b6dac] transition-colors">
-          <a href="/early-life">Read More &gt;&gt;</a>
-        </p>
-
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
@@ -105,11 +125,32 @@ export default function EarlyLifeSection() {
           className="w-full mt-4 text-center"
         >
           <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent my-4" />
-          <p className="text-sm text-muted-foreground italic">
+          <p className="text-sm text-muted-foreground italic mb-6">
             "The foundation of greatness is laid in childhood"
           </p>
         </motion.div>
+
+        {/* Read More Button - Prominent at bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full mt-auto"
+        >
+          <Link to="/early-life">
+            <Button
+              className="w-full group cursor-pointer"
+              size="lg"
+              variant="default"
+            >
+              Read More
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        </motion.div>
       </motion.div>
+      </div>
     </div>
   );
 }

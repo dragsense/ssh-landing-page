@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import SSHLogo from "@/assets/logo/ssh-logo.png";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);

@@ -11,8 +11,15 @@ pm2 stop ssh-app-prod || true
 # install deps
 pnpm install --no-frozen-lockfile
 
-# build server
-npm run build
+# build client and server
+npm run build:static
+
+# ensure server.js exists (it should be in project root)
+# server.js references ./dist/client and ./dist/server, so it must run from project root
+if [ ! -f "server.js" ]; then
+  echo "❌ Error: server.js not found in project root"
+  exit 1
+fi
 
 # reload app
 pm2 reload ecosystem.config.cjs --only ssh-app-prod

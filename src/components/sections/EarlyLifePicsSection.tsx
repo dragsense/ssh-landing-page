@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import i7 from '@/assets/images/earlylife/early-life-quetta-1.jpg';
 import i8 from '@/assets/images/earlylife/early-life-quetta-2.jpg';
-import i9 from '@/assets/images/earlylife/early-life-quetta-3.jpg';
 import i10 from '@/assets/images/earlylife/early-life-quetta-4.jpg';
 import i11 from '@/assets/images/earlylife/early-life-quetta-5.jpg';
 import i12 from '@/assets/images/earlylife/family-memories-1.jpg';
@@ -27,7 +26,6 @@ const images = [
     S16_Image,
     i7,
     i8,
-    i9,
     i10,
     i11,
     i12,
@@ -41,7 +39,6 @@ const images = [
     i20,
     i7,
     i8,
-    i9,
     i10,
     i11,
     i12,

@@ -30,6 +30,9 @@ export default function RecordSection() {
             whileHover={{ scale: 1.02 }}
             loading="lazy"
           />
+          <p className="text-sm text-muted-foreground italic">
+          Credit: S.M. Hussaini, PAF
+          </p>
         </div>
 
         {/* Video Side */}
@@ -68,7 +71,7 @@ export default function RecordSection() {
                 16 F-86 SABRE
               </h3>
               <h3 className="text-base font-semibold">
-                FEBRUARY 2, 1958
+                FEBRUARY 9
               </h3>
             </div>
             <div className="text-center text-muted-foreground/50 text-5xl lg:text-6xl font-bold">

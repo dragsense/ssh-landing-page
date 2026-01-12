@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Mobile Heading */}
         <div className="md:hidden absolute top-8 w-full left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
-            Sajad Haider - Saviour of Lahore
+            Sajad Haider
           </h1>
           <h2 className="font-semibold drop-shadow-lg leading-tight">Air Commodore (R) S.J.</h2>
 
@@ -61,7 +61,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Badges + Button */}
-      <div className="absolute -bottom-25 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
+      <div className="absolute -bottom-0 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
         {/* Left Badge */}
         <motion.img
           src={badge1}
