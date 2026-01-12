@@ -8,6 +8,9 @@ nvm use node
 # stop app before build
 pm2 stop ssh-app-prod || true
 
+# clean dist folder for fresh build
+rm -rf dist
+
 # install deps
 pnpm install --no-frozen-lockfile
 
