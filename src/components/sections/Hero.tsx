@@ -94,12 +94,14 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
+            <a href="#awards" className="no-underline cursor-pointer">  
             <Button
               variant="ghost"
               className="rotate-90 tracking-wide font-medium hover:text-[#9b6dac] hover:bg-transparent transition hidden sm:inline-flex"
             >
               — view all awards —
             </Button>
+            </a>
           </motion.div>
         </div>
       </div>
