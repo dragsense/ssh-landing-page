@@ -8,9 +8,9 @@ nvm use node
 # stop app before build
 pm2 stop ssh-app-staging || true
 
+
 # install deps
-rm -rf node_modules package-lock.json pnpm-lock.yaml
-pnpm install
+pnpm install --no-frozen-lockfile
 
 # build client and server
 npm run build:static
