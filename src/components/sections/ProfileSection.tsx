@@ -54,7 +54,7 @@ export default function BusinessmanSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, type: "spring" }}
-          className="relative -mb-6 md:-mb-10"
+          className="relative -mb-6 md:-mb-10 -rotate-1"
         >
           <div className="absolute -top-6 -left-6 w-5/6 h-5/6 border-2 border-primary/20 dark:border-white/30 rounded-tl-md rounded-tr-md rounded-bl-md z-0 dark:border-primary/10"></div>
 
