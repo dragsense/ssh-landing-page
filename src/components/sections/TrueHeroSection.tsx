@@ -128,7 +128,7 @@ export default function TrueHeroComponent() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
           viewport={{ once: true }}
-          className="relative"
+          className="relative order-2 md:order-1"
         >
           <motion.img
             src={S1_Image}
@@ -158,6 +158,7 @@ export default function TrueHeroComponent() {
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
+          className="mb-5"
         >
 
           <GradientFillButton className="font-semibold">

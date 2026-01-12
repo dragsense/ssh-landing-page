@@ -168,7 +168,7 @@ export default function BusinessImageSlider() {
 
     return (
         <div
-            className="background-contain relative md:h-screen md:h-[90vh] px-4 pb-24 flex flex-col justify-between"
+            className="background-contain relative md:h-screen md:h-[90vh] px-4 pb-10 md:pb-24 flex flex-col justify-between"
             style={{
                 backgroundImage: `url(${sliderBackground})`,
                 backgroundRepeat: "no-repeat",

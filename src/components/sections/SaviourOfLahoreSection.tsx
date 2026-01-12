@@ -20,7 +20,7 @@ export default function SaviourOfLahoreSection() {
             {/* Overlay for better text readability - Only visible on md and above */}
 
             {/* Content */}
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2 mt-30 lg:gap-12 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2 lg:mt-30 lg:gap-12 items-center">
                 {/* TEXT CONTENT */}
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}

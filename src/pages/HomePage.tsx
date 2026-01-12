@@ -69,11 +69,11 @@ export default function Home() {
 
     return (<HomePageLayout>
         <h1 className="sr-only">Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero</h1>
-        <section className="relative max-w-screen-lg mx-auto my-8 mt-40 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative max-w-screen-lg mx-auto my-12 md:mt-40 md:my-16 lg:my-24 px-4 md:px-6">
             <TrueHeroSection />
         </section>
 
-        <section id="awards" className="relative max-w-screen-xl mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section id="awards" className="relative max-w-screen-xl mx-auto my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <AwardSection />
         </section>
 
@@ -82,25 +82,25 @@ export default function Home() {
         </section>
         <div id="space" className="pt-10"></div>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <QuoteSection />
         </section>
 
-        <section className="relative max-w-screen-lg mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6 flex items-center">
+        <section className="relative max-w-screen-lg mx-auto my-12 md:my-16 lg:my-24 px-4 md:px-6 flex items-center">
             <RecordSection />
         </section>
         
         <div id="publications" className="pt-10"></div>
         
-        <section id="books" className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section id="books" className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <BookHighlightSection />
         </section>
 
-        <section className="relative max-w-screen-lg mx-auto my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative max-w-screen-lg mx-auto my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <MediaArchiveSection />
         </section>
 
-        <section className="relative max-w-screen-xl mx-auto my-16 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative max-w-screen-xl mx-auto mt-24 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifeSection />
         </section>
 

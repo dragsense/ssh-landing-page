@@ -9,7 +9,7 @@ import badge3 from "@/assets/hero/badge-3.png";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-screen  flex flex-col justify-center items-center bg-background/50">
+    <div className="relative w-full min-h-screen pb-15 flex flex-col justify-center items-center bg-background/50">
       {/* Background + Sparkles */}
       <div className="absolute inset-0 -z-10">
         <div
@@ -36,7 +36,7 @@ export default function Hero() {
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         {/* Mobile Heading */}
-        <div className="md:hidden absolute top-8 w-full left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10">
+        <div className="md:hidden absolute -top-5 w-full left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg leading-tight">
             Sajad Haider
           </h1>
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* Timeline */}
-        <div className="mt-100 md:mt-4 flex items-center justify-center text-sm sm:text-base md:text-lg px-12 w-full">
+        <div className="mt-100 md:mt-4 flex items-center justify-center text-sm sm:text-base md:text-lg px-12 md:px-24 w-full">
           <span className="dark:text-white text-black">1932</span>
           <div className="flex-1 mx-2 sm:mx-4 h-0.5 bg-gradient-to-r from-black/40 via-transparent to-black/40 dark:from-white/40 dark:via-transparent dark:to-white/40" />
           <span className="dark:text-white text-black">2025</span>
@@ -61,7 +61,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Badges + Button */}
-      <div className="absolute -bottom-0 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
+      <div className="absolute bottom-5 md:bottom-10 w-full flex flex-col md:flex-row items-center justify-between px-6">
         {/* Left Badge */}
         <motion.img
           src={badge1}

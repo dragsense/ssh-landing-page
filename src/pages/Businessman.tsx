@@ -42,22 +42,22 @@ export default function BusinessMan() {
     content="From fighter pilot to business pilot, Sajad Haider ended his military career in 1980; he resigned with no land, no assets, and a meagre bank balance. His only possession was a ten-year-old Toyota. Having to provide for his family without a pension that could sustain them, he was forced to enter the civilian world to earn an income. "
     image={S7_Image}
     >
-         <section className="relative my-8 mt-20 md:my-16 lg:my-24 px-4 md:px-6">
+         <section className="relative my-12 mt-20 md:my-16 lg:my-24 px-4 md:px-6">
             <BusinessImageSlider />
         </section>
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <BusinessmanContentSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-30 px-4 md:px-6">
+        <section className="relative my-12 md:my-16 lg:my-30 px-4 md:px-6">
             <BusinessmanFeatureSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6 hidden">
+        <section className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6 hidden">
             <BusinessmanGallerySlider />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+        <section className="relative mt-12 md:my-16 lg:my-24 px-4 md:px-6">
             <CertificateSection />
         </section>
 

@@ -22,7 +22,7 @@ export default function BusinessmanContentSection() {
                     <motion.img
                         src={BusinessmanImage}
                         alt="Business Man"
-                        className="w-full h-auto rounded-lg shadow-lg object-cover"
+                        className="w-full h-auto rounded-lg shadow-lg object-cover -rotate-1"
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     />

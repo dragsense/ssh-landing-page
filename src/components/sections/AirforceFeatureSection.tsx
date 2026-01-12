@@ -45,16 +45,16 @@ export default function AirforceFeatureSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className=""
+                    className="flex flex-col gap-6"
                 >
                     <motion.img
                         src={S16_Image}
                         alt="Young Haider in uniform"
-                        className="w-full h-auto rounded-lg"
+                        className="w-full h-auto rounded-lg order-2 md:order-1"
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     />
-                    <p className="font-normal mt-5">
+                    <p className="font-normal">
                         Sajad’s fighter training was conducted on the dual Fury, and it was then that he had his first altercation and almost resigned. But his Squadron leader Ashraf Chaudhry tore up the resignation, saying, "Go, boy, and fly well, you will make a fine fighter pilot." He placed second in the conversion course, behind Sarfraz Rafiqui, a martyr of the 1965 war. He was then posted to No. 14 Fighter Bomber Squadron in Peshawar.
 
                     </p>

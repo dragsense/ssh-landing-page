@@ -232,7 +232,7 @@ export default function LifeAtTheAirforcePage() {
             content={war.description}
             image={war.image}
         >
-            <section className="relative my-8 md:my-16 lg:my-24 px-4 md:px-6">
+            <section className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6">
                 <div className="max-w-4xl mx-auto">
                     {/* Back Button */}
                     <motion.button
