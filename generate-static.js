@@ -17,10 +17,22 @@ const pages = [
 ];
 
 const distPath = path.resolve("dist");
-const template = fs.readFileSync(
-  path.resolve(distPath, "client/index.html"),
-  "utf-8"
-);
+const clientDistPath = path.join(distPath, "client");
+
+// Ensure dist/client directory exists
+if (!fs.existsSync(clientDistPath)) {
+  fs.mkdirSync(clientDistPath, { recursive: true });
+}
+
+// Read the built template (this should exist after build:client)
+const templatePath = path.join(clientDistPath, "index.html");
+if (!fs.existsSync(templatePath)) {
+  throw new Error(
+    `Template file not found: ${templatePath}\nPlease run 'npm run build:client' first.`
+  );
+}
+
+const template = fs.readFileSync(templatePath, "utf-8");
 
 // Artificial delay function
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -30,26 +42,19 @@ const generatePage = async (route) => {
   const render = (await import("./dist/server/entry-server.js")).render;
   const html = await render(route);
 
-  // Clone the template with template.html [this file if that page not required SSG then SSR will use]
-  if (route === "") {
-    const filePath = path.join(`${distPath}/client`, "template.html");
-    console.log(`✅ Generated: ${filePath}`);
-    fs.writeFileSync(filePath, template, "utf-8");
-  }
-
   // Inject head and body content properly
   const outputHtml = template
     .replace("<!--app-head-->", html.head ?? "") // Inject head content
     .replace("<!--app-html-->", html.html ?? ""); // Inject body content
 
   // Ensure directory exists before writing file
-  const outputDir = path.join(`${distPath}/client`, path.dirname(cleanRoute));
+  const outputDir = path.join(clientDistPath, path.dirname(cleanRoute));
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true }); // Create parent directories if needed
   }
 
   const filePath = path.join(
-    `${distPath}/client`,
+    clientDistPath,
     route === "/" || route === "" ? "index.html" : `${cleanRoute}.html`
   );
 
@@ -57,9 +62,32 @@ const generatePage = async (route) => {
   console.log(`✅ Generated: ${filePath}`);
 };
 
+// Generate template.html separately (for SSR fallback)
+// This is a clean copy of the template with placeholders intact
+const generateTemplate = () => {
+  const templateFilePath = path.join(clientDistPath, "template.html");
+  
+  // Ensure directory exists
+  if (!fs.existsSync(clientDistPath)) {
+    fs.mkdirSync(clientDistPath, { recursive: true });
+  }
+  
+  // Write the clean template (with placeholders <!--app-head--> and <!--app-html-->)
+  fs.writeFileSync(templateFilePath, template, "utf-8");
+  console.log(`✅ Generated: ${templateFilePath}`);
+};
+
 async function generatePagesSequentially() {
   console.log("🚀 Starting static site generation...\n");
   
+  // First, generate template.html for SSR fallback
+  try {
+    generateTemplate();
+  } catch (error) {
+    console.error(`❌ Error generating template.html:`, error);
+  }
+  
+  // Then generate all static pages
   for (const route of pages) {
     try {
       await generatePage(route);
