@@ -22,7 +22,8 @@ export default function BusinessmanFeatureSection() {
                 >
                     <p className="font-normal mb-5 text-base md:text-lg">
                         <strong>Cormorant</strong> <br />
-                        Cormorant was the name of the company Sajad founded, named after the bird that can fly (representing the Air Force), live on land (the Army), and go underwater (the Navy). The business operated for a decade, from 1980 to 1990. Initially financed by the Gokals, Sajad sought complete independence and achieved it in 1983 by paying them back ten times their original investment. At its peak, Cormorant represented 80 of the top Fortune 100 defence companies in the world. Major deals included selling AM General vehicles to the Army, providing Gulfstream aircraft to the Survey General of Pakistan for aerial mapping, supplying Litton Industries with night vision and setting up a major ammunition plant in Wah.
+                        Cormorant was the name of the company Sajad founded, named after the bird that can fly (representing the Air Force), live on land (the Army), and go underwater (the Navy). <br/>
+                        The business operated for a  little over a decade, from 1980 to 1991. Initially financed by the Gokals, Sajad sought complete independence and achieved it in 1983 by paying them back ten times their original investment. At its peak, Cormorant represented 80 of the top Fortune 100 defence companies in the world. Major deals included selling AM General vehicles to the Army, providing Gulfstream aircraft to the Survey General of Pakistan for aerial mapping, supplying Litton Industries with night vision and setting up a major ammunition plant in Wah. While Sajad dealt in military equipment, he never dealt directly in guns and arms.
 
                         
 

@@ -68,10 +68,10 @@ export default function RecordSection() {
                 DIAMOND LOOP
               </h3>
               <h3 className="text-base font-semibold">
-                16 F-86 SABRE
+              16x F-86 SABRES
               </h3>
               <h3 className="text-base font-semibold">
-                FEBRUARY 9
+              Feb 9, 1958 
               </h3>
             </div>
             <div className="text-center text-muted-foreground/50 text-5xl lg:text-6xl font-bold">

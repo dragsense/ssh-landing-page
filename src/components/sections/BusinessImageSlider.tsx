@@ -176,6 +176,7 @@ export default function BusinessImageSlider() {
                 backgroundPosition: "center",
             }}
         >
+
                 <div></div>
          {/*    <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
                 <motion.div
@@ -301,26 +302,26 @@ export default function BusinessImageSlider() {
 
                         <motion.div
                             layout
-                            className="flex flex-col h-full flex-1 gap-4 sm:flex-row items-end"
+                            className="flex flex-col h-full flex-1 gap-4 sm:flex-row items-end  "
                         >
                             {visibleImages.map(({ data, absoluteIndex, relativeIndex }) => {
                                 const isFeatured = relativeIndex === featuredRelativeIndex;
                                 return (
-                                    <div key={`wrapper-${data.image}-${absoluteIndex}`} className="relative flex-1">
+                                    <div key={`wrapper-${data.image}-${absoluteIndex}`} className="relative flex-1 ">
                                         {/* Scanner Marker - only for featured image */}
                                         {isFeatured && (
                                             <motion.div
                                                 key={`scanner-${absoluteIndex}`}
                                                 initial={{ opacity: 0, y: -10 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                className="absolute -top-45 right-2 transform hidden sm:flex items-start justify-center -z-1"
+                                                className="absolute -top-45 right-2 transform hidden sm:flex items-start justify-center z-0 "
                                             >
-                                                <div className="flex flex-col items-center relative">
+                                                <div className="flex flex-col items-center relative ">
                                                     {/* Dot on top */}
                                                     <div className="w-3 h-3 rounded-full bg-black dark:bg-white relative">
                                                         {/* Scanner Box with single tag - positioned at top right of dot */}
                                                         {data.keywords && data.keywords.length > 0 && (
-                                                            <div className="absolute left-full ml-2 top-1">
+                                                            <div className="absolute left-full ml-2 top-1 bg-white z-10">
                                                                 <div className="relative p-2">
                                                                     {/* Scanner corner brackets */}
                                                                     <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-black dark:border-white" />
@@ -329,8 +330,8 @@ export default function BusinessImageSlider() {
                                                                     <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-black dark:border-white" />
                                                                     
                                                                     {/* Single tag */}
-                                                                    <div className="relative z-10">
-                                                                        <span className="text-sm font-semibold text-black dark:text-white">
+                                                                    <div className="relative z-30 bg-white">
+                                                                        <span className="text-sm font-semibold text-black dark:text-white ">
                                                                             {data.keywords[0]}
                                                                         </span>
                                                                     </div>

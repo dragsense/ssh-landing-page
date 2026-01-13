@@ -2,14 +2,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import CertificateImage from "@/assets/certificates/certificate.jpg";
+import HummerImage from "@/assets/business/hummer.jpeg";
 
 export default function CertificateSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === "Escape" && isModalOpen) {
                 setIsModalOpen(false);
+                setSelectedImage(null);
             }
         };
 
@@ -24,12 +27,14 @@ export default function CertificateSection() {
         };
     }, [isModalOpen]);
 
-    const handleOpenModal = () => {
+    const handleOpenModal = (imageSrc: string) => {
+        setSelectedImage(imageSrc);
         setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
+        setSelectedImage(null);
     };
 
     return (
@@ -41,7 +46,7 @@ export default function CertificateSection() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-8"
             >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Certificates</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Memorabilia</h2>
                 <p className="text-gray-600 dark:text-gray-400">
                     Recognition and Achievements
                 </p>
@@ -53,15 +58,24 @@ export default function CertificateSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="relative flex items-center justify-center"
+                className="relative flex items-center justify-center gap-6 flex-wrap"
             >
                 <motion.img
                     src={CertificateImage}
                     alt="Sajad Haider Military Certificate and Recognition"
-                    className="md:w-1/3 h-auto rounded-lg shadow-lg object-contain cursor-pointer"
+                    className="w-80 h-80 md:w-96 md:h-96 rounded-lg shadow-lg object-contain cursor-pointer"
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                    onClick={handleOpenModal}
+                    onClick={() => handleOpenModal(CertificateImage)}
+                    loading="lazy"
+                />
+                <motion.img
+                    src={HummerImage}
+                    alt="Hummer Vehicle"
+                    className="w-80 h-80 md:w-96 md:h-96 rounded-lg shadow-lg object-contain cursor-pointer"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    onClick={() => handleOpenModal(HummerImage)}
                     loading="lazy"
                 />
             </motion.div>
@@ -92,12 +106,14 @@ export default function CertificateSection() {
                                 <X className="h-6 w-6" />
                             </button>
                             
-                            <img
-                                src={CertificateImage}
-                                alt="Sajad Haider Military Certificate and Recognition - Full View"
-                                className="max-w-full max-h-full object-contain rounded-lg"
-                                loading="eager"
-                            />
+                            {selectedImage && (
+                                <img
+                                    src={selectedImage}
+                                    alt="Full View"
+                                    className="max-w-full max-h-full object-contain rounded-lg"
+                                    loading="eager"
+                                />
+                            )}
                         </motion.div>
                     </motion.div>
                 )}

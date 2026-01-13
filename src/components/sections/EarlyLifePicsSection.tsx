@@ -1,5 +1,7 @@
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 
 import i7 from '@/assets/images/earlylife/early-life-quetta-1.jpg';
@@ -22,13 +24,14 @@ import { ThreeDMarquee } from "../ui/3d-marquee";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 
-const images = [
+// Base images array - all images in order
+const baseImages = [
     S16_Image,
     i7,
     i8,
     i10,
     i11,
-    i12,
+  
     i13,
     i14,
     i15,
@@ -37,23 +40,69 @@ const images = [
     i18,
     i19,
     i20,
+    i12,
+    S16_Image,
     i7,
     i8,
-    i10,
-    i11,
-    i12,
-    i13,
-    i14,
-    i15,
-    
-    i17,
-    i18,
-    i19,
-    i20,
 ];
 
-export default function EarlyLifePicsSection() {
+// Repeat images to fill 4 columns evenly (16 images = 4 columns × 4 images)
+// This ensures a balanced grid layout
+const images = [...baseImages, ...baseImages.slice(0, 2)];
 
+export default function EarlyLifePicsSection() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    // Get unique images (remove duplicates from baseImages)
+    const uniqueImages = Array.from(new Set(baseImages));
+
+    const handleOpenModal = (index: number) => {
+        setCurrentImageIndex(index);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleNext = () => {
+        setCurrentImageIndex((prev) => (prev + 1) % uniqueImages.length);
+    };
+
+    const handlePrevious = () => {
+        setCurrentImageIndex((prev) => (prev - 1 + uniqueImages.length) % uniqueImages.length);
+    };
+
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === "Escape" && isModalOpen) {
+                setIsModalOpen(false);
+            }
+        };
+
+        const handleArrowKeys = (e: KeyboardEvent) => {
+            if (!isModalOpen) return;
+            
+            if (e.key === "ArrowLeft") {
+                setCurrentImageIndex((prev) => (prev - 1 + uniqueImages.length) % uniqueImages.length);
+            } else if (e.key === "ArrowRight") {
+                setCurrentImageIndex((prev) => (prev + 1) % uniqueImages.length);
+            }
+        };
+
+        if (isModalOpen) {
+            document.addEventListener("keydown", handleEscape);
+            document.addEventListener("keydown", handleArrowKeys);
+            document.body.style.overflow = "hidden";
+        }
+
+        return () => {
+            document.removeEventListener("keydown", handleEscape);
+            document.removeEventListener("keydown", handleArrowKeys);
+            document.body.style.overflow = "unset";
+        };
+    }, [isModalOpen, uniqueImages.length]);
 
     return (
         <>
@@ -63,9 +112,98 @@ export default function EarlyLifePicsSection() {
                     EARLY LIFE ARCHIVE
                 </h2>
 
-                <div className="mx-auto my-10 rounded-3xl p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
+                {/* Desktop: 3D Marquee */}
+                <div className="hidden md:block mx-auto my-10 rounded-3xl p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
                     <ThreeDMarquee images={images} />
                 </div>
+
+                {/* Mobile: Responsive Grid */}
+                <div className="md:hidden mx-auto my-10 p-4">
+                    <div className="grid grid-cols-2 gap-4">
+                        {uniqueImages.map((image, index) => (
+                            <motion.img
+                                key={index}
+                                src={image}
+                                alt={`Early life memory ${index + 1}`}
+                                className="w-full h-48 object-cover rounded-lg shadow-lg cursor-pointer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                whileHover={{ scale: 1.02 }}
+                                onClick={() => handleOpenModal(index)}
+                                loading="lazy"
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Image Modal */}
+                <AnimatePresence>
+                    {isModalOpen && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+                            onClick={handleCloseModal}
+                        >
+                            <motion.div
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.9, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {/* Close Button */}
+                                <button
+                                    onClick={handleCloseModal}
+                                    className="absolute top-4 right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
+                                    aria-label="Close modal"
+                                >
+                                    <X className="h-6 w-6" />
+                                </button>
+
+                                {/* Previous Button */}
+                                <button
+                                    onClick={handlePrevious}
+                                    className="absolute left-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
+                                    aria-label="Previous image"
+                                >
+                                    <ChevronLeft className="h-8 w-8" />
+                                </button>
+
+                                {/* Next Button */}
+                                <button
+                                    onClick={handleNext}
+                                    className="absolute right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-colors"
+                                    aria-label="Next image"
+                                >
+                                    <ChevronRight className="h-8 w-8" />
+                                </button>
+
+                                {/* Image */}
+                                <motion.img
+                                    key={currentImageIndex}
+                                    src={uniqueImages[currentImageIndex]}
+                                    alt={`Early life memory ${currentImageIndex + 1}`}
+                                    className="max-w-full max-h-full object-contain rounded-lg"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -20 }}
+                                    transition={{ duration: 0.3 }}
+                                    loading="eager"
+                                />
+
+                                {/* Image Counter */}
+                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded-full text-white text-sm">
+                                    {currentImageIndex + 1} / {uniqueImages.length}
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
                 <div className="mx-auto mt-10 md:mt-30 p-2 max-w-screen-md hidden">
                     <div className="space-y-20">

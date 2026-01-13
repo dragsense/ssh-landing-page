@@ -39,7 +39,7 @@ export default function BusinessMan() {
     });
     return (<InnerPageLayout 
         title="Trading Wings for Ventures" 
-    content="From fighter pilot to business pilot, Sajad Haider ended his military career in 1980; he resigned with no land, no assets, and a meagre bank balance. His only possession was a ten-year-old Toyota. Having to provide for his family without a pension that could sustain them, he was forced to enter the civilian world to earn an income. "
+    content="From fighter pilot to business pilot, Sajad Haider ended his military career in 1979; he resigned with no land, no assets, and a meagre bank balance. His only possession was a ten-year-old Toyota. Having to provide for his family without a pension that could sustain them, he was forced to enter the civilian world to earn an income. "
     image={S7_Image}
     >
          <section className="relative my-12 mt-20 md:my-16 lg:my-24 px-4 md:px-6">

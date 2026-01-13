@@ -32,8 +32,8 @@ const allPilotLifeContent = [
     },
     {
         title: "First Postings and the Dawn of Jet Power",
-        content: "Sajad Haider left Quetta with his family for Peshawar, joining the Bachelor's Officer Quarters and training with his flight companions under a demanding flying culture. He participated in a landmark goodwill mission to Dhaka, observing early signs of Bengali resentment toward West Pakistan's political dominance. Later, assigned to No. 11 Squadron—the PAF's first jet unit—Haider faced gruelling flying conditions that shaped his discipline and skill under exacting mentors. Upon Dhaka return, Haider and Tinchoo were assigned to No. 11 squadron by Sqn Ldr Masroor Hossain—the PAF's first and only jet squadron then. This posting was a significant leap for young pilots. He met the beloved Butch (Alauddin Ahmed), who explained the Super Marine Attacker. Flying the Attacker was described as the toughest flying anywhere: no heating/cooling or navigational aids, and bad manual controls, making formation aerobatics deadly. He experienced the bends often, once using a fuel tank opener to tear his gum to relieve excruciating pain, all while maintaining formation. He was surrounded by motivating superiors like Sqn Ldr FS Hussain (a world-class legend whose first interaction involved an upside-down 50 feet off the ground inverted loop), Mitty Masud, and Corny Karim, who were \"terrors\" and sticklers for tight flying. Flt Lt Corny Karim \"bullied the life out of me\" for formation, which Haider later thanked him for after advancing from position 5 to 3 in a year. Stunts for commanders were common despite little safety culture. He was around the same time called \"Nosy\" while Plt Off MA Shamim returned from training called \"Pinky\" for his ruddy complexion."
-    },
+        content: "Sajad Haider left Quetta with his family for Peshawar, joining the Bachelor’s Officer Quarters and training with his flight companions under a demanding flying culture. He participated in a landmark goodwill mission to Dhaka, observing early signs of Bengali resentment toward West Pakistan’s political dominance. Later, assigned to No. 11 Squadron—the PAF’s first jet unit—Haider faced gruelling flying conditions that shaped his discipline and skill under exacting mentors."
+     },
     {
         title: "Near Miss",
         content: "Haider was on a single-craft run trying new weapons. On his way back he was informed that his jet was on fire. With adrenaline spiking and stomach turning, and with no option to bail out, he landed and ran from the cockpit immediately after cutting the fuel, with the rear aflame from a severed exhaust pipe leaking flames. 10-15 seconds more, and he would have died there."
@@ -92,6 +92,10 @@ const allPilotLifeContent = [
     },
     {
         title: "Air Battle over Dhaka",
+        content: "In East Pakistan (Bangladesh), the solitary No. 14 Squadron (\"Tail-Choppers\") faced overwhelming odds, pitted against ten Indian Air Force (IAF) squadrons due to operational mismanagement and internal politics. Operating from the single runway at Tejgaon, they maintained Combat Air Patrols (CAPs) from dawn to dusk in a struggle Haider compared to the Battle of Britain, but by the end of 7 December, Indian MiG-21s effectively halved the Tejgaon runway with precision bombing, finally grounding the squadron’s remaining 11 aircraft."
+    },
+    {
+        title: "Interdictions on the Western Front",
         content: "On the Western Front, the PAF launched a series of strikes on 3 December targeting Indian airfields like Amritsar, Pathankot, and Srinagar. Unlike 1965, the focus was on cratering runways because the IAF had moved their aircraft into hardened concrete shelters, and while Sajad did not fly the mission himself (as much as he wanted to relive his memories of 1965), he was persuaded to stay behind by Wg Cdr Hakimullah to supervise the conduct of operations. Hakimullah led a particularly successful Mirage mission that decimated a large assembly of Indian tanks at the Mukerian railway station. However, the campaign also saw the loss of the legendary Wg Cdr Mervyn Middlecoat, who was shot down in his F-104 by a MiG-21 on 12 December."
     },
     {
@@ -104,11 +108,11 @@ const allPilotLifeContent = [
     },
     {
         title: "The Attock Conspiracy",
-        content: "The Attock Conspiracy, unearthed in March 1973, was a plot to overthrow Zulfiqar Ali Bhutto’s legitimate government by criminal force, masterminded by Brigadier F.B. Ali and Colonel Aleem Afridi, as per Sajad. This event was immediately seized upon by the PAF high command (Air Marshal Zafar Chaudhry's cabal) as a pretext to frame critics, resulting in Sajad Haider's arrest in May 1973 and subsequent solitary confinement in a sub-detention centre near Badaber for many months. Haider defied intense pressure and threats, refusing to sign a coerced confession that would have implicated Air Commodore Zulfiqar Ali Khan. He maintained a \"Plea of No Case\" at the General Court-Martial, leading to his unanimous exoneration; however, the Air Chief, driven by malice, unlawfully ordered him kept under arrest following the verdict, necessitating intervention from the Defence Minister to secure his final release. The fallout from the conspiracy resulted in the conviction of Wing Commander Hashmi and Squadron Leader Ghaus, but also the official removal of the others from their posts for intrigue and vindictive witch-hunting. In an extremely rare case, Sajad Haider was not only exonerated but reinstated to his position, which is unheard of after court martials, as that usually ends in honourable discharge if innocent.",
+        content: "The Attock Conspiracy, unearthed in March 1973, was a plot to overthrow Zulfiqar Ali Bhutto’s legitimate government by criminal force, masterminded by Brigadier F.B. Ali and Colonel Aleem Afridi, as per Sajad. This event was immediately seized upon by the PAF high command (Air Marshal Zafar Chaudhry's cabal) as a pretext to frame critics, resulting in Sajad Haider's arrest in May 1973 and subsequent solitary confinement in a sub-detention centre near Badaber for many months.\n\nHaider defied intense pressure and threats, refusing to sign a coerced confession that would have implicated Air Commodore Zulfiqar Ali Khan. He maintained a \"Plea of No Case\" at the General Court-Martial, leading to his unanimous exoneration; however, the Air Chief, driven by malice, unlawfully ordered him kept under arrest following the verdict, necessitating intervention from the Defence Minister to secure his final release. The fallout from the conspiracy resulted in the conviction of Wing Commander Hashmi and Squadron Leader Ghaus, but also the official removal of the others from their posts for intrigue and vindictive witch-hunting. In an extremely rare case, Sajad Haider was not only exonerated but reinstated to his position, which is unheard of after court martials, as that usually ends in honourable discharge if innocent.",
     },
     {
         title: "End of an Era",
-        content: "Sajad Haider's experience with General Zia ul Haq was marked by escalating disillusionment culminating in his resignation from the PAF in 1980. Sajad developed a revulsion for Zia ul Haq following Zulfiqar Ali Bhutto's unlawful murder and Zia's subsequent imposition of the Hadood melodrama and hypocritical use of Islam, earning Zia the derogatory alias Lash ul Haq (Whipper of truth). His career under Zia was jeopardised when he gave a strongly worded note during a presentation to the President, criticising Zia's rule and his assertion that the army would run the country indefinitely. This confrontation, which Sajad felt compelled to make out of sincerity, convinced him that the PIA job was history and that his military career was ending. Concluding that he felt uneasy and did not wish to serve under Zia's rule anymore, Sajad requested to quit, stating, \"Enough was enough\" and that he should be allowed to quit while honour was still an option. He left the PAF with a bank balance of just Rs 17,000."
+        content: "Sajad Haider's experience with General Zia ul Haq was marked by escalating disillusionment culminating in his resignation from the PAF in 1980. Sajad developed a revulsion for Zia ul Haq following Zulfiqar Ali Bhutto's unlawful murder and Zia's subsequent imposition of the Hadood melodrama and hypocritical use of Islam, earning Zia the derogatory alias Lash ul Haq (Whipper of truth). \n\nHis career under Zia was jeopardised when he gave a strongly worded note during a presentation to the President, criticising Zia's rule and his assertion that the army would run the country indefinitely. This confrontation, which Sajad felt compelled to make out of sincerity, convinced him that the PIA job was history and that his military career was ending. Concluding that he felt uneasy and did not wish to serve under Zia's rule anymore, Sajad requested to quit, stating, \"Enough was enough\" and that he should be allowed to quit while honour was still an option. He left the PAF with a bank balance of just Rs 17,000."
     },
 ];
 
@@ -136,6 +140,7 @@ const wars = [
         sections: allPilotLifeContent.filter(s => 
             s.title.includes("1971 War") ||
             s.title.includes("Air Battle over Dhaka") ||
+            s.title.includes("Interdictions on the Western Front") ||
             s.title.includes("Defence of Sialkot") ||
             s.title.includes("Sajad Haider’s Combat and the Ferozpur Incident")
         )
@@ -253,14 +258,7 @@ export default function LifeAtTheAirforcePage() {
                         transition={{ duration: 0.5 }}
                         className="space-y-8"
                     >
-                        <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                            <img
-                                src={war.image}
-                                alt={`${war.title} - ${war.description}`}
-                                className="w-full h-full object-cover"
-                                loading="eager"
-                            />
-                        </div>
+                   
                         
                         <div className="prose prose-lg max-w-none dark:prose-invert">
                             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">

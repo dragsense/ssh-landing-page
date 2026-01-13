@@ -8,10 +8,10 @@ export default function SaviourOfLahoreSection() {
     const descriptionText2 = ``;
 
     return (
-        <div className="w-full overflow-hidden rounded-lg md:px-8 min-h-[650px] max-w-screen-xl px-12 md:px-24">
+        <div className="w-full overflow-hidden rounded-lg md:px-8 md:min-h-screen max-w-screen-xl px-12 md:px-24">
             {/* Background Image - Only visible on md and above */}
             <div 
-                className="hidden lg:block absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
+                className="hidden lg:block absolute inset-0 bg-contain md:bg-cover bg-bottom bg-no-repeat"
                 style={{
                     backgroundImage: `url(${SaviourOfLahoreImage})`,
                 }}

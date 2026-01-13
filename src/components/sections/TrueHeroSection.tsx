@@ -6,7 +6,7 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import S1_Image from '@/assets/images/ui/ui-section-1.png';
 import S2_Image from '@/assets/images/ui/ui-section-2.png';
-import S3_Image from '@/assets/images/ui/ui-section-3.png';
+import S3_Image from '@/assets/images/ui/i4h.jpg';
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientFillButton } from "../ui/gradient-fill-overlay";
 
@@ -85,7 +85,7 @@ export default function TrueHeroComponent() {
           </motion.div>
         </div>
 
-        <div className="space-y-8 md:space-y-12 lg:space-y-20">
+        <div className="space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
