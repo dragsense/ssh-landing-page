@@ -54,7 +54,7 @@ export default function AirforceLife() {
             <AirforceFeatureSection />
         </section>
 
-        <section className="relative max-w-screen-xl mx-auto my-16 lg:my-50 px-4 md:px-6">
+        <section className="relative  mx-auto my-16 lg:my-50">
             <SaviourOfLahoreSection />
         </section>
 

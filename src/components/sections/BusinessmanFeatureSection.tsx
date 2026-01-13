@@ -20,7 +20,7 @@ export default function BusinessmanFeatureSection() {
                     viewport={{ once: true }}
                     className="flex justify-between flex-col order-2 md:order-1"
                 >
-                    <p className="font-normal mb-5">
+                    <p className="font-normal mb-5 text-base md:text-lg">
                         <strong>Cormorant</strong> <br />
                         Cormorant was the name of the company Sajad founded, named after the bird that can fly (representing the Air Force), live on land (the Army), and go underwater (the Navy). The business operated for a decade, from 1980 to 1990. Initially financed by the Gokals, Sajad sought complete independence and achieved it in 1983 by paying them back ten times their original investment. At its peak, Cormorant represented 80 of the top Fortune 100 defence companies in the world. Major deals included selling AM General vehicles to the Army, providing Gulfstream aircraft to the Survey General of Pakistan for aerial mapping, supplying Litton Industries with night vision and setting up a major ammunition plant in Wah.
 
@@ -72,7 +72,7 @@ export default function BusinessmanFeatureSection() {
                     viewport={{ once: true }}
                     className="flex justify-between flex-col"
                 >
-                    <p className="font-normal mb-5">
+                    <p className="font-normal mb-5 text-base md:text-lg">
                     Sajad maintained a strict code of ethics, refusing to do "one cent of business" with the Air Force because he would not leverage his former position or ask for favours from officers who had served under him.
                         In 1989, a businessman with ties to the military demanded a 10% kickback on a contract, and Sajad responded by kicking his desk, telling him he did not want the contract, and walking out. “I refused kickbacks. That door closed. Another opened.”
 

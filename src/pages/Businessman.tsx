@@ -49,7 +49,7 @@ export default function BusinessMan() {
             <BusinessmanContentSection />
         </section>
 
-        <section className="relative my-12 md:my-16 lg:my-30 px-4 md:px-6">
+        <section className="relative mb-12 md:mb-16 lg:mb-30 px-4 md:px-6">
             <BusinessmanFeatureSection />
         </section>
 
