@@ -77,7 +77,7 @@ export default function Home() {
             <AwardSection />
         </section>
 
-        <section className="relative my-8 md:my-16 lg:my-24 pt-8 md:pt-16 lg:pt-24 dark:bg-black bg-accent px-4 md:px-6">
+        <section className="relative my-8 md:my-16 lg:my-24 py-12  lg:pt-24 dark:bg-black bg-accent px-4 md:px-6">
             <ProfileSection />
         </section>
         <div id="space" className="pt-10"></div>

@@ -9,11 +9,11 @@ import badge3 from "@/assets/hero/badge-3.png";
 
 export default function Hero() {
   return (
-    <div className="relative w-full min-h-screen pb-15 flex flex-col justify-center items-center bg-background/50">
+    <div className="relative w-full min-h-screen md:h-screen pb-15 flex flex-col justify-center items-center bg-background/50">
       {/* Background + Sparkles */}
       <div className="absolute inset-0 -z-10">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center  bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <SparklesCore
