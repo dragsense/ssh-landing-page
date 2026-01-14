@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import S5_Image from '@/assets/images/ui/ui-section-5.png';
-import S6_Image from '@/assets/images/ui/ui-section-6.png';
+import S6_Image from '@/assets/images/earlylife/early-life-1.jpeg';
 import S16_Image from '@/assets/images/earlylife/early-life-inspiration.jpg';
 
 const sections = [
     {
         id: "early-life-inspiration",
-        title: "Early Life and Inspiration",
+        title: "Early Life and Education",
         content: "Haider's formative years were spent in Quetta, first in the Bugti house and then the Bugti Complex, a gift to his parents from Nawab Mehran Khan. His father, known as \"Baba-e-Baluch,\" lunched daily with Nawab Sahib, leading Haider and his sister Kausar to spend many years there. Kausar was the closest to their parents among the siblings, which also included Bunyad and Jawwad. Surrounded by fierce, hard men in a hardcore Baloch and Pashtun culture, he made friends with children from those clans, as well as Hindus and Sikhs, fostering strong intercommunal ties and describing life in that multicultural community as wonderful and uncomplicated, with a focus on communal wellbeing.",
         image: S6_Image,
     },
@@ -44,7 +44,7 @@ export default function EarlyLifeInspirationSection() {
 
     return (
         <div className="max-w-5xl mx-auto space-y-6">
-            <motion.h2
+       {/*      <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function EarlyLifeInspirationSection() {
                 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-transparent"
             >
                 Early Life and Inspiration
-            </motion.h2>
+            </motion.h2> */}
 
             <div className="space-y-4">
                 {sections.map((section, index) => {

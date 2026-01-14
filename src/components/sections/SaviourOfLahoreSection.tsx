@@ -40,7 +40,7 @@ export default function SaviourOfLahoreSection() {
 
                     <TextGenerateEffect
                         words={descriptionText}
-                        className="text-md font-normal"
+                        className="text-md font-normal text-black dark:text-black"
                     />
 
                     <TextGenerateEffect

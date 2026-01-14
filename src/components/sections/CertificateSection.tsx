@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import CertificateImage from "@/assets/certificates/certificate.jpg";
-import HummerImage from "@/assets/business/hummer.jpeg";
+import HummerImage from "@/assets/business/cormorant-hummer.jpeg";
 
 export default function CertificateSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);

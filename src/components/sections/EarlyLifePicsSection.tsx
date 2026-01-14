@@ -17,6 +17,7 @@ import i17 from '@/assets/images/earlylife/family-memories-6.jpg';
 import i18 from '@/assets/images/earlylife/family-memories-7.jpg';
 import i19 from '@/assets/images/earlylife/family-memories-8.jpg';
 import i20 from '@/assets/images/earlylife/family-memories-9.jpg';
+import i21 from '@/assets/images/earlylife/early-life-1.jpeg';
 
 import S16_Image from '@/assets/images/earlylife/early-life-inspiration.jpg';
 
@@ -27,6 +28,7 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 // Base images array - all images in order
 const baseImages = [
     S16_Image,
+    i21,
     i7,
     i8,
     i10,

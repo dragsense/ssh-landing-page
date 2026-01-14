@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import sliderBackground from '@/assets/images/backgrounds/cormorant-background.png';
 import carmorant_logo from '@/assets/logo/cormorant-logo.png';
+import carmorant_logo_light from '@/assets/logo/cormorant-logo-light.jpeg';
 import image1 from '@/assets/business/cormorant-armored-vehicle-1.jpg';
 import image2 from '@/assets/business/cormorant-armored-vehicle-2.jpg';
 import image3 from '@/assets/business/cormorant-military-aircraft.jpg';
@@ -10,6 +11,7 @@ import image4 from '@/assets/business/cormorant-night-vision-equipment.jpg';
 import image5 from '@/assets/business/cormorant-military-weapons.jpg';
 import image6 from '@/assets/business/cormorant-teletype-equipment.jpg';
 import image7 from '@/assets/business/cormorant-hummer-vehicle.jpeg';
+import image8 from '@/assets/business/cormorant-bullet-assembly.jpeg';
 
 type ImageItem = {
     title: string;
@@ -26,44 +28,45 @@ export default function BusinessImageSlider() {
     const images = useMemo<PreparedImage[]>(() => {
         const list: ImageItem[] = [
             {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image1,
                 keywords: ["Armored Jeep"],
             },
             {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image2,
                 keywords: ["Armored Truck"],
             },
             {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image3,
                 keywords: ["Military Aircraft"],
             },
             {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
+                desc: "Representative around 80 of the to fortune 500 companies",
+                image: image8,
+                keywords: ["Bullet Assembly"],
+            },
+            {
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image4,
                 keywords: ["Night Vision Goggles"],
             },
             
+        
             {
-                title: "1980 - 1990",
-                desc: "Representative around 80 of the to fortune 500 companies",
-                image: image5,
-                keywords: ["Military Weapons"],
-            },
-            {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image6,
                 keywords: ["Teletype Equipment"],
             },
             {
-                title: "1980 - 1990",
+                title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
                 image: image7,
                 keywords: ["H1 Hummer"],
@@ -198,13 +201,21 @@ export default function BusinessImageSlider() {
             <div className="lg:hidden mx-auto w-full max-w-md md:px-4">
                 <div className="space-y-6">
                     <p className="text-4xl font-semibold uppercase text-center">
-                    <img
-                                src={carmorant_logo}
-                                alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
-                                className="w-64"
-                                loading="eager"
-                            />
-                    
+                        <img
+                                    src={carmorant_logo}
+                                    alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
+                                    className="w-64 dark:hidden"
+                                    loading="eager"
+                                />
+                                <h2 className="uppercase text-center hidden dark:block ">
+                                    Cormorant Limited Consultance
+                                </h2>
+                 {/*    <img
+                                    src={carmorant_logo_light}
+                                    alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
+                                    className="w-64 hidden dark:block"
+                                    loading="eager"
+                                /> */}
                     </p>
                     <p className="text-center">
                             Representative around 80 of the to fortune 500 companies
@@ -239,7 +250,7 @@ export default function BusinessImageSlider() {
                             </button>
                             
                             <div className="flex-1 px-4 text-center">
-                                <h3 className="text-lg font-semibold">1980 - 1990</h3>
+                                <h3 className="text-lg font-semibold">1980 - 1991</h3>
                             </div>
                             
                             <button
@@ -261,17 +272,25 @@ export default function BusinessImageSlider() {
                     <img
                                 src={carmorant_logo}
                                 alt="Cormorant Logo"
-                                className="w-64"
+                                className="w-64 dark:hidden"
                             />
+                                  <h6 className="text-base uppercase text-left hidden dark:block ">
+                                    Cormorant Limited
+                                </h6>
+                          {/*   <img
+                                src={carmorant_logo_light}
+                                alt="Cormorant Logo"
+                                className="w-64 hidden dark:block"
+                            /> */}
                     </p>
 
                     <div className="space-y-4 w-70">
                         <h3 className="text-3xl font-semibold">
-                            1980 - 1990
+                            1980 - 1991
                         </h3>
                         
                     </div>
-                </div>
+                        </div>
 
                 <div className="mx-auto flex flex-col items-start justify-center gap-12 lg:flex-row">
                     
@@ -321,7 +340,7 @@ export default function BusinessImageSlider() {
                                                     <div className="w-3 h-3 rounded-full bg-black dark:bg-white relative">
                                                         {/* Scanner Box with single tag - positioned at top right of dot */}
                                                         {data.keywords && data.keywords.length > 0 && (
-                                                            <div className="absolute left-full ml-2 top-1 bg-white z-10">
+                                                            <div className="absolute left-full ml-2 top-1 bg-white dark:bg-background z-10">
                                                                 <div className="relative p-2">
                                                                     {/* Scanner corner brackets */}
                                                                     <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-black dark:border-white" />
@@ -330,7 +349,7 @@ export default function BusinessImageSlider() {
                                                                     <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-black dark:border-white" />
                                                                     
                                                                     {/* Single tag */}
-                                                                    <div className="relative z-30 bg-white">
+                                                                    <div className="relative z-30 ">
                                                                         <span className="text-sm font-semibold text-black dark:text-white ">
                                                                             {data.keywords[0]}
                                                                         </span>

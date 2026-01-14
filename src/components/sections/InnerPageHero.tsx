@@ -6,8 +6,7 @@ import { TextRevealCard } from "../ui/text-reveal-card";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { Spotlight } from "../ui/spotlight";
 
-export default function InnerPageHero({ title, content, image }: { title: string, content: string, image: string }) {
-
+export default function InnerPageHero({ title, content, image, link, linkText }: { title: string, content: string, image: string, link?: string, linkText?: string }) {
 
     return (
         <div
@@ -32,7 +31,7 @@ export default function InnerPageHero({ title, content, image }: { title: string
                         <motion.img
                             src={image}
                             alt={`${title} - Sajad Haider`}
-                            className="relative z-10 rounded-xl w-auto h-80 md:h-120 shadow-2xl object-contain object-top"
+                            className="relative z-10 rounded-xl max-w-120 max-h-120 shadow-2xl object-contain object-top"
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             loading="eager"
@@ -64,6 +63,10 @@ export default function InnerPageHero({ title, content, image }: { title: string
                         words={content}
                         className="text-sm md:text-md font-normal"
                     />
+
+                    {link && linkText && <a href={link} target="_blank" rel="noopener noreferrer" className="text-sm md:text-md font-normal underline decoration-dotted">
+                        <span>{linkText}</span>
+                    </a>}
 
                 </motion.div>
             </div>

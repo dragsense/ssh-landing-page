@@ -38,11 +38,23 @@ export default function EarlyLife() {
         title="EARLY LIFE AND EDUCATION" 
     content="Sajad was born in Sargodha on 25 and 26 of December 1932, at midnight. 
 
-His parents were Dr Syed Fazal Shah (1882–1986) and Rashida Begum. 
+His parents were Dr Syed Fazal Shah (1882–1986) and Rashida Begum.
 
 Being the eldest, he had a sister named Kausar Fazal Shah (1934 - 2022), a renowned Professor of Psychology at the Government College of Lahore, and two younger brothers, Dr. Bunyad Haider (1936 – 2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey (UMDNJ) and the youngest, Jawwad Haider, a businessman in New York and only remaining sibling."
     image={S6_Image}
+    link="https://en.wikipedia.org/wiki/Sajad_Haider"
+    linkText="Source: Wikipedia"
     >
+        <section className="relative my-12 mt-25 md:my-16 lg:my-24 px-4 md:px-6 max-w-screen-lg mx-auto">
+            <p>
+            Sajad first attended the Mission School in Quetta, run by Christian teachers, where he remained until the fourth standard. This was followed by fifth grade at the Islamia School, which he described as having dedicated but "ruthless" teachers. <br/> <br/>
+
+Driven by a desire to master the English language, he successfully entered the prestigious St Francis Grammar School, where he spent three years and completed his Junior Cambridge examination. On his father's recommendation, he also cleared his Matriculation to hasten his path to college. Haider then moved to Lahore to attend Forman Christian College, a transformative experience that he credits with making him a "more rounded person" due to its academic atmosphere and his first exposure to being in a mixed environment. <br/><br/>
+
+Later on, during his pilot training, his formal education continued at the RPAF College in Risalpur.
+
+            </p>
+        </section>
         <section className="relative my-12 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifeInspirationSection />
         </section>

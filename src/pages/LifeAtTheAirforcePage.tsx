@@ -11,6 +11,7 @@ import S8_Image from '@/assets/images/airforce/airforce-war-1971-4.jpg';
 
 import fl1 from '@/assets/images/airforce/flight-log-1.jpeg';
 import fl4 from '@/assets/images/airforce/flight-log-4.jpeg';
+import fl5 from '@/assets/images/airforce/flight-log-5.jpeg';
 
 import md1 from '@/assets/images/airforce/medal-display-1.jpeg';
 import md2 from '@/assets/images/airforce/medal-display-2.jpeg';
@@ -83,6 +84,7 @@ const allPilotLifeContent = [
         images: [
             fl1,
             fl4,
+            fl5,
         ]
 
     },
