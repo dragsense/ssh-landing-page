@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import sliderBackground from '@/assets/images/backgrounds/cormorant-background.png';
 import carmorant_logo from '@/assets/logo/cormorant-logo.png';
-import carmorant_logo_light from '@/assets/logo/cormorant-logo-light.jpeg';
+import carmorant_logo_light from '@/assets/logo/cormorant-logo-light.png';
 import image1 from '@/assets/business/cormorant-armored-vehicle-1.jpg';
 import image2 from '@/assets/business/cormorant-armored-vehicle-2.jpg';
 import image3 from '@/assets/business/cormorant-military-aircraft.jpg';
@@ -57,8 +57,8 @@ export default function BusinessImageSlider() {
                 image: image4,
                 keywords: ["Night Vision Goggles"],
             },
-            
-        
+
+
             {
                 title: "1980 - 1991",
                 desc: "Representative around 80 of the to fortune 500 companies",
@@ -180,8 +180,8 @@ export default function BusinessImageSlider() {
             }}
         >
 
-                <div></div>
-         {/*    <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
+            <div></div>
+            {/*    <div className="overflow-hidden pointer-events-none select-none mb-10 md:mb-1">
                 <motion.div
                     animate={{ x: ["0%", "-100%"] }}
                     transition={{
@@ -202,25 +202,23 @@ export default function BusinessImageSlider() {
                 <div className="space-y-6">
                     <p className="text-4xl font-semibold uppercase text-center">
                         <img
-                                    src={carmorant_logo}
-                                    alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
-                                    className="w-64 dark:hidden"
-                                    loading="eager"
-                                />
-                                <h2 className="uppercase text-center hidden dark:block ">
-                                    Cormorant Limited Consultance
-                                </h2>
-                 {/*    <img
-                                    src={carmorant_logo_light}
-                                    alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
-                                    className="w-64 hidden dark:block"
-                                    loading="eager"
-                                /> */}
+                            src={carmorant_logo}
+                            alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
+                            className="w-64 dark:hidden"
+                            loading="eager"
+                        />
+
+                        <img
+                            src={carmorant_logo_light}
+                            alt="Cormorant Company Logo - Defense and Aviation Company founded by Sajad Haider"
+                            className="w-64 hidden dark:block"
+                            loading="eager"
+                        />
                     </p>
                     <p className="text-center">
-                            Representative around 80 of the to fortune 500 companies
-                        </p>
-                    
+                        Representative around 80 of the to fortune 500 companies
+                    </p>
+
                     <div className="relative">
                         <motion.div
                             key={activeIndex}
@@ -239,7 +237,7 @@ export default function BusinessImageSlider() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                         </motion.div>
-                        
+
                         <div className="flex items-center justify-between mt-4">
                             <button
                                 onClick={() => handleMove("prev")}
@@ -248,11 +246,11 @@ export default function BusinessImageSlider() {
                             >
                                 <ChevronLeft className="h-5 w-5" />
                             </button>
-                            
+
                             <div className="flex-1 px-4 text-center">
                                 <h3 className="text-lg font-semibold">1980 - 1991</h3>
                             </div>
-                            
+
                             <button
                                 onClick={() => handleMove("next")}
                                 aria-label="Next image"
@@ -269,34 +267,32 @@ export default function BusinessImageSlider() {
             <div className="hidden lg:block mx-auto max-w-screen-xl w-full">
                 <div className="space-y-3">
                     <p className="text-6xl font-semibold uppercase">
-                    <img
-                                src={carmorant_logo}
-                                alt="Cormorant Logo"
-                                className="w-64 dark:hidden"
-                            />
-                                  <h6 className="text-base uppercase text-left hidden dark:block ">
-                                    Cormorant Limited
-                                </h6>
-                          {/*   <img
+                        <img
+                            src={carmorant_logo}
+                            alt="Cormorant Logo"
+                            className="w-64 dark:hidden"
+                        />
+                       
+                          <img
                                 src={carmorant_logo_light}
                                 alt="Cormorant Logo"
                                 className="w-64 hidden dark:block"
-                            /> */}
+                            /> 
                     </p>
 
                     <div className="space-y-4 w-70">
                         <h3 className="text-3xl font-semibold">
                             1980 - 1991
                         </h3>
-                        
+
                     </div>
-                        </div>
+                </div>
 
                 <div className="mx-auto flex flex-col items-start justify-center gap-12 lg:flex-row">
-                    
-                      <div className="w-50 mt-3">
-                        
-                      <p>
+
+                    <div className="w-50 mt-3">
+
+                        <p>
                             Representative around 80 of the to fortune 500 companies
                         </p>
                     </div>
@@ -347,7 +343,7 @@ export default function BusinessImageSlider() {
                                                                     <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-black dark:border-white" />
                                                                     <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-black dark:border-white" />
                                                                     <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-black dark:border-white" />
-                                                                    
+
                                                                     {/* Single tag */}
                                                                     <div className="relative z-30 ">
                                                                         <span className="text-sm font-semibold text-black dark:text-white ">
@@ -358,13 +354,13 @@ export default function BusinessImageSlider() {
                                                             </div>
                                                         )}
                                                     </div>
-                                                    
+
                                                     {/* Vertical Line - no gap */}
                                                     <div className="w-0.5 h-56 bg-black dark:bg-white" />
                                                 </div>
                                             </motion.div>
                                         )}
-                                        
+
                                         <motion.button
                                             layout
                                             whileHover={{ scale: 1.02 }}
@@ -446,7 +442,7 @@ export default function BusinessImageSlider() {
                             >
                                 <ChevronRight className="h-6 w-6" />
                             </button>
-                            
+
                             <div className="w-full h-full flex flex-col items-center justify-center">
                                 <img
                                     src={viewingImage.image}
