@@ -39,7 +39,7 @@ export default function AirforceLife() {
     });
     return (<InnerPageLayout 
         title="Fighter pilot . Air Commodore" 
-    content="Syed Sajad Haider (26 December 1932 – 3 January 2025), better known by his aliases as Nosey Haider and Saviour of Lahore, was a Pakistani fighter pilot and one-star rank officer in the Pakistan Air Force (PAF). He is best known for leading a devastating Blitzkrieg on the Pathankot airbase in India on 6 September during the Indo-Pakistani air war of 1965. "
+    content="Sayed Sajad Haider (26 December 1932 – 3 January 2025), better known by his aliases as Nosey Haider and Saviour of Lahore, was a Pakistani fighter pilot and one-star rank officer in the Pakistan Air Force (PAF). He is best known for leading a devastating Blitzkrieg on the Pathankot airbase in India on 6 September during the Indo-Pakistani air war of 1965. "
     image={S7_Image}
     >
         <section className="relative my-12 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
