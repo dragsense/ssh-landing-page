@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* Timeline */}
-        <div className="mt-100 md:mt-4 flex items-center justify-center text-sm sm:text-base md:text-lg px-12 md:px-24 w-full">
+        <div className="mt-100 md:mt-18 flex items-center justify-center text-sm sm:text-base md:text-lg px-12 md:px-24 w-full">
           <span className="dark:text-white text-black">1932</span>
           <div className="flex-1 mx-2 sm:mx-4 h-0.5 bg-gradient-to-r from-black/40 via-transparent to-black/40 dark:from-white/40 dark:via-transparent dark:to-white/40" />
           <span className="dark:text-white text-black">2025</span>

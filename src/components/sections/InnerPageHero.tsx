@@ -26,12 +26,12 @@ export default function InnerPageHero({ title, content, image, link, linkText }:
                     transition={{ duration: 0.7, type: "spring" }}
                     className="relative m-4 md:m-10 h-2/ order-1 md:order-2"
                 >
-                    <div className="absolute -top-8 -right-0 w-4/5 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
+                    <div className="absolute -top-8 right-15 w-4/5 h-full border-2 border-primary/20 dark:border-white/30 rounded-tl-3xl rounded-tr-3xl rounded-bl-full z-0 dark:border-primary/10"></div>
 
                         <motion.img
                             src={image}
                             alt={`${title} - Sajad Haider`}
-                            className="relative z-10 rounded-xl max-w-120 max-h-120 shadow-2xl object-contain object-top"
+                            className="relative z-10 rounded-xl w-100 shadow-2xl object-contain object-top"
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             loading="eager"
