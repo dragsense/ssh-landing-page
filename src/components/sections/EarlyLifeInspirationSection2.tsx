@@ -7,16 +7,16 @@ import S16_Image from '@/assets/images/earlylife/early-life-inspiration.jpg';
 
 const sections = [
     {
-        id: "early-life-inspiration",
-        title: "Education",
-        content: "Sajad first attended the Mission School in Quetta, run by Christian teachers, where he remained until the fourth standard. This was followed by fifth grade at the Islamia School, which he described as having dedicated but \"ruthless\" teachers. \n\nDriven by a desire to master the English language, he successfully entered the prestigious St Francis Grammar School, where he spent three years and completed his Junior Cambridge examination. On his father's recommendation, he also cleared his Matriculation to hasten his path to college. Haider then moved to Lahore to attend Forman Christian College, a transformative experience that he credits with making him a \"more rounded person\" due to its academic atmosphere and his first exposure to being in a mixed environment. \n\nLater on, during his pilot training, his formal education continued at the RPAF College in Risalpur.",
-        image: S6_Image,
+        id: "early-life-inspiration-3",
+        title: "His hero, Quaid-e-Azam",
+        content: "As a teenager, he aspired to follow in the footsteps of his hero, Quaid-e-Azam, who he saw at his old school in Quetta, sitting just six feet away, sparking the seed of his ambition to become a defender of Pakistan. \n\nA pivotal moment for Haider was witnessing Quaid-e-Azam Muhammad Ali Jinnah speak at his old school in Quetta, sitting an arm's length away in sheer awe. Jinnah's powerful words, urging that \"some of you will choose to defend your country with your lives as members of the army, navy, or the air force,\" inspired Haider. He viewed Jinnah as truly the only one worthy of the title Quaid-e-Azam, having created Pakistan single-handedly. Initially seeing himself in an army uniform while living in a largely army cantonment, he shifted his aspiration to the air force after encountering fighter pilots at Cafe Stanley and witnessing Spitfires perform intricate manoeuvres the next day. He stated, \"To me it will always be that momentous occasion and the Quaid's powerful words that motivated me with passion towards flying as a defender of my country.\"",
+        image: S16_Image,
     },
     {
-        id: "early-life-inspiration-2",
-        title: "Family",
-        content: '<a href="https://en.wikipedia.org/wiki/Sajad_Haider" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">Wikipedia page</a> Born in Sargodha on 25 and 26 December 1932, at midnight to Dr Syed Fazal Shah (1882–1986) and Rashida Begum, Sajad was the eldest sibling. He had a sister named Kausar Fazal Shah (1934 - 2022), a renowned Professor of Psychology at the Government College of Lahore, and two younger brothers, Dr. Bunyad Haider (1936 – 2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey (UMDNJ) and the youngest, Jawwad Haider, a businessman in New York and only remaining sibling.',
-        image: S6_Image,
+        id: "rigorous-training",
+        title: "Rigorous Military Training",
+        content: "Haider joined the PAF after passing the gruelling Inter Service Selection Board (ISSB), which tested physical, mental, and psychological capabilities with a very low pass rate. His batch was the 13th General Duty Pilot's course, the largest to graduate since the academy's inception at Risalpur. Training was intense and strictly regimented, following British tradition, to prepare for taking orders in a regimented lifestyle. Even talking in Urdu was forbidden. An extensive education program covered aerodynamics, physics, airmanship, meteorology, Morse Code, and history, lasting months before flight training.",
+        image: S5_Image,
     },
 ];
 

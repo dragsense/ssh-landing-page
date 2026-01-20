@@ -3,6 +3,7 @@ import S6_Image from '@/assets/images/ui/ui-section-6.png';
 import InnerPageLayout from "@/components/layouts/InnerPageLayout";
 import EarlyLifePicsSection from "@/components/sections/EarlyLifePicsSection";
 import EarlyLifeInspirationSection from "@/components/sections/EarlyLifeInspirationSection";
+import EarlyLifeInspirationSection2 from "@/components/sections/EarlyLifeInspirationSection2";
 
 export default function EarlyLife() {
     useSEO({
@@ -36,11 +37,7 @@ export default function EarlyLife() {
     });
     return (<InnerPageLayout 
         title="EARLY LIFE AND EDUCATION" 
-    content="Sajad was born in Sargodha on 25 and 26 of December 1932, at midnight. 
-
-His parents were Dr Syed Fazal Shah (1882–1986) and Rashida Begum.
-
-Being the eldest, he had a sister named Kausar Fazal Shah (1934 - 2022), a renowned Professor of Psychology at the Government College of Lahore, and two younger brothers, Dr. Bunyad Haider (1936 – 2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey (UMDNJ) and the youngest, Jawwad Haider, a businessman in New York and only remaining sibling."
+    content="Sajad’s formative years were spent in Quetta, first in the Bugti house and then the Bugti Complex, a gift to his parents from Nawab Mehran Khan. His father, known as 'Baba-e-Baluch,' lunched daily with Nawab Sahib, leading Haider and his sister Kausar to spend many years there. Kausar was the closest to their parents among the siblings, which also included Bunyad and Jawwad. Surrounded by fierce, hard men in a hardcore Baloch and Pashtun culture, he made friends with children from those clans, as well as Hindus and Sikhs, fostering strong intercommunal ties and describing life in that multicultural community as wonderful and uncomplicated, with a focus on communal wellbeing."
     image={S6_Image}
     link="https://en.wikipedia.org/wiki/Sajad_Haider"
     linkText="Source: Wikipedia"
@@ -61,6 +58,11 @@ Later on, during his pilot training, his formal education continued at the RPAF 
 
         <section className="relative mt-12 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
             <EarlyLifePicsSection />
+        </section>
+
+
+        <section className="relative mt-12 mt-25 md:my-16 lg:my-24 px-4 md:px-6">
+            <EarlyLifeInspirationSection2 />
         </section>
 
     </InnerPageLayout>)
