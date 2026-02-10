@@ -4,7 +4,7 @@ module.exports = {
     {
       name: "ssh-app-staging",
       script: "server.js",
-      cwd: "/var/www/sajadhaider.com/data/www/sajadhaider.com/staging/current",
+      cwd: "/var/www/sajadhaider__usr/data/www/sajadhaider.com/staging/current",
       env: {
         NODE_ENV: "production",
         PORT: 3001,
@@ -19,7 +19,7 @@ module.exports = {
     {
       name: "ssh-app-prod",
       script: "server.js",
-      cwd: "/var/www/sajadhaider.com/data/www/sajadhaider.com/current",
+      cwd: "/var/www/sajadhaider__usr/data/www/sajadhaider.com/current",
       env: {
         NODE_ENV: "production",
         PORT: 3002,
@@ -39,7 +39,7 @@ module.exports = {
       host: "66.103.211.113",
       ref: "origin/main",
       repo: "git@github.com:dragsense/ssh-landing-page.git",
-      path: "/var/www/sajadhaider.com/data/www/sajadhaider.com/staging",
+      path: "/var/www/sajadhaider__usr/data/www/sajadhaider.com/staging",
       key: "C:/.ssh/ds-server",
       "post-setup": "",
       "post-deploy": "sh ./deploy-staging.sh",
@@ -49,7 +49,7 @@ module.exports = {
       host: "66.103.211.113",
       ref: "origin/main",
       repo: "git@github.com:dragsense/ssh-landing-page.git",
-      path: "/var/www/sajadhaider.com/data/www/sajadhaider.com",
+      path: "/var/www/sajadhaider__usr/data/www/sajadhaider.com",
       key: "C:/.ssh/ds-server",
       "post-setup": "",
       "post-deploy": "sh ./deploy-prod.sh",
