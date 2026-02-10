@@ -22,7 +22,7 @@ module.exports = {
       cwd: "/var/www/sajadhaider__usr/data/www/sajadhaider.com/current",
       env: {
         NODE_ENV: "production",
-        PORT: 3002,
+        PORT: 3000,
       },
       instances: 1,
       exec_mode: "fork",
