@@ -15,7 +15,7 @@ const sections = [
     {
         id: "early-life-inspiration-2",
         title: "Family",
-        content: '<a href="https://en.wikipedia.org/wiki/Sajad_Haider" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">Wikipedia page</a> Born in Sargodha on 25 and 26 December 1932, at midnight to Dr Syed Fazal Shah (1882–1986) and Rashida Begum, Sajad was the eldest sibling. He had a sister named Kausar Fazal Shah (1934 - 2022), a renowned Professor of Psychology at the Government College of Lahore, and two younger brothers, Dr. Bunyad Haider (1936 – 2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey (UMDNJ) and the youngest, Jawwad Haider, a businessman in New York and only remaining sibling.',
+        content: ' Born in Sargodha on 25 and 26 December 1932, at midnight to Dr Syed Fazal Shah (1882–1986) and Rashida Begum, Sajad was the eldest sibling. He had a sister named Kausar Fazal Shah (1934 - 2022), a renowned Professor of Psychology at the Government College of Lahore, and two younger brothers, Dr. Bunyad Haider (1936 – 2014), a renowned cardiologist who served as the Chairperson of the University of Medicine and Dentistry of New Jersey (UMDNJ) and the youngest, Jawwad Haider, a businessman in New York and only remaining sibling. <br /> Reference : <a href="https://en.wikipedia.org/wiki/Sajad_Haider" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">Wikipedia</a>',
         image: S6_Image,
     },
 ];

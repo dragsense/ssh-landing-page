@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import JetImage from "@/assets/images/ui/jet.png";
 
 const quotes = [
+   {
+    text: "Sajad Haider is real and forever hero of 1965 air war.",
+    author: "Pushpindar Singh, Indain aviation expert and historian",
+  },
   {
     text: "As Chief of Operations during the 1965 war, I can say Squadron Leader Sajad Haider emerged as one of the outstanding commanders. Under his able and inspiring leadership, No. 19 Squadron's contribution was second to none and at times beyond all expectations. Whenever there was a difficult task to be carried out effectively, I always called upon No. 19 Squadron to do it and it was always done in the best traditions of the Pakistan Air Force.",
     author: "Former C-in-C of the PAF, Air Marshal Abdur Rahim Khan",
