@@ -14,7 +14,7 @@ interface SEOConfig {
 const defaultConfig = {
   title: 'Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
   description: 'Sajad Haider, Pakistan Air Force hero, Saviour of Lahore. 1965 & 1971 war veteran, Pathankot Strike leader.',
-  keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore',
+  keywords: 'Sajad Haider, Sajjad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore',
   image: '/og-image.jpg',
   type: 'website',
 };

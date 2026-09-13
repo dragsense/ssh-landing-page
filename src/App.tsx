@@ -6,6 +6,7 @@ import EarlyLife from "@/pages/EarlyLifePage";
 import AirforceLife from "@/pages/AirforceLifePage";
 import BusinessMan from "@/pages/Businessman";
 import LifeAtTheAirforcePage from "@/pages/LifeAtTheAirforcePage";
+import PressPage from "@/pages/PressPage";
 import './App.css'
 
 interface AppProps {
@@ -22,6 +23,8 @@ function App({ someProps }: AppProps) {
         <Route path="/airforce-life" element={<AirforceLife />} />
         <Route path="/business-man" element={<BusinessMan />} />
         <Route path="/life-at-airforce/:warId" element={<LifeAtTheAirforcePage />} />
+        <Route path="/press" element={<PressPage />} />
+        <Route path="/press/:slug" element={<PressPage />} />
       </Route>
     </Routes>
   )

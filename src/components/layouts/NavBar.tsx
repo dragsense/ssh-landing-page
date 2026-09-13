@@ -39,6 +39,7 @@ export default function Navbar() {
         { label: "Early Life", to: "/early-life" },
         { label: "Airforce Life", to: "/airforce-life" },
         { label: "Business Life", to: "/business-man" },
+        { label: "Press", to: "/press" },
     ];
 
     useEffect(() => {

@@ -4,6 +4,7 @@ import EarlyLife from "@/pages/EarlyLifePage";
 import AirforceLife from "@/pages/AirforceLifePage";
 import BusinessMan from "@/pages/Businessman";
 import LifeAtTheAirforcePage from "@/pages/LifeAtTheAirforcePage";
+import PressPage from "@/pages/PressPage";
 
 // Static routes configuration - can be used by both client and server
 export const routes = [
@@ -15,7 +16,9 @@ export const routes = [
       { path: "/early-life", element: <EarlyLife /> },
       { path: "/airforce-life", element: <AirforceLife /> },
       { path: "/business-man", element: <BusinessMan /> },
-      { path: "/life-at-airforce/:warId", element: <LifeAtTheAirforcePage /> }
+      { path: "/life-at-airforce/:warId", element: <LifeAtTheAirforcePage /> },
+      { path: "/press", element: <PressPage /> },
+      { path: "/press/:slug", element: <PressPage /> }
     ]
   }
 ];

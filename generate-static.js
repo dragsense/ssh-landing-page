@@ -14,6 +14,9 @@ const pages = [
   // Dynamic routes - add specific war IDs here if needed
   "life-at-airforce/war-of-1965", // /life-at-airforce/war-of-1965
   "life-at-airforce/war-of-1971", // /life-at-airforce/war-of-1971
+  "press", // /press
+  // Add each new press post slug here
+  "press/jang-wings-of-the-homeland-2026",
 ];
 
 const distPath = path.resolve("dist");

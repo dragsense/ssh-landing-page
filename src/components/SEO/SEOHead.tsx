@@ -13,7 +13,7 @@ interface SEOHeadProps {
 const defaultSEO = {
   title: 'Air Commodore (R) Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
   description: 'Official website of Air Commodore (Retired) Sajad Haider, hero of the 1965 and 1971 wars, Saviour of Lahore, and distinguished Pakistan Air Force pilot. Explore his life, achievements, and contributions to Pakistan\'s defense.',
-  keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
+  keywords: 'Sajad Haider, Sajjad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
   image: '/og-image.jpg',
   type: 'website',
   siteName: 'Sajad Haider - Official Website',

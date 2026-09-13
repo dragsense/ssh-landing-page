@@ -6,6 +6,7 @@ import AwardSection from "@/components/sections/AwardSection";
 import BookHighlightSection from "@/components/sections/BookHighlightSection";
 import EarlyLifeSection from "@/components/sections/EarlyLifeSection";
 import MediaArchiveSection from "@/components/sections/MeidaArchiveSection";
+import PressLegacySection from "@/components/sections/PressLegacySection";
 import ProfileSection from "@/components/sections/ProfileSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import RecordSection from "@/components/sections/RecordSection";
@@ -15,7 +16,7 @@ export default function Home() {
     useSEO({
         title: 'Sajad Haider - Saviour of Lahore | Pakistan Air Force Hero',
         description: 'Sajad Haider, Pakistan Air Force hero, Saviour of Lahore. 1965 & 1971 war veteran, Pathankot Strike leader.',
-        keywords: 'Sajad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
+        keywords: 'Sajad Haider, Sajjad Haider, Air Commodore Sajjad Haider, Air Commodore, Pakistan Air Force, PAF, 1965 War, 1971 War, Saviour of Lahore, Pathankot Strike, Fighter Pilot, Pakistan Military History',
         structuredData: {
             '@context': 'https://schema.org',
             '@type': 'Person',
@@ -94,6 +95,10 @@ export default function Home() {
         
         <section id="books" className="relative my-12 md:my-16 lg:my-24 px-4 md:px-6">
             <BookHighlightSection />
+        </section>
+
+        <section id="press" className="relative max-w-screen-lg mx-auto my-12 md:my-16 lg:my-24 px-4 md:px-6">
+            <PressLegacySection />
         </section>
 
         <section className="relative max-w-screen-lg mx-auto my-12 md:my-16 lg:my-24 px-4 md:px-6">
