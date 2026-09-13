@@ -1,0 +1,5 @@
+# Cloudflare Pages configuration
+# Deploy: npm run deploy:cloudflare  (first time: npx wrangler login)
+name = "sajad-haider"
+pages_build_output_dir = "dist/client"
+compatibility_date = "2026-09-13"
